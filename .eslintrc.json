@@ -19,7 +19,15 @@
     "react",
     "@typescript-eslint"
   ],
-  "rules": {},
+  "rules": {
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ]
+  },
   "settings": {
     "react": {
       "version": "detect"

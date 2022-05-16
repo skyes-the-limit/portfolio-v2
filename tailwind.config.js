@@ -1,7 +1,12 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: [
+    './public/**/*.html',
+    './src/**/*.{jsx,tsx}'
+  ],
+  content: ['./src/**/*.{jsx,tsx}'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -31,7 +36,11 @@ module.exports = {
       neutral: colors.blueGray,
       stone: colors.stone
     },
-    variants: {},
-    plugins: []
-  }
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif']
+    }
+  },
+  variants: {},
+  plugins: []
 }
