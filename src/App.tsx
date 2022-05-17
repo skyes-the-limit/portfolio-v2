@@ -1,24 +1,23 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Header from './Header/Header'
-import Hero from './Hero/Hero'
 import Footer from './Footer/Footer'
-import Feature from './Feature/Feature'
+import HomePage from './HomePage/HomePage'
 
 import './input.css'
 
 const App = () => {
   return (
-    <div className='bg-gray-800 text-gray-100'>
-      <Header />
-      <div className='pt-16'>
-        <Hero />
+    <Router>
+      <div className='bg-gray-800 text-gray-100'>
+        <Header />
+        <Routes>
+          <Route index element={<HomePage />} />
+        </Routes>
+        <Footer />
       </div>
-      <div className='container max-w-6xl p-6 space-y-6 sm:space-y-12'>
-        <Feature />
-      </div>
-      <Footer />
-    </div>
+    </Router>
   )
 }
 
