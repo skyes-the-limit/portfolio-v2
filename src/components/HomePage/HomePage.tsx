@@ -4,7 +4,7 @@ import Feature from '../Feature/Feature'
 import Grid, { Variant } from '../Grid/Grid'
 import Hero from '../Hero/Hero'
 import { CardInfo } from '../Card/Card'
-import { primaryCategories, secondaryCategories } from '../data/categories'
+import { primaryCategories, secondaryCategories } from '../../data/categories'
 
 const primaryCards: CardInfo[] = primaryCategories.map(category => {
   return { ...category, header: category.title, imageSrc: category.coverImageSrc, seeMoreSrc: category.path }

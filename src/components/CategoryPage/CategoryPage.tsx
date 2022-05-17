@@ -1,5 +1,5 @@
 import React from 'react'
-import { Category } from '../data/categories'
+import { Category } from '../../data/categories'
 import Grid, { Variant } from '../Grid/Grid'
 
 type CategoryProps = {

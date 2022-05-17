@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import HomePage from './HomePage/HomePage'
-import CategoryPage from './CategoryPage/CategoryPage'
-import AboutPage from './AboutPage/AboutPage'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import HomePage from './components/HomePage/HomePage'
+import CategoryPage from './components/CategoryPage/CategoryPage'
+import AboutPage from './components/AboutPage/AboutPage'
 import { primaryCategories, secondaryCategories } from './data/categories'
 
 import './input.css'
