@@ -1,11 +1,22 @@
 import React from 'react'
-import LargeCard from '../LargeCard/LargeCard'
+import LargeCard, { CardProps } from '../LargeCard/LargeCard'
 
-const LargeGrid = () => {
+export interface CardGridProps {
+  cardGridProps: CardProps[]
+}
+
+const LargeGrid = ({ cardGridProps }: CardGridProps) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <LargeCard />
-      <LargeCard />
+      {cardGridProps && cardGridProps.map((card, index) => (
+        <LargeCard
+          key={index}
+          title={card.title}
+          description={card.description}
+          imageSrc={card.imageSrc + `?${index}`}
+          seeMoreSrc={card.seeMoreSrc}
+        />
+      ))}
     </div>
   )
 }
