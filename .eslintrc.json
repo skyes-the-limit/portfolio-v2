@@ -26,6 +26,10 @@
       {
         "allowTemplateLiterals": true
       }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
     ]
   },
   "settings": {
