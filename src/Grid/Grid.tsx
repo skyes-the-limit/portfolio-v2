@@ -31,7 +31,7 @@ const Grid = ({ variant, cards }: GridProps) => {
         <Card
           key={index}
           variant={variant}
-          card={{ ...card, imageSrc: card.imageSrc + `?${index}` }}
+          card={card}
         />
       ))}
     </div>

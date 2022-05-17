@@ -2,6 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 
 import { Variant } from '../Grid/Grid'
+import { Link } from 'react-router-dom'
 
 export type CardInfo = {
   header: string,
@@ -30,18 +31,22 @@ const Card = ({ variant, card }: CardProps) => {
   }
 
   return (
-    <div className='rounded-md shadow-md bg-gray-900 text-gray-100'>
-      <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />
-      <div className='flex flex-col justify-between p-6 space-y-2'>
-        {subheader && (
-          <p className='block text-xs font-medium tracking-widest uppercase text-sky-400 -mb-2'>Subheader</p>
-        )}
-        <h2 className='text-xl font-semibold tracking-wide'>{header}</h2>
-        <p className='text-sm text-gray-400'>{description}</p>
-        {seeMoreSrc && (
-          <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400'>See More</p>
-        )}
+    <div className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'>
+      <div className='flex flex-col space-y-6'>
+        <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />
+        <div className='flex flex-col justify-between px-6'>
+          {subheader && (
+            <p className='block text-xs font-medium tracking-widest uppercase text-sky-400'>Subheader</p>
+          )}
+          <h2 className='text-xl font-semibold tracking-wide'>{header}</h2>
+          <p className='text-sm text-gray-400'>{description}</p>
+        </div>
       </div>
+      {seeMoreSrc && (
+        <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'>
+          <Link to={seeMoreSrc}>See More</Link>
+        </p>
+      )}
     </div>
   )
 }
