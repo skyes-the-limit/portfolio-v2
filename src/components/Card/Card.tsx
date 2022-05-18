@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom'
 export type CardInfo = {
   header: string,
   subheader?: string,
+  overline?: string,
   description: string,
   imageSrc: string,
-  seeMoreSrc?: string
+  seeMoreSrc?: string,
+  onClick?: Function // TODO: If onClick truthy, add a hover effect to the image. Use for modals and such.
 }
 
 export type CardProps = {
@@ -18,7 +20,7 @@ export type CardProps = {
 }
 
 const Card = ({ variant, card }: CardProps) => {
-  const { header, subheader, description, imageSrc, seeMoreSrc } = card
+  const { header, subheader, overline, description, imageSrc, seeMoreSrc } = card
   const imgClassNames = () => {
     switch (variant) {
       case Variant.Small:
@@ -35,8 +37,13 @@ const Card = ({ variant, card }: CardProps) => {
       <div className='flex flex-col space-y-6'>
         <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />
         <div className='flex flex-col justify-between px-6'>
-          {subheader && (
-            <p className='block text-xs font-medium tracking-widest uppercase text-sky-400'>Subheader</p>
+          {overline && (
+            <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>
+              <span className='text-sky-400'>{overline}</span>
+              {subheader && (
+                <span className='text-gray-400'>{subheader}</span>
+              )}
+            </p>
           )}
           <h2 className='text-xl font-semibold tracking-wide'>{header}</h2>
           <p className='text-sm text-gray-400'>{description}</p>
