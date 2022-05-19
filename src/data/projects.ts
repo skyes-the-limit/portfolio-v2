@@ -9,6 +9,8 @@ export type Project = {
   collab?: string
 }
 
+// TODO: convert animated .gifs to looping videos, and images to .webp
+// TODO: re-crop project cover images from square ratio to landscape
 export const general3d: Project[] = [
   // TODO: Pangolin & Anim 3 & Virtual Environment Design Work
   {

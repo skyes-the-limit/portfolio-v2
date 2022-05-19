@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import cx from 'classnames'
 
 import Feature from '../Feature/Feature'
 import Grid, { Variant } from '../Grid/Grid'
@@ -21,11 +20,12 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={cx('', showModal ? '' : 'hidden')}>
+      {showModal && (
         <Modal title={'Title'} setShowModal={setShowModal}>
           <p>Children go here!</p>
         </Modal>
-      </div>
+      )}
+
       <div className='pt-16'>
         <Hero />
         <div className='container mx-auto my-12 max-w-6xl px-6 space-y-6 sm:space-y-12'>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Category } from '../../data/categories'
 import Grid, { Variant } from '../Grid/Grid'
+import ProjectDetails from '../ProjectDetails/ProjectDetails'
 
 type CategoryProps = {
   category: Category
@@ -16,7 +17,8 @@ const CategoryPage = ({ category }: CategoryProps) => {
       overline: project.medium,
       description: project.description,
       imageSrc: require(`../../assets/${project.coverImageSrc}`),
-      seeMoreSrc: ''
+      seeMoreSrc: '',
+      details: <ProjectDetails project={project} />
     }
   })
 

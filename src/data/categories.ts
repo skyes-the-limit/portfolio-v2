@@ -8,6 +8,7 @@ export type Category = {
   content: Project[]
 }
 
+// TODO: Add real cover images
 export const primaryCategories: Category[] = [
   {
     path: '/general-3d',
