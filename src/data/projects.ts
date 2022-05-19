@@ -58,7 +58,7 @@ export const techArt: Project[] = [
 ]
 
 export const softwareDev: Project[] = [
-  // Graphics & Web Development Work
+  // Web Development Work
   {
     date: `Apr '20`,
     medium: 'React.JS',
@@ -161,6 +161,7 @@ export const softwareDev: Project[] = [
 ]
 
 export const creativeCoding: Project[] = [
+  // TODO: Graphics project
   {
     date: `Jul '19`,
     medium: 'Processing',
