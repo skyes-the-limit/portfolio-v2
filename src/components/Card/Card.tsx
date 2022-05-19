@@ -44,7 +44,7 @@ const Card = ({ variant, card }: CardProps) => {
 
       <div
         className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'
-        onClick={() => setShowModal(true)}
+        onClick={() => details ? setShowModal(true) : undefined}
       >
         <div className='flex flex-col space-y-6'>
           <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />

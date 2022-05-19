@@ -9,6 +9,7 @@ type ModalProps = {
 const Modal = ({ title, setShowModal, children }: ModalProps) => {
   // TODO: Listen to key press and close modal on esc
   // TODO: Close modal on click of background
+  // TODO: Disable scrolling while Modal is open
 
   return (
     <div className='fixed w-screen h-screen bg-gray-800 bg-opacity-75' tabIndex={-1}>
