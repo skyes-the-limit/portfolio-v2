@@ -1,12 +1,13 @@
 import React from 'react'
 import { Project } from '../../data/projects'
+import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
 
 type ProjectDetailsProps = {
   project: Project
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { date, medium, description, coverImageSrc, imageSrcs, videoSrcs, github, collab } = project
+  const { date, medium, description, imageSrcs, videoSrcs, github, collab } = project
 
   return (
     <div>
@@ -14,21 +15,23 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       <p>{date}</p>
       <p>{medium}</p>
       <p>{description}</p>
-      <p>{coverImageSrc}</p>
+      {/* <p>{coverImageSrc}</p> */}
       <p>{github}</p>
       <p>{collab}</p>
 
-      {imageSrcs && imageSrcs.map(src => {
+      {imageSrcs && imageSrcs.map((src, index) => {
         return (
-          <p key={src}>{src}</p>
+          <img key={`image-${index}`} src={`../../assets/${require(src)}`} />
+          // <p key={src}>{src}</p>
         )
       })}
 
-      {videoSrcs && videoSrcs.map(src => {
+      {videoSrcs && videoSrcs.map((src, index) => {
         return (
-          <p key={src}>{src}</p>
+          <VimeoPlayer key={`video-${index}`} id={src} />
         )
       })}
+
     </div>
   )
 }

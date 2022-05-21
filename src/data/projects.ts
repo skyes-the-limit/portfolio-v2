@@ -353,15 +353,6 @@ export const videography: Project[] = [
     ]
   },
   {
-    date: `May '18`,
-    medium: 'Premiere',
-    description: 'Short interview of a Toronto local named James.',
-    coverImageSrc: '2018-05-23 Profile Preview.png',
-    videoSrcs: [
-      '353296500'
-    ]
-  },
-  {
     date: `Apr '18`,
     medium: 'Premiere',
     description: 'An impressionistic recollection of a season of dance.',

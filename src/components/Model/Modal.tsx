@@ -12,7 +12,7 @@ const Modal = ({ title, setShowModal, children }: ModalProps) => {
   // TODO: Disable scrolling while Modal is open
 
   return (
-    <div className='fixed w-screen h-screen bg-gray-800 bg-opacity-75' tabIndex={-1}>
+    <div className='fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-60' tabIndex={-1}>
       <div className='z-10 fixed flex items-center justify-center top-0 left-0 w-screen h-screen p-6'>
         <div className='relative w-auto pointer-events-none'>
           <div className='modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-clip-padding rounded-md outline-none bg-gray-800 text-gray-100'>
