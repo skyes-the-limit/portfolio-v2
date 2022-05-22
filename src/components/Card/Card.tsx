@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Link } from 'react-router-dom'
 
 import { Variant } from '../Grid/Grid'
-import Modal from '../Model/Modal'
+import Modal from '../Modal/Modal'
 
 export type CardInfo = {
   header: string,
@@ -47,7 +47,7 @@ const Card = ({ variant, card }: CardProps) => {
         onClick={() => details ? setShowModal(true) : undefined}
       >
         <div className='flex flex-col space-y-6'>
-          <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />
+          <img src={imageSrc} alt='' className={cx('object-cover object-top w-full rounded-t-md bg-gray-500', imgClassNames())} />
           <div className='flex flex-col justify-between px-6'>
             {overline && (
               <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>
