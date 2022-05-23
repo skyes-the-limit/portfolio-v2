@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import cx from 'classnames'
 import { Link } from 'react-router-dom'
+import cx from 'classnames'
 
 import { Variant } from '../Grid/Grid'
 import Modal from '../Modal/Modal'
+
+import './Card.css'
 
 export type CardInfo = {
   header: string,
@@ -23,7 +25,7 @@ export type CardProps = {
 const Card = ({ variant, card }: CardProps) => {
   const [showModal, setShowModal] = useState(false)
   const { header, subheader, overline, description, imageSrc, seeMoreSrc, details } = card
-  const imgClassNames = () => {
+  const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
         return 'h-48'
@@ -37,7 +39,7 @@ const Card = ({ variant, card }: CardProps) => {
   return (
     <>
       {showModal && (
-        <Modal title={'Title'} setShowModal={setShowModal}>
+        <Modal title={header} setShowModal={setShowModal}>
           {details}
         </Modal>
       )}
@@ -46,8 +48,11 @@ const Card = ({ variant, card }: CardProps) => {
         className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'
         onClick={() => details ? setShowModal(true) : undefined}
       >
-        <div className='flex flex-col space-y-6'>
-          <img src={imageSrc} alt='' className={cx('object-cover object-top w-full rounded-t-md bg-gray-500', imgClassNames())} />
+        <div className='overlay flex flex-col space-y-6'>
+          <img
+            src={imageSrc}
+            className={cx('overlay', 'object-cover object-top w-full rounded-t-md bg-gray-500 cursor-pointer', imgHeight())}
+          />
           <div className='flex flex-col justify-between px-6'>
             {overline && (
               <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>

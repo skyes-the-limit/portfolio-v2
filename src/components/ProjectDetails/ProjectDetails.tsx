@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
 
-import './ProjectDetails.module.css'
+import './ProjectDetails.css'
 
 type ProjectDetailsProps = {
   project: Project
@@ -11,20 +11,28 @@ type ProjectDetailsProps = {
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { imageSrcs = [], videoSrcs = [], github, collab } = project
-  const [selectedIndex] = useState(0)
+  const [selectedIndex, setSelectedIndex] = useState(0)
   // setSelectedindex(0) // TODO
 
   return (
     <div>
       {imageSrcs?.length + videoSrcs?.length > 1 && (
-        <div className='fixed z-10 w-screen h-screen top-0 left-0 pointer-events-none'>
+        <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
           <label
             className='carouselControl carouselControl__backward'
-            onClick={() => { /* selectedIndex-- */ }}
+            onClick={() => {
+              selectedIndex <= 0
+                ? setSelectedIndex(imageSrcs.length + videoSrcs.length - 1)
+                : setSelectedIndex(selectedIndex - 1)
+            }}
           />
           <label
             className='carouselControl carouselControl__forward'
-            onClick={() => { /* selectedIndex++ */ }}
+            onClick={() => {
+              selectedIndex >= (imageSrcs.length + videoSrcs.length - 1)
+                ? setSelectedIndex(0)
+                : setSelectedIndex(selectedIndex + 1)
+            }}
           />
         </div>
       )}
@@ -45,15 +53,13 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             className={index === selectedIndex ? '' : 'hidden'}
             style={{ maxHeight: '70vh' }}
           />
-          // <p key={src}>{src}</p>
         )
       })}
 
-      {videoSrcs && videoSrcs.map((src, index) => {
-        return (
-          <VimeoPlayer key={`video-${index}`} id={src} />
-        )
-      })}
+      {(selectedIndex > imageSrcs.length - 1) && (
+        <VimeoPlayer key={`video-${selectedIndex}`} id={videoSrcs[selectedIndex - imageSrcs.length]} />
+      )
+      }
 
     </div>
   )

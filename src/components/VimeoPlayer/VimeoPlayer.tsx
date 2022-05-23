@@ -5,6 +5,7 @@ type VimeoPlayerProps = {
 }
 
 const VimeoPlayer = ({ id }: VimeoPlayerProps) => {
+  // TODO: Fix Vimeo size to match images from ProjectDetails
   return (
     <div style={{ width: 'calc(100vw - 16rem)' }}>
       <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

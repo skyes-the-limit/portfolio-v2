@@ -1,11 +1,12 @@
 .carouselControl {
   height: 30px;
   width: 30px;
-  margin: -15px 15px 0;
-  top: 50%;
+  margin: 30px;
+  top: calc(50% - 30px);
   position: absolute;
   display: block;
   cursor: pointer;
+  pointer-events: auto;
   border-width: 5px 5px 0 0;
   border-style: solid;
   border-color: #fafafa;

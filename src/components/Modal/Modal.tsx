@@ -37,7 +37,7 @@ const Modal = ({ title, setShowModal, children }: ModalProps) => {
               </h2>
               <button
                 type='button'
-                className='w-6 h-6 z-20 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:opacity-75 hover:no-underline'
+                className='w-6 h-6 z-20 cursor-pointer pointer-events-auto'
                 aria-label='Close'
                 onClick={() => setShowModal(false)}
               >
