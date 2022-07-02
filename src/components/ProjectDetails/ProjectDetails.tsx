@@ -58,9 +58,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 
       {(selectedIndex > imageSrcs.length - 1) && (
         <VimeoPlayer key={`video-${selectedIndex}`} id={videoSrcs[selectedIndex - imageSrcs.length]} />
-      )
-      }
-
+      )}
     </div>
   )
 }
