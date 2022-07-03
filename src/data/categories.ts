@@ -5,6 +5,7 @@ export type Category = {
   title: string,
   description: string,
   coverImageSrc: string,
+  coverImagePosition?: 'object-center' | 'object-bottom',
   content: Project[]
 }
 
@@ -46,6 +47,7 @@ export const secondaryCategories: Category[] = [
     title: 'Illustration',
     description: '',
     coverImageSrc: '2017-11-20 Patterns Preview.png',
+    coverImagePosition: 'object-center',
     content: illustration
   },
   {
@@ -60,6 +62,7 @@ export const secondaryCategories: Category[] = [
     title: 'Motion Graphics',
     description: '',
     coverImageSrc: '2018-11-07 Edutainment Preview.png',
+    coverImagePosition: 'object-bottom',
     content: motionGraphics
   }
 ]

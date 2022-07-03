@@ -4,9 +4,9 @@ module.exports = {
   mode: 'jit',
   purge: [
     './public/**/*.html',
-    './src/**/*.{jsx,tsx}'
+    './src/**/*.{jsx,tsx,ts}'
   ],
-  content: ['./src/**/*.{jsx,tsx}'],
+  content: ['./src/**/*.{jsx,tsx,ts}'],
   theme: {
     colors: {
       transparent: 'transparent',

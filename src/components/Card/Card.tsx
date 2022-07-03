@@ -13,6 +13,7 @@ export type CardInfo = {
   overline?: string,
   description: string,
   imageSrc: string,
+  imageObjectPos?: string
   seeMoreSrc?: string,
   details?: React.ReactElement // TODO: If onClick truthy, add a hover effect to the image. Place details within Modal.
 }
@@ -24,7 +25,7 @@ export type CardProps = {
 
 const Card = ({ variant, card }: CardProps) => {
   const [showModal, setShowModal] = useState(false)
-  const { header, subheader, overline, description, imageSrc, seeMoreSrc, details } = card
+  const { header, subheader, overline, description, imageSrc, imageObjectPos, seeMoreSrc, details } = card
   const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
@@ -51,7 +52,7 @@ const Card = ({ variant, card }: CardProps) => {
         <div className='overlay flex flex-col space-y-6'>
           <img
             src={imageSrc}
-            className={cx('overlay', 'object-cover object-top w-full rounded-t-md bg-gray-500 cursor-pointer', imgHeight())}
+            className={cx('overlay', 'object-cover w-full rounded-t-md bg-gray-500 cursor-pointer', imgHeight(), imageObjectPos || 'object-top')}
           />
           <div className='flex flex-col justify-between px-6'>
             {overline && (

@@ -3,6 +3,7 @@ export type Project = {
   medium: string,
   description: string,
   coverImageSrc: string,
+  coverImagePosition?: 'object-center' | 'object-bottom',
   imageSrcs?: string[],
   videoSrcs?: string[],
   github?: string,
@@ -70,6 +71,7 @@ export const general3d: Project[] = [
     date: `Nov '19`,
     medium: 'Maya',
     description: 'Digital recreation of a small interior space.',
+    coverImagePosition: 'object-center',
     coverImageSrc: '2019-11-05 Interior Preview.png',
     imageSrcs: [
       '2019-11-05 Interior (1).png',
@@ -81,6 +83,7 @@ export const general3d: Project[] = [
     medium: 'Maya',
     description: 'Talent show act of an animated and rigged character.',
     coverImageSrc: '2018-12-14 Talent Show Preview.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '352084087'
     ]
@@ -90,6 +93,7 @@ export const general3d: Project[] = [
     medium: '3DS Max',
     description: 'Character model based on Castle Crashers.',
     coverImageSrc: '2016-11-18 Castle Crasher Preview.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '353296476'
     ]
@@ -301,6 +305,7 @@ export const motionGraphics: Project[] = [
     medium: 'Photoshop\u3000|\u3000AfterEffects',
     description: `An educational video on different culture's 'Halloween-esque' holidays.`,
     coverImageSrc: '2018-11-07 Edutainment Preview.png',
+    coverImagePosition: 'object-bottom',
     videoSrcs: [
       '354709668'
     ],
@@ -311,6 +316,7 @@ export const motionGraphics: Project[] = [
     medium: 'AfterEffects',
     description: 'Lyric video focusing on transforming audio into visual representations.',
     coverImageSrc: '2018-03-20 Lyrics.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '352082622'
     ]
@@ -323,6 +329,7 @@ export const illustration: Project[] = [
     medium: 'Photoshop',
     description: 'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
     coverImageSrc: '2019-11-15 Process Portrait Preview.png',
+    coverImagePosition: 'object-center',
     imageSrcs: [
       '2019-11-15 Process Portrait (1).png',
       '2019-11-15 Process Portrait (2).png',
@@ -345,6 +352,7 @@ export const illustration: Project[] = [
     medium: 'Screenprinted Fabric',
     description: 'Exploration of tagging and graffiti using publicly sited textiles.',
     coverImageSrc: '2019-07-22 Screenprint Preview.png',
+    coverImagePosition: 'object-center',
     imageSrcs: [
       '2019-07-22 Screenprint (1).jpg',
       '2019-07-22 Screenprint (2).jpg',
@@ -359,6 +367,7 @@ export const illustration: Project[] = [
     medium: 'Illustrator',
     description: 'Patterns generated from swatches of a plant drawing.',
     coverImageSrc: '2017-11-20 Patterns Preview.png',
+    coverImagePosition: 'object-center',
     imageSrcs: [
       '2017-11-20 Patterns.png'
     ]
@@ -367,6 +376,7 @@ export const illustration: Project[] = [
     date: `Oct '17`,
     medium: 'Photoshop',
     description: 'Study on different modes of drawing.',
+    coverImagePosition: 'object-center',
     coverImageSrc: '2017-10-30 Modes Preview.png',
     imageSrcs: [
       '2017-10-30 Modes.png'
@@ -376,6 +386,7 @@ export const illustration: Project[] = [
     date: `Sept '17`,
     medium: 'Illustrator',
     description: 'Composition of only squares.',
+    coverImagePosition: 'object-bottom',
     coverImageSrc: '2017-09-25 Squares Preview.png',
     imageSrcs: [
       '2017-09-25 Squares.png'
@@ -398,6 +409,7 @@ export const videography: Project[] = [
     medium: 'Premiere',
     description: `A variant on the 'chalk talk' style of stop motion.`,
     coverImageSrc: '2018-09-25 Chalk Talk Preview.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '352083851'
     ],
@@ -408,6 +420,7 @@ export const videography: Project[] = [
     medium: 'Premiere',
     description: 'Claymation conceptualized by visualizing a predetermined cartoon soundtrack.',
     coverImageSrc: '2018-09-19 Claymation Preview.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '352083588'
     ]
@@ -417,6 +430,7 @@ export const videography: Project[] = [
     medium: 'Premiere',
     description: 'An impressionistic recollection of a season of dance.',
     coverImageSrc: '2018-04-23 Sum Preview.png',
+    coverImagePosition: 'object-center',
     videoSrcs: [
       '352082744'
     ]
@@ -425,6 +439,7 @@ export const videography: Project[] = [
     date: `Feb '18`,
     medium: 'Premiere',
     description: 'Short study on performance.',
+    coverImagePosition: 'object-bottom',
     coverImageSrc: '2018-02-26 Twister Preview.png',
     videoSrcs: [
       '352082020'
