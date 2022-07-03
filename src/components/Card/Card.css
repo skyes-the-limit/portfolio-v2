@@ -1,0 +1,3 @@
+.overlay::before {
+  /* TODO: Lighten image on hover without messing up the stacking context */
+}

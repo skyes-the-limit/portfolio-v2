@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import cx from 'classnames'
 import { Link } from 'react-router-dom'
+import cx from 'classnames'
 
 import { Variant } from '../Grid/Grid'
-import Modal from '../Model/Modal'
+import Modal from '../Modal/Modal'
+
+import './Card.css'
 
 export type CardInfo = {
   header: string,
@@ -11,6 +13,7 @@ export type CardInfo = {
   overline?: string,
   description: string,
   imageSrc: string,
+  imageObjectPos?: string
   seeMoreSrc?: string,
   details?: React.ReactElement // TODO: If onClick truthy, add a hover effect to the image. Place details within Modal.
 }
@@ -22,8 +25,8 @@ export type CardProps = {
 
 const Card = ({ variant, card }: CardProps) => {
   const [showModal, setShowModal] = useState(false)
-  const { header, subheader, overline, description, imageSrc, seeMoreSrc, details } = card
-  const imgClassNames = () => {
+  const { header, subheader, overline, description, imageSrc, imageObjectPos, seeMoreSrc, details } = card
+  const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
         return 'h-48'
@@ -37,7 +40,7 @@ const Card = ({ variant, card }: CardProps) => {
   return (
     <>
       {showModal && (
-        <Modal title={'Title'} setShowModal={setShowModal}>
+        <Modal title={header} setShowModal={setShowModal}>
           {details}
         </Modal>
       )}
@@ -46,11 +49,15 @@ const Card = ({ variant, card }: CardProps) => {
         className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'
         onClick={() => details ? setShowModal(true) : undefined}
       >
-        <div className='flex flex-col space-y-6'>
-          <img src={imageSrc} alt='' className={cx('object-cover object-center w-full rounded-t-md bg-gray-500', imgClassNames())} />
+        <div className='overlay flex flex-col space-y-6'>
+          <img
+            src={imageSrc}
+            className={cx('overlay', 'object-cover w-full rounded-t-md bg-gray-500 cursor-pointer', imgHeight(), imageObjectPos || 'object-top')}
+          />
           <div className='flex flex-col justify-between px-6'>
             {overline && (
               <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>
+                {/* TODO: Restyle as badges */}
                 <span className='text-sky-400'>{overline}</span>
                 {subheader && (
                   <span className='text-gray-400'>{subheader}</span>
@@ -63,6 +70,7 @@ const Card = ({ variant, card }: CardProps) => {
         </div>
         {seeMoreSrc && (
           <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'>
+            {/* TODO: Navigate to top of page */}
             <Link to={seeMoreSrc}>See More</Link>
           </p>
         )}

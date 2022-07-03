@@ -1,34 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Project } from '../../data/projects'
+import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
+
+import './ProjectDetails.css'
 
 type ProjectDetailsProps = {
   project: Project
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { date, medium, description, coverImageSrc, imageSrcs, videoSrcs, github, collab } = project
+  const { imageSrcs = [], videoSrcs = [] } = project
+  const [selectedIndex, setSelectedIndex] = useState(0)
+  // TODO: Videos should come first
 
   return (
     <div>
-      <h1>Project Details</h1>
-      <p>{date}</p>
-      <p>{medium}</p>
-      <p>{description}</p>
-      <p>{coverImageSrc}</p>
-      <p>{github}</p>
-      <p>{collab}</p>
+      {imageSrcs?.length + videoSrcs?.length > 1 && (
+        <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
+          <label
+            className='carouselControl carouselControl__backward'
+            onClick={() => {
+              selectedIndex <= 0
+                ? setSelectedIndex(imageSrcs.length + videoSrcs.length - 1)
+                : setSelectedIndex(selectedIndex - 1)
+            }}
+          />
+          <label
+            className='carouselControl carouselControl__forward'
+            onClick={() => {
+              selectedIndex >= (imageSrcs.length + videoSrcs.length - 1)
+                ? setSelectedIndex(0)
+                : setSelectedIndex(selectedIndex + 1)
+            }}
+          />
+        </div>
+      )}
 
-      {imageSrcs && imageSrcs.map(src => {
+      {imageSrcs && imageSrcs.map((src, index) => {
         return (
-          <p key={src}>{src}</p>
+          <img
+            key={`image-${index}`}
+            src={require(`../../assets/${src}`)}
+            className={index === selectedIndex ? '' : 'hidden'}
+            style={{ maxHeight: '70vh' }}
+          />
         )
       })}
 
-      {videoSrcs && videoSrcs.map(src => {
-        return (
-          <p key={src}>{src}</p>
-        )
-      })}
+      {(selectedIndex > imageSrcs.length - 1) && (
+        <VimeoPlayer key={`video-${selectedIndex}`} id={videoSrcs[selectedIndex - imageSrcs.length]} />
+      )}
     </div>
   )
 }

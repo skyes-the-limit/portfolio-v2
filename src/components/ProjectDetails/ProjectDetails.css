@@ -1,0 +1,31 @@
+.carouselControl {
+  height: 30px;
+  width: 30px;
+  margin: 30px;
+  top: calc(50% - 30px);
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  pointer-events: auto;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  opacity: 0.35;
+  outline: 0;
+}
+
+.carouselControl:hover {
+  opacity: 1;
+}
+
+.carouselControl__backward {
+  left: 10px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.carouselControl__forward {
+  right: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
