@@ -12,17 +12,60 @@ export type Project = {
 // TODO: convert animated .gifs to looping videos, and images to .webp
 // TODO: re-crop project cover images from square ratio to landscape
 export const general3d: Project[] = [
-  // TODO: Pangolin & Anim 3 & Virtual Environment Design Work
   {
-    date: `Dec '19`,
-    medium: 'Maya',
-    description: 'Self portrait model.',
-    coverImageSrc: '2019-12-12 Self Portrait Preview.png',
-    imageSrcs: [
-      '2019-12-12 Self Portrait (1).gif',
-      '2019-12-12 Self Portrait (2).gif'
-    ] // TODO: Maybe go back and render a topology pass?
+    date: `Apr '22`,
+    medium: 'Houdini, Substance Painter, World Machine, Unreal Engine 4',
+    description: `Virtual environment inspired by Iceland's basalt columns. Columns procedurally generated with Houdini, textured in Substance Painter. Terrain generated in World Machine and textured with Quixel Megascans materials. Assembled and rendered in UE4.`,
+    coverImageSrc: 'IcelandicBasalt_cover.png',
+    imageSrcs: ['IcelandicBasalt_HoudiniPreview.png', 'IcelandicBasalt_WorldMachinePreview.png'],
+    videoSrcs: ['713927330']
   },
+  {
+    date: `Mar '22`,
+    medium: 'Maya, Substance Painter, World Machine, Unreal Engine 4',
+    description: 'Geodesic tent modeled in Maya and textured with Substance Painter. Furnished with free assets from TurboSquid. Terrain generated in World Machine. Assembled in UE4 with Quixel Megascans materials and vegetation.',
+    coverImageSrc: 'BorealAurora_cover.png',
+    imageSrcs: ['BorealAurora_concept.png', 'BorealAurora_process.png', 'BorealAurora_terrainPreview.png'],
+    videoSrcs: ['713926631']
+  },
+  {
+    date: `Dec '21`,
+    medium: 'Maya, Substance Painter, Unreal Engine 5',
+    description: `Virtual environment of a resort spaceship's lounge. Modeled in Maya, textured in Substance Painter, assembled and rendered in UE5.`,
+    coverImageSrc: 'SpaceshipLounge_cover.png',
+    videoSrcs: ['725470027']
+  },
+  {
+    date: `Oct '21`,
+    medium: 'Houdini, Substance Painter, Unreal Engine 5',
+    description: 'Bio-engineered vegetation for Martian colonization. Models generated in Houdini, textured in Substance Painter, assembled and rendered in UE5.',
+    coverImageSrc: 'MartianVegetation_cover.png',
+    videoSrcs: ['726182601']
+  },
+  {
+    date: `Sept '21`,
+    medium: 'Maya, Substance Painter, Unreal Engine 5',
+    description: 'SciFi chair for neurologically simulated virtual reality. Modeled in Maya, textured in Substance Painter, assembled and rendered in UE5.',
+    coverImageSrc: 'VRChair_cover.png',
+    videoSrcs: ['726300088']
+  },
+  {
+    date: `Dec '20`,
+    medium: 'Maya, ZBrush, Substance Painter',
+    description: 'The endangered Pangolin has developed an adaptation to protect it from poachers! Low-poly mesh modeled in Maya, details sculpted in ZBrush. Textured with substance painter, rigged, animated and composited in Maya.',
+    coverImageSrc: 'Pangolin_cover.png',
+    videoSrcs: ['726303946', '726302583']
+  },
+  // {
+  //   date: `Dec '19`,
+  //   medium: 'Maya',
+  //   description: 'Self portrait model.',
+  //   coverImageSrc: '2019-12-12 Self Portrait Preview.png',
+  //   imageSrcs: [
+  //     '2019-12-12 Self Portrait (1).gif',
+  //     '2019-12-12 Self Portrait (2).gif'
+  //   ]
+  // },
   {
     date: `Nov '19`,
     medium: 'Maya',
@@ -54,11 +97,20 @@ export const general3d: Project[] = [
 ]
 
 export const techArt: Project[] = [
-  // TODO: Degree Project 1 & 2 work
+  // TODO: Finished SPL work
+  {
+    date: `Dec '21`,
+    medium: 'Houdini',
+    description: 'Experiment with vellum and combining Mixamo animations.',
+    coverImageSrc: 'VellumDance_cover.png',
+    videoSrcs: [
+      '726342593'
+    ]
+  }
 ]
 
 export const softwareDev: Project[] = [
-  // Web Development Work
+  // Project work from graphics, software engineering, and web dev
   {
     date: `Apr '20`,
     medium: 'React.JS',
@@ -332,7 +384,15 @@ export const illustration: Project[] = [
 ]
 
 export const videography: Project[] = [
-  // TODO: 360 Video from Immersive Media
+  {
+    date: `Sept '21`,
+    medium: 'Premiere',
+    description: `Immersive short comedy featuring the Cha Cha Slide by DJ Casper`,
+    coverImageSrc: 'GetFunky_Cover.png',
+    videoSrcs: [
+      '713918755'
+    ]
+  },
   {
     date: `Sept '18`,
     medium: 'Premiere',

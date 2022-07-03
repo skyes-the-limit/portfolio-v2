@@ -12,7 +12,7 @@ type ProjectDetailsProps = {
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { imageSrcs = [], videoSrcs = [], github, collab } = project
   const [selectedIndex, setSelectedIndex] = useState(0)
-  // setSelectedindex(0) // TODO
+  // TODO: Videos should come first
 
   return (
     <div>

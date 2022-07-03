@@ -13,22 +13,22 @@ export const primaryCategories: Category[] = [
   {
     path: '/general-3d',
     title: 'General 3D',
-    description: 'General 3D modeling projects, often with a focus on environment design. Typically using Maya, Substance Painter, UE4.',
-    coverImageSrc: 'https://source.unsplash.com/random/300x300/?1',
+    description: 'General 3D modeling projects, often with a focus on environment design.',
+    coverImageSrc: 'BorealAurora_cover.png',
     content: general3d
   },
   {
     path: '/tech-art',
     title: 'Technical Art',
-    description: 'Generative assets and special effects work. Largely made with SideFX Houdini.',
-    coverImageSrc: 'https://source.unsplash.com/random/300x300/?2',
+    description: 'Generative assets and special effects work.',
+    coverImageSrc: 'VellumDance_cover.png',
     content: techArt
   },
   {
     path: '/software-dev',
     title: 'Software Development',
     description: 'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
-    coverImageSrc: 'https://source.unsplash.com/random/300x300/?3',
+    coverImageSrc: '2020-04-07 Toastweb Digital Presence Preview.png',
     content: softwareDev
   }
 ]
@@ -38,28 +38,28 @@ export const secondaryCategories: Category[] = [
     path: '/creative-coding',
     title: 'Creative Coding',
     description: '',
-    coverImageSrc: 'https://source.unsplash.com/random/200x300/?1',
+    coverImageSrc: '2019-07-14 Generative Tessellations Preview.png',
     content: creativeCoding
   },
   {
     path: '/illustration',
     title: 'Illustration',
     description: '',
-    coverImageSrc: 'https://source.unsplash.com/random/200x300/?3',
+    coverImageSrc: '2017-11-20 Patterns Preview.png',
     content: illustration
   },
   {
     path: '/videography',
     title: 'Videography',
     description: '',
-    coverImageSrc: 'https://source.unsplash.com/random/200x300/?4',
+    coverImageSrc: 'GetFunky_Cover.png',
     content: videography
   },
   {
     path: '/motion-graphics',
     title: 'Motion Graphics',
     description: '',
-    coverImageSrc: 'https://source.unsplash.com/random/200x300/?2',
+    coverImageSrc: '2018-11-07 Edutainment Preview.png',
     content: motionGraphics
   }
 ]
