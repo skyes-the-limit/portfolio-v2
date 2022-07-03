@@ -57,16 +57,6 @@ export const general3d: Project[] = [
     coverImageSrc: 'Pangolin_cover.png',
     videoSrcs: ['726303946', '726302583']
   },
-  // {
-  //   date: `Dec '19`,
-  //   medium: 'Maya',
-  //   description: 'Self portrait model.',
-  //   coverImageSrc: '2019-12-12 Self Portrait Preview.png',
-  //   imageSrcs: [
-  //     '2019-12-12 Self Portrait (1).gif',
-  //     '2019-12-12 Self Portrait (2).gif'
-  //   ]
-  // },
   {
     date: `Nov '19`,
     medium: 'Maya',
@@ -114,45 +104,27 @@ export const techArt: Project[] = [
 ]
 
 export const softwareDev: Project[] = [
-  // Project work from graphics, software engineering, and web dev
   {
-    date: `Apr '20`,
-    medium: 'React.JS',
-    description: 'Web tool for restaurants to manage their digital presence.',
-    coverImageSrc: '2020-04-07 Toastweb Digital Presence Preview.png',
+    date: `Apr '22`,
+    medium: 'MongoDB, Node.js, React.js',
+    description: 'Fullstack web application for writing parodies of songs. Integrates with Genius API.',
+    coverImageSrc: 'ParodyParty_home.png',
     imageSrcs: [
-      '2020-04-07 Toastweb Digital Presence (1).png',
-      '2020-04-07 Toastweb Digital Presence (2).png'
+      'ParodyParty_home.png', 'ParodyParty_search.png', 'ParodyParty_result.png', 'ParodyParty_login.png', 'ParodyParty_account.png'
     ]
   },
   {
-    date: `Mar '20`,
-    medium: 'Swift',
-    description: 'Contributions to the Toast Takeout iOS app, including contactless delivery, curbside pickup, confirmation screen order map, and delivery feedback.',
-    coverImageSrc: '2020-03-20 Toast Takeout Preview.png',
-    imageSrcs: [
-      '2020-03-20 Toast Takeout (1).png',
-      '2020-03-20 Toast Takeout (2).png',
-      '2020-03-20 Toast Takeout (3).png',
-      '2020-03-20 Toast Takeout (4).png',
-      '2020-03-20 Toast Takeout (5).png'
-    ]
-  },
-  {
-    date: `Jan '20`,
-    medium: 'React.JS',
-    description: 'Web tool for configuring Toast Drop Points.',
-    coverImageSrc: '2020-01-14 Outpost Config Admin Preview.png',
-    imageSrcs: [
-      '2020-01-14 Outpost Config Admin (1).png',
-      '2020-01-14 Outpost Config Admin (2).png',
-      '2020-01-14 Outpost Config Admin (3).png',
-      '2020-01-14 Outpost Config Admin (4).png'
+    date: `Dec '21`,
+    medium: 'C++',
+    description: 'Application for collaborative painting. Private Github repo available on request with professor approval.',
+    coverImageSrc: 'CollaborativeDrawing_cover.png',
+    videoSrcs: [
+      '726526677'
     ]
   },
   {
     date: `Dec '19`,
-    medium: 'NativeScript.JS',
+    medium: 'NativeScript.js',
     description: 'Prototype for a social event planning app.',
     coverImageSrc: '2019-12-14 You In Preview.png',
     imageSrcs: [
@@ -168,32 +140,6 @@ export const softwareDev: Project[] = [
     ],
     collab: 'Shravya Raj, Clara Kim & Sunny Lee',
     github: 'you-in'
-  },
-  {
-    date: `Jun '19`,
-    medium: 'Java\u3000|\u3000Vue.JS',
-    description: 'Internal tool designed and implemented during co-op at Chewy for managing their Ship Route data.',
-    coverImageSrc: '2019-06-28 Ship Route Manager Preview.png',
-    imageSrcs: [
-      '2019-06-28 Ship Route Manager (1).png',
-      '2019-06-28 Ship Route Manager (2).png',
-      '2019-06-28 Ship Route Manager (3).png',
-      '2019-06-28 Ship Route Manager (4).png',
-      '2019-06-28 Ship Route Manager (5).png',
-      '2019-06-28 Ship Route Manager (6).png',
-      '2019-06-28 Ship Route Manager (7).png',
-      '2019-06-28 Ship Route Manager (8).png',
-      '2019-06-28 Ship Route Manager (9).png',
-      '2019-06-28 Ship Route Manager (10).png',
-      '2019-06-28 Ship Route Manager (11).png',
-      '2019-06-28 Ship Route Manager (12).png',
-      '2019-06-28 Ship Route Manager (13).png',
-      '2019-06-28 Ship Route Manager (14).png',
-      '2019-06-28 Ship Route Manager (15).png',
-      '2019-06-28 Ship Route Manager (16).png',
-      '2019-06-28 Ship Route Manager (17).png',
-      '2019-06-28 Ship Route Manager (18).png'
-    ]
   },
   {
     date: `Dec '18`,
@@ -217,7 +163,16 @@ export const softwareDev: Project[] = [
 ]
 
 export const creativeCoding: Project[] = [
-  // TODO: Graphics project
+  {
+    date: `Dec '20`,
+    medium: 'Three.js',
+    description: 'Web-based graphics project utilizing IBM Watson Tone Analyzer API.',
+    coverImageSrc: 'EmotionVisualizer_cover.png',
+    imageSrcs: [
+      'EmotionVisualizer_form.png', 'EmotionVisualizer_explanation.png'
+    ],
+    github: 'GraphicsFinalProject'
+  },
   {
     date: `Jul '19`,
     medium: 'Processing',

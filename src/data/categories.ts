@@ -9,7 +9,6 @@ export type Category = {
   content: Project[]
 }
 
-// TODO: Add real cover images
 export const primaryCategories: Category[] = [
   {
     path: '/general-3d',
@@ -29,7 +28,7 @@ export const primaryCategories: Category[] = [
     path: '/software-dev',
     title: 'Software Development',
     description: 'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
-    coverImageSrc: '2020-04-07 Toastweb Digital Presence Preview.png',
+    coverImageSrc: 'ParodyParty_home.png',
     content: softwareDev
   }
 ]
