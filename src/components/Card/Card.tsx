@@ -68,6 +68,7 @@ const Card = ({ variant, card }: CardProps) => {
         </div>
         {seeMoreSrc && (
           <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'>
+            {/* TODO: Navigate to top of page */}
             <Link to={seeMoreSrc}>See More</Link>
           </p>
         )}
