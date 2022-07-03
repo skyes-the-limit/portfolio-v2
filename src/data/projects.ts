@@ -6,8 +6,10 @@ export type Project = {
   coverImagePosition?: 'object-center' | 'object-bottom',
   imageSrcs?: string[],
   videoSrcs?: string[],
-  github?: string,
-  collab?: string
+  links?: {
+    displayText: string,
+    href: string
+  }[]
 }
 
 // TODO: convert animated .gifs to looping videos, and images to .webp
@@ -111,6 +113,16 @@ export const softwareDev: Project[] = [
     coverImageSrc: 'ParodyParty_home.png',
     imageSrcs: [
       'ParodyParty_home.png', 'ParodyParty_search.png', 'ParodyParty_result.png', 'ParodyParty_login.png', 'ParodyParty_account.png'
+    ],
+    links: [
+      {
+        displayText: 'View the frontend on Github!',
+        href: 'https://github.com/skyes-the-limit/parody-party-web'
+      },
+      {
+        displayText: 'View the backend on Github!',
+        href: 'https://github.com/skyes-the-limit/parody-party-server'
+      }
     ]
   },
   {
@@ -138,8 +150,10 @@ export const softwareDev: Project[] = [
       '2019-12-14 You In (8).jpg',
       '2019-12-14 You In (9).jpg'
     ],
-    collab: 'Shravya Raj, Clara Kim & Sunny Lee',
-    github: 'you-in'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/you-in'
+    }]
   },
   {
     date: `Dec '18`,
@@ -149,7 +163,10 @@ export const softwareDev: Project[] = [
     imageSrcs: [
       '2018-12-13 Animator.png'
     ],
-    github: 'animator'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/animator'
+    }]
   },
   {
     date: `Mar '18`,
@@ -171,7 +188,10 @@ export const creativeCoding: Project[] = [
     imageSrcs: [
       'EmotionVisualizer_form.png', 'EmotionVisualizer_explanation.png'
     ],
-    github: 'GraphicsFinalProject'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/GraphicsFinalProject'
+    }]
   },
   {
     date: `Jul '19`,
@@ -186,7 +206,10 @@ export const creativeCoding: Project[] = [
       '2019-07-29 Simple Image Processing (5).png',
       '2019-07-29 Simple Image Processing (6).png'
     ],
-    github: 'creative-coding/tree/master/OutsideData'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/OutsideData'
+    }]
   },
   {
     date: `Jul '19`,
@@ -206,8 +229,10 @@ export const creativeCoding: Project[] = [
       '353297101',
       '355991818'
     ],
-    collab: 'Kriti Gurubacharya & Maggie Van Nortwick',
-    github: 'creative-coding/tree/master/FacadePortal'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/FacadePortal'
+    }]
   },
   {
     date: `Jul '19`,
@@ -225,7 +250,10 @@ export const creativeCoding: Project[] = [
     videoSrcs: [
       '353274180'
     ],
-    github: 'creative-coding/tree/master/GenerativeDesign'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/GenerativeDesign'
+    }]
   },
   {
     date: `Jul '19`,
@@ -250,7 +278,10 @@ export const creativeCoding: Project[] = [
     videoSrcs: [
       '356239943'
     ],
-    github: 'creative-coding/tree/master/DrawingMachine'
+    links: [{
+      displayText: 'View it on Github!',
+      href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/creative-coding/tree/master/DrawingMachine'
+    }]
   }
 ]
 
@@ -263,8 +294,7 @@ export const motionGraphics: Project[] = [
     coverImagePosition: 'object-bottom',
     videoSrcs: [
       '354709668'
-    ],
-    collab: 'Ryan Nuz & Raveena Jain'
+    ]
   },
   {
     date: `Mar '19`,
@@ -367,8 +397,7 @@ export const videography: Project[] = [
     coverImagePosition: 'object-center',
     videoSrcs: [
       '352083851'
-    ],
-    collab: 'Ryan Nuz & Raveena Jain'
+    ]
   },
   {
     date: `Sept '18`,

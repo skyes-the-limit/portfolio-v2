@@ -10,7 +10,7 @@ type ProjectDetailsProps = {
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { imageSrcs = [], videoSrcs = [], github, collab } = project
+  const { imageSrcs = [], videoSrcs = [] } = project
   const [selectedIndex, setSelectedIndex] = useState(0)
   // TODO: Videos should come first
 
@@ -35,14 +35,6 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             }}
           />
         </div>
-      )}
-
-      {github && (
-        <p>Github: {github}</p>
-      )}
-
-      {collab && (
-        <p>Made in collaboration with {collab}</p>
       )}
 
       {imageSrcs && imageSrcs.map((src, index) => {

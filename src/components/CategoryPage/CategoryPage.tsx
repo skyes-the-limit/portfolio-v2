@@ -11,6 +11,7 @@ type CategoryProps = {
 const CategoryPage = ({ category }: CategoryProps) => {
   const { title, content } = category
   const cards = content.map(project => {
+    // TODO: Append links from the project after the description
     return {
       header: '',
       subheader: project.date,

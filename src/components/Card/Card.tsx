@@ -57,6 +57,7 @@ const Card = ({ variant, card }: CardProps) => {
           <div className='flex flex-col justify-between px-6'>
             {overline && (
               <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>
+                {/* TODO: Restyle as badges */}
                 <span className='text-sky-400'>{overline}</span>
                 {subheader && (
                   <span className='text-gray-400'>{subheader}</span>
