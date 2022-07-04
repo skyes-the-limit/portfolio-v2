@@ -21,6 +21,11 @@ module.exports = {
       serif: ['Merriweather', 'serif']
     }
   },
+  safelist: [
+    {
+      pattern: /h-(2|4|6|10|12|14|16)/
+    }
+  ],
   variants: {},
   plugins: []
 }
