@@ -11,10 +11,17 @@ type Link = {
 const links: Link[] = [
   {
     logoSrcs: ['ArtStation-logo-horizontal-dark.svg'],
-    logoHeight: 'h-14',
-    paddingY: 'py-3',
+    logoHeight: 'h-16',
+    paddingY: 'py-2',
     buttonColor: '#171717',
     href: 'https://www.artstation.com/skyes-the-limit'
+  },
+  {
+    logoSrcs: ['Gumroad_logo.svg'],
+    logoHeight: 'h-6',
+    paddingY: 'py-7',
+    buttonColor: '#ff90e8',
+    href: 'https://skyesthelimit.gumroad.com/'
   },
   {
     logoSrcs: ['Instagram_Glyph_Gradient_RGB.svg', 'Instagram_wordmark.svg'],
@@ -22,13 +29,6 @@ const links: Link[] = [
     paddingY: 'py-4',
     buttonColor: '#ffffff',
     href: 'https://www.instagram.com/skye.makes.cgi/'
-  },
-  {
-    logoSrcs: ['gumroadLogo.svg'],
-    logoHeight: 'h-6',
-    paddingY: 'py-7',
-    buttonColor: '#ff90e8',
-    href: 'https://skyesthelimit.gumroad.com/'
   },
   {
     logoSrcs: ['vimeo_logo_blue.svg'],
