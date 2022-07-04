@@ -1,15 +1,14 @@
 import React from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
+import Download from '../../assets/icons/download.svg'
 
 const Resume = () => {
+  const pdfSrc = require('../../assets/docs/SkyeBishop_Resume.pdf')
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
   return (
     <div>
-      <Document
-        className='drop-shadow-2xl'
-        file={require('../../assets/docs/SkyeBishop_Resume.pdf')}
-      >
+      <Document className='drop-shadow-2xl' file={pdfSrc}>
         <Page
           className='rounded-md overflow-hidden'
           pageNumber={1}
@@ -17,12 +16,15 @@ const Resume = () => {
           width={768}
         />
       </Document>
-      <button
-        type='button'
-        className='px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100'
-      >
-        Border
-      </button>
+      <a href={pdfSrc} target='blank' rel='noopener noreferrer'>
+        <button
+          type='button'
+          className='flex mt-4 mx-auto items-center px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100'
+        >
+          <img src={Download} className='inline mr-2 h-4 w-4' />
+          Download Resume
+        </button>
+      </a>
     </div>
   )
 }
