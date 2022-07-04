@@ -36,7 +36,7 @@ const icons: Icon[] = [
 
 const IconLink = ({ title, logoSrc, href }: Icon) => {
   return (
-    <a target='_blank' rel='noopener noreferrer' href={href} title={title} className='flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-900'>
+    <a target='_blank' rel='noopener noreferrer' href={href} title={title} className='flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-900 hover:bg-gray-700'>
       <img
         className='w-4 h-4'
         src={logoSrc}

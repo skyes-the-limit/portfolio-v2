@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className='bg-gray-800 text-gray-100'>
+      <div className='bg-gray-800 text-gray-100 font-sans'>
         <Header />
         <Routes>
           <Route index element={<HomePage />} />

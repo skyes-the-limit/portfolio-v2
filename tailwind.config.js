@@ -17,8 +17,8 @@ module.exports = {
       gray: colors.gray
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
-      serif: ['Merriweather', 'serif']
+      sans: ['Montserrat', 'sans-serif'],
+      serif: ['serif']
     }
   },
   variants: {},
