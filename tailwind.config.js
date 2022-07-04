@@ -18,7 +18,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
-      serif: ['serif']
+      serif: ['Zilla+Slab serif']
     }
   },
   variants: {},
