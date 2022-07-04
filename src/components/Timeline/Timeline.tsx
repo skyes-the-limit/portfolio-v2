@@ -10,32 +10,32 @@ const events: Event[] = [
   {
     title: 'Toast',
     date: 'January 2021 - Present',
-    description: 'I currently work on Toast\'s "Mobile Dining Solutions" team, responsible for the Order and Pay at Table, Scan to Pay, and Digital Menus products. I primarily work as a React developer, though I sometimes take design projects on as well.'
+    description: 'Software Engineer I on the Mobile Dining Solutions team, responsible for the Order and Pay at Table, Scan to Pay, and Digital Menus products. Primarily focused on frontend dev in React, sometimes flexing towards design as well.'
   },
   {
     title: 'Cuseum',
     date: 'April 2020 - June 2020',
-    description: 'TODO'
+    description: 'Software developer internship focused on rapid prototyping for new ventures. Worked in Flutter and Vue.'
   },
   {
     title: 'Toast',
     date: 'January 2020 - April 2020',
-    description: 'TODO'
+    description: 'Software Engineer co-op focused on new ventures within Digital Ordering, including Toast Outposts and first-party delivery. Worked in React, Swift and Kotlin.'
   },
   {
     title: 'Chewy',
     date: 'January 2019 - June 2019',
-    description: 'TODO'
+    description: 'Software Engineer co-op on the Fulfillment Planning team. Developed the Ship Route Manager project from start to finish, working in PostgreSQL, Java, and Vue.'
   },
   {
-    title: 'Digital Fabrication Assistant with CAMD',
+    title: 'CAMD\'s Makerspace',
     date: 'October 2018 - December 2020',
-    description: 'This is also a cool thing that I did that feels maybe worthy'
+    description: 'Worked part-time as a Digital Fabrication Assistant for Northeastern\'s College of Arts, Media, and Design, assisting students with laser cutting and 3D printing projects.'
   },
   {
-    title: 'Undergraduate Study at Northeastern University',
+    title: 'Northeastern University',
     date: 'September 2017 - May 2022',
-    description: 'Graduated with a BS in Computer Science / Media Arts (Animation). During this time I completed 3 software engineering co-ops for a total of 20 months of full-time experience, with an additional 8 months of part-time work.'
+    description: 'Bachelor of Science in Computer Science / Media Arts (Animation), graduated cum laude.'
   }
 ]
 
