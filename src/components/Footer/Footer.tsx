@@ -1,8 +1,8 @@
 import React from 'react'
 
 type Icon = {
-  title: string,
-  logoSrc: string,
+  title: string
+  logoSrc: string
   href: string
 }
 
@@ -41,11 +41,14 @@ const icons: Icon[] = [
 
 const IconLink = ({ title, logoSrc, href }: Icon) => {
   return (
-    <a target='_blank' rel='noopener noreferrer' href={href} title={title} className='flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-900 hover:bg-gray-700'>
-      <img
-        className='w-4 h-4'
-        src={logoSrc}
-      />
+    <a
+      target='_blank'
+      rel='noopener noreferrer'
+      href={href}
+      title={title}
+      className='flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-900 hover:bg-gray-700'
+    >
+      <img className='w-4 h-4' src={logoSrc} />
     </a>
   )
 }
@@ -54,13 +57,16 @@ const Footer = () => {
   return (
     <footer className='bg-gray-800 text-gray-50'>
       <div className='container flex justify-between items-center p-4 mx-auto md:p-8 lg:flex-row divide-gray-400'>
-        <div className='text-gray-400'>
-          © All rights reserved
-        </div>
+        <div className='text-gray-400'>© All rights reserved</div>
         <div className='flex flex-col justify-center pt-6 lg:pt-0'>
           <div className='flex justify-center space-x-4'>
-            {icons.map(icon => (
-              <IconLink key={icon.title} title={icon.title} logoSrc={require(`../../assets/icons/${icon.logoSrc}`)} href={icon.href} />
+            {icons.map((icon) => (
+              <IconLink
+                key={icon.title}
+                title={icon.title}
+                logoSrc={require(`../../assets/icons/${icon.logoSrc}`)}
+                href={icon.href}
+              />
             ))}
           </div>
         </div>

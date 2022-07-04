@@ -8,24 +8,33 @@ import Modal from '../Modal/Modal'
 import './Card.css'
 
 export type CardInfo = {
-  header: string,
-  subheader?: string,
-  overline?: string,
-  description: string,
-  imageSrc: string,
+  header: string
+  subheader?: string
+  overline?: string
+  description: string
+  imageSrc: string
   imageObjectPos?: string
-  seeMoreSrc?: string,
+  seeMoreSrc?: string
   details?: React.ReactElement // TODO: If onClick truthy, add a hover effect to the image. Place details within Modal.
 }
 
 export type CardProps = {
-  variant: Variant,
+  variant: Variant
   card: CardInfo
 }
 
 const Card = ({ variant, card }: CardProps) => {
   const [showModal, setShowModal] = useState(false)
-  const { header, subheader, overline, description, imageSrc, imageObjectPos, seeMoreSrc, details } = card
+  const {
+    header,
+    subheader,
+    overline,
+    description,
+    imageSrc,
+    imageObjectPos,
+    seeMoreSrc,
+    details
+  } = card
   const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
@@ -47,12 +56,17 @@ const Card = ({ variant, card }: CardProps) => {
 
       <div
         className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'
-        onClick={() => details ? setShowModal(true) : undefined}
+        onClick={() => (details ? setShowModal(true) : undefined)}
       >
         <div className='overlay flex flex-col space-y-6'>
           <img
             src={imageSrc}
-            className={cx('overlay', 'object-cover w-full rounded-t-md bg-gray-500 cursor-pointer', imgHeight(), imageObjectPos || 'object-top')}
+            className={cx(
+              'overlay',
+              'object-cover w-full rounded-t-md bg-gray-500 cursor-pointer',
+              imgHeight(),
+              imageObjectPos || 'object-top'
+            )}
           />
           <div className='flex flex-col justify-between px-6'>
             {overline && (

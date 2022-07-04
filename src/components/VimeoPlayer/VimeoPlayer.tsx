@@ -14,10 +14,15 @@ const VimeoPlayer = ({ id }: VimeoPlayerProps) => {
           frameBorder='0'
           allow='autoplay; fullscreen; picture-in-picture'
           allowFullScreen
-          style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+          style={{
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: '100%',
+            height: '100%'
+          }}
           title='Animatic'
-        >
-        </iframe>
+        ></iframe>
       </div>
       <script src='https://player.vimeo.com/api/player.js' />
     </div>

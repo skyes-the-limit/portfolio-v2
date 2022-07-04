@@ -1,10 +1,10 @@
 import React from 'react'
 
 type Link = {
-  logoSrcs: string[],
-  logoHeight: string,
-  paddingY: string,
-  buttonColor: string,
+  logoSrcs: string[]
+  logoHeight: string
+  paddingY: string
+  buttonColor: string
   href: string
 }
 
@@ -59,29 +59,30 @@ const LinkFarm = () => {
     // TODO: Figure out why w-fit isn't recognized by tailwind
     <div className='mx-auto' style={{ width: 'fit-content' }}>
       <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-2 md:grid-cols-3'>
-        {links && links.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            target='_blank'
-            rel='noopener noreferrer'
-            style={{ width: 'fit-content' }}
-          >
-            <button
-              type='button'
-              className={`flex justify-center w-60 px-8 ${link.paddingY} space-x-2 font-semibold text-lg rounded-md`}
-              style={{ backgroundColor: link.buttonColor }}
+        {links &&
+          links.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ width: 'fit-content' }}
             >
-              {link.logoSrcs.map(src => (
-                <img
-                  key={src}
-                  src={require(`../../assets/icons/${src}`)}
-                  className={`inline-block ${link.logoHeight}`}
-                />
-              ))}
-            </button>
-          </a>
-        ))}
+              <button
+                type='button'
+                className={`flex justify-center w-60 px-8 ${link.paddingY} space-x-2 font-semibold text-lg rounded-md`}
+                style={{ backgroundColor: link.buttonColor }}
+              >
+                {link.logoSrcs.map((src) => (
+                  <img
+                    key={src}
+                    src={require(`../../assets/icons/${src}`)}
+                    className={`inline-block ${link.logoHeight}`}
+                  />
+                ))}
+              </button>
+            </a>
+          ))}
       </div>
     </div>
   )

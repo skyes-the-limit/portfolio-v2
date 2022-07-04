@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 
 type ModalProps = {
-  title: string,
-  setShowModal: Function,
+  title: string
+  setShowModal: Function
   children?: React.ReactNode
 }
 
@@ -32,24 +32,30 @@ const Modal = ({ title, setShowModal, children }: ModalProps) => {
         <div className='z-30 relative w-auto pointer-events-auto'>
           <div className='z-30 modal-content border-none shadow-lg relative flex flex-col w-full bg-clip-padding rounded-md outline-none bg-gray-800 text-gray-100'>
             <div className='modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-700 rounded-t-md'>
-              <h2 className='text-xl font-medium tracking-wide'>
-                {title}
-              </h2>
+              <h2 className='text-xl font-medium tracking-wide'>{title}</h2>
               <button
                 type='button'
                 className='w-6 h-6 z-30 cursor-pointer pointer-events-auto'
                 aria-label='Close'
                 onClick={() => setShowModal(false)}
               >
-                <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                >
                   <line x1='18' y1='6' x2='6' y2='18' />
                   <line x1='6' y1='6' x2='18' y2='18' />
                 </svg>
               </button>
             </div>
-            <div className='modal-body relative p-4'>
-              {children}
-            </div>
+            <div className='modal-body relative p-4'>{children}</div>
           </div>
         </div>
       </div>

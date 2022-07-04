@@ -19,9 +19,14 @@ const App = () => {
         <Header />
         <Routes>
           <Route index element={<HomePage />} />
-          {categories && categories.map(category => (
-            <Route key={category.path} path={category.path} element={<CategoryPage category={category} />} />
-          ))}
+          {categories &&
+            categories.map((category) => (
+              <Route
+                key={category.path}
+                path={category.path}
+                element={<CategoryPage category={category} />}
+              />
+            ))}
           <Route path='about' element={<AboutPage />} />
         </Routes>
         <Footer />
