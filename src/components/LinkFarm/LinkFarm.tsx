@@ -60,7 +60,7 @@ const LinkFarm = () => {
               {link.logoSrcs.map(src => (
                 <img
                   key={src}
-                  src={require(`../../assets/${src}`)}
+                  src={require(`../../assets/icons/${src}`)}
                   className={`inline-block ${link.logoHeight}`}
                 />
               ))}

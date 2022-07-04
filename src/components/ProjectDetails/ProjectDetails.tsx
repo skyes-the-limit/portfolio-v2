@@ -41,7 +41,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         return (
           <img
             key={`image-${index}`}
-            src={require(`../../assets/${src}`)}
+            src={require(`../../assets/projects/${src}`)}
             className={index === selectedIndex ? '' : 'hidden'}
             style={{ maxHeight: '70vh' }}
           />

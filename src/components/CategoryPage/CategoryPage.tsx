@@ -17,7 +17,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
       subheader: project.date,
       overline: project.medium,
       description: project.description,
-      imageSrc: require(`../../assets/${project.coverImageSrc}`),
+      imageSrc: require(`../../assets/projects/${project.coverImageSrc}`),
       imageObjectPos: project.coverImagePosition,
       seeMoreSrc: '',
       details: <ProjectDetails project={project} />

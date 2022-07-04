@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <Document
       className='w-fit mx-auto drop-shadow-2xl'
-      file={require('../../assets/SkyeBishop_Resume.pdf')}
+      file={require('../../assets/docs/SkyeBishop_Resume.pdf')}
     >
       <Page
         className='rounded-md overflow-hidden'

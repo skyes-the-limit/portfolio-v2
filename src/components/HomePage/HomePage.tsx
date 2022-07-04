@@ -7,11 +7,11 @@ import { CardInfo } from '../Card/Card'
 import { primaryCategories, secondaryCategories } from '../../data/categories'
 
 const primaryCards: CardInfo[] = primaryCategories.map(category => {
-  return { ...category, header: category.title, imageSrc: require(`../../assets/${category.coverImageSrc}`), imageObjectPos: category.coverImagePosition, seeMoreSrc: category.path }
+  return { ...category, header: category.title, imageSrc: require(`../../assets/projects/${category.coverImageSrc}`), imageObjectPos: category.coverImagePosition, seeMoreSrc: category.path }
 })
 
 const secondaryCards: CardInfo[] = secondaryCategories.map(category => {
-  return { ...category, header: category.title, imageSrc: require(`../../assets/${category.coverImageSrc}`), imageObjectPos: category.coverImagePosition, seeMoreSrc: category.path }
+  return { ...category, header: category.title, imageSrc: require(`../../assets/projects/${category.coverImageSrc}`), imageObjectPos: category.coverImagePosition, seeMoreSrc: category.path }
 })
 
 const HomePage = () => {
