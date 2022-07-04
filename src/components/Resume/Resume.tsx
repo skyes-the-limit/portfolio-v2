@@ -19,7 +19,7 @@ const Resume = () => {
       <a href={pdfSrc} target='blank' rel='noopener noreferrer'>
         <button
           type='button'
-          className='flex mt-4 mx-auto items-center px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100'
+          className='flex mt-4 mx-auto items-center px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100'
         >
           <img src={Download} className='inline mr-2 h-4 w-4' />
           Download Resume

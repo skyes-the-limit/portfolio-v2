@@ -3,6 +3,7 @@ import React from 'react'
 type Event = {
   title: string
   date: string
+  badges: string[]
   description: string
 }
 
@@ -10,36 +11,42 @@ const events: Event[] = [
   {
     title: 'Toast',
     date: 'January 2021 - Present',
+    badges: ['React', 'Figma'],
     description:
-      'Software Engineer I on the Mobile Dining Solutions team, responsible for the Order and Pay at Table, Scan to Pay, and Digital Menus products. Primarily focused on frontend dev in React, sometimes flexing towards design as well.'
+      'Software Engineer I on the Mobile Dining Solutions team, responsible for the Order and Pay at Table, Scan to Pay, and Digital Menus products. Primarily focused on frontend development, sometimes flexing towards design as well.'
   },
   {
     title: 'Cuseum',
     date: 'April 2020 - June 2020',
+    badges: ['Flutter', 'Vue'],
     description:
-      'Software developer internship focused on rapid prototyping for new ventures. Worked in Flutter and Vue.'
+      'Software developer internship focused on rapid prototyping for new ventures.'
   },
   {
     title: 'Toast',
     date: 'January 2020 - April 2020',
+    badges: ['React', 'Swift', 'Kotlin'],
     description:
-      'Software Engineer co-op focused on new ventures within Digital Ordering, including Toast Outposts and first-party delivery. Worked in React, Swift and Kotlin.'
+      'Software engineering co-op focused on new ventures within Digital Ordering, including Toast Outposts and first-party delivery.'
   },
   {
     title: 'Chewy',
     date: 'January 2019 - June 2019',
+    badges: ['PostgreSQL', 'Java', 'Vue'],
     description:
-      'Software Engineer co-op on the Fulfillment Planning team. Developed the Ship Route Manager project from start to finish, working in PostgreSQL, Java, and Vue.'
+      'Software engineering co-op with the Fulfillment Planning team. Worked independently to develop full-stack project from start to finish.'
   },
   {
     title: "CAMD's Makerspace",
     date: 'October 2018 - December 2020',
+    badges: [],
     description:
       "Worked part-time as a Digital Fabrication Assistant for Northeastern's College of Arts, Media, and Design, assisting students with laser cutting and 3D printing projects."
   },
   {
     title: 'Northeastern University',
     date: 'September 2017 - May 2022',
+    badges: [],
     description:
       'Bachelor of Science in Computer Science / Media Arts (Animation), graduated cum laude.'
   }
@@ -57,9 +64,21 @@ const Timeline = () => {
                   key={index}
                   className='flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-400'
                 >
-                  <h3 className='text-xl font-semibold tracking-wide'>
-                    {event.title}
-                  </h3>
+                  <div className='flex flex-row justify-between'>
+                    <h3 className='text-2xl font-semibold tracking-wide font-serif'>
+                      {event.title}
+                    </h3>
+                    <div className='flex space-x-4'>
+                      {event.badges.map((badge, index) => (
+                        <span
+                          key={index}
+                          className='flex items-center px-3 border rounded-md text-gray-100 text-xs font-medium tracking-wide'
+                        >
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   <time className='text-xs tracking-wide uppercase text-gray-400'>
                     {event.date}
                   </time>
