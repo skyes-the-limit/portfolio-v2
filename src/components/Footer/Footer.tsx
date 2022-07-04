@@ -31,6 +31,11 @@ const icons: Icon[] = [
     title: 'LinkedIn',
     logoSrc: 'LinkedIn_Icon_white.svg',
     href: 'https://www.linkedin.com/in/skye-bishop-854212172/'
+  },
+  {
+    title: 'Github',
+    logoSrc: 'github_mark_white.svg',
+    href: 'https://github.com/skyes-the-limit'
   }
 ]
 
