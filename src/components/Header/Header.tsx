@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/icons/logo.svg'
 
 const Header = () => {
   return (
-    <header className='fixed flex justify-between h-16 w-screen p-4 bg-gray-900 bg-opacity-80'>
+    <header className='fixed flex justify-between h-16 w-screen p-4 bg-gray-900 bg-opacity-80 z-10'>
       <NavLink
         to='/'
         aria-label='Back to homepage'

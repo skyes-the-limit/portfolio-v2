@@ -5,11 +5,15 @@ import Card, { CardInfo } from '../Card/Card'
 
 export enum Variant {
   // eslint-disable-next-line no-unused-vars
-  Small, Medium, Large
+  Small,
+  // eslint-disable-next-line no-unused-vars
+  Medium,
+  // eslint-disable-next-line no-unused-vars
+  Large
 }
 
 export interface GridProps {
-  variant: Variant,
+  variant: Variant
   cards: CardInfo[]
 }
 
@@ -27,13 +31,10 @@ const Grid = ({ variant, cards }: GridProps) => {
 
   return (
     <div className={cx('grid gap-8', gridClassNames())}>
-      {cards && cards.map((card, index) => (
-        <Card
-          key={index}
-          variant={variant}
-          card={card}
-        />
-      ))}
+      {cards &&
+        cards.map((card, index) => (
+          <Card key={index} variant={variant} card={card} />
+        ))}
     </div>
   )
 }

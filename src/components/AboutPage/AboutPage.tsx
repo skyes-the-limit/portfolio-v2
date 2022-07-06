@@ -1,12 +1,25 @@
 import React from 'react'
+import ContactForm from '../ContactForm/ContactForm'
+import LinkFarm from '../LinkFarm/LinkFarm'
+import Resume from '../Resume/Resume'
+// import ArtistsStatement from '../ArtistsStatement/ArtistsStatement'
+// import Sidebar from '../Sidebar/Sidebar'
+import Timeline from '../Timeline/Timeline'
 
 const AboutPage = () => {
   return (
-    <div className='container pt-16 px-6 mx-auto' style={{ minHeight: 'calc(100vh - 136px)' }}>
-      <h1>About</h1>
-      <h2>Timeline</h2>
-      <h2>Resume?</h2>
-      <h2>Artist&apos;s Statement</h2>
+    <div>
+      {/* <Sidebar /> */}
+      <div
+        className='flex flex-col space-y-12 container pt-24 pb-4 mx-auto w-[768px]'
+        style={{ minHeight: 'calc(100vh - 136px)' }}
+      >
+        <LinkFarm />
+        <Timeline />
+        <Resume />
+        <ContactForm />
+        {/* <ArtistsStatement /> */}
+      </div>
     </div>
   )
 }

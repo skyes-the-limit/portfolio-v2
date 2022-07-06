@@ -29,7 +29,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           <label
             className='carouselControl carouselControl__forward'
             onClick={() => {
-              selectedIndex >= (imageSrcs.length + videoSrcs.length - 1)
+              selectedIndex >= imageSrcs.length + videoSrcs.length - 1
                 ? setSelectedIndex(0)
                 : setSelectedIndex(selectedIndex + 1)
             }}
@@ -37,19 +37,23 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </div>
       )}
 
-      {imageSrcs && imageSrcs.map((src, index) => {
-        return (
-          <img
-            key={`image-${index}`}
-            src={require(`../../assets/${src}`)}
-            className={index === selectedIndex ? '' : 'hidden'}
-            style={{ maxHeight: '70vh' }}
-          />
-        )
-      })}
+      {imageSrcs &&
+        imageSrcs.map((src, index) => {
+          return (
+            <img
+              key={`image-${index}`}
+              src={require(`../../assets/projects/${src}`)}
+              className={index === selectedIndex ? '' : 'hidden'}
+              style={{ maxHeight: '70vh' }}
+            />
+          )
+        })}
 
-      {(selectedIndex > imageSrcs.length - 1) && (
-        <VimeoPlayer key={`video-${selectedIndex}`} id={videoSrcs[selectedIndex - imageSrcs.length]} />
+      {selectedIndex > imageSrcs.length - 1 && (
+        <VimeoPlayer
+          key={`video-${selectedIndex}`}
+          id={videoSrcs[selectedIndex - imageSrcs.length]}
+        />
       )}
     </div>
   )

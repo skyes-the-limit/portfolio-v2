@@ -17,24 +17,20 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "rules": {
-    "quotes": [
-      "error",
-      "single",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
-    "jsx-quotes": [
-      "error",
-      "prefer-single"
-    ]
+    "prettier/prettier": "error",
+    "indent": "off",
+    "multiline-ternary": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "JSX": "readonly"
   }
 }

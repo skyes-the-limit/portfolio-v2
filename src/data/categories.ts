@@ -1,11 +1,20 @@
-import { Project, general3d, techArt, softwareDev, creativeCoding, motionGraphics, illustration, videography } from './projects'
+import {
+  Project,
+  general3d,
+  techArt,
+  softwareDev,
+  creativeCoding,
+  motionGraphics,
+  illustration,
+  videography
+} from './projects'
 
 export type Category = {
-  path: string,
-  title: string,
-  description: string,
-  coverImageSrc: string,
-  coverImagePosition?: 'object-center' | 'object-bottom',
+  path: string
+  title: string
+  description: string
+  coverImageSrc: string
+  coverImagePosition?: 'object-center' | 'object-bottom'
   content: Project[]
 }
 
@@ -13,7 +22,8 @@ export const primaryCategories: Category[] = [
   {
     path: '/general-3d',
     title: 'General 3D',
-    description: 'General 3D modeling projects, often with a focus on environment design.',
+    description:
+      'General 3D modeling projects, often with a focus on environment design.',
     coverImageSrc: 'BorealAurora_cover.png',
     content: general3d
   },
@@ -27,7 +37,8 @@ export const primaryCategories: Category[] = [
   {
     path: '/software-dev',
     title: 'Software Development',
-    description: 'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
+    description:
+      'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
     coverImageSrc: 'ParodyParty_home.png',
     content: softwareDev
   }
