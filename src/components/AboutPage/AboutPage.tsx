@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactForm from '../ContactForm/ContactForm'
 import LinkFarm from '../LinkFarm/LinkFarm'
 import Resume from '../Resume/Resume'
 // import ArtistsStatement from '../ArtistsStatement/ArtistsStatement'
@@ -16,6 +17,7 @@ const AboutPage = () => {
         <LinkFarm />
         <Timeline />
         <Resume />
+        <ContactForm />
         {/* <ArtistsStatement /> */}
       </div>
     </div>

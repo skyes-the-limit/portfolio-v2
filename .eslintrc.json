@@ -21,11 +21,16 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "indent": "off",
+    "multiline-ternary": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
+  },
+  "globals": {
+    "JSX": "readonly"
   }
 }
