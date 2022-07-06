@@ -1,8 +1,12 @@
 import React from 'react'
 import { Field, Form, Formik } from 'formik'
 import * as Yup from 'yup'
+import { toast } from 'react-toastify'
 
-type ContactValues = {
+import useEmail from '../../hooks/useEmail/useEmail'
+import Loader from '../Loader/Loader'
+
+export type ContactValues = {
   fullName: string
   email: string
   message: string
@@ -41,6 +45,15 @@ const validationSchema = Yup.object().shape({
 })
 
 const ContactForm = () => {
+  const { loading, submitted, setSubmitted, error, sendEmail } = useEmail(
+    process.env.REACT_APP_HEROTOFU_URL || ''
+  )
+
+  if (submitted) {
+    toast('Email sent!')
+    setSubmitted(false)
+  }
+
   return (
     <section className='container max-w-md mx-auto'>
       <h1 className='text-4xl font-bold text-center'>Get in touch!</h1>
@@ -51,10 +64,7 @@ const ContactForm = () => {
           message: ''
         }}
         validationSchema={validationSchema}
-        onSubmit={function (values: ContactValues): void | Promise<any> {
-          console.log(values)
-          throw new Error('Function not implemented.')
-        }}
+        onSubmit={sendEmail}
       >
         {({ errors, touched }) => {
           const submitDisabled =
@@ -121,15 +131,22 @@ const ContactForm = () => {
                 )}
               </div>
 
+              {error && (
+                <div className='mb-6 mx-4 text-red-400 text-sm'>
+                  {`Unexpected error: ${error}`}
+                </div>
+              )}
+
               <button
                 type='submit'
+                disabled={submitDisabled}
                 className={`self-center px-8 py-3 text-lg rounded focus:ring focus:ring-opacity-75 text-gray-900 font-medium focus:ring-sky-400 hover:ring-sky-400 ${
                   submitDisabled
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-sky-400 hover:ring'
                 }`}
               >
-                Submit
+                {loading ? <Loader /> : <>Submit</>}
               </button>
             </Form>
           )
