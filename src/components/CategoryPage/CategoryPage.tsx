@@ -38,7 +38,6 @@ const CategoryPage = ({ category }: CategoryProps) => {
           Back
         </p>
       </Link>
-      {/* TODO: Nav back to HomePage at correct scroll height */}
     </div>
   )
 }

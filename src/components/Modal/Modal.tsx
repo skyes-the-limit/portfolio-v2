@@ -8,7 +8,6 @@ type ModalProps = {
 
 const Modal = ({ title, setShowModal, children }: ModalProps) => {
   // TODO: Listen to key press and close modal on esc
-  // TODO: Close modal on click of background
   useEffect(() => {
     document.body.style.overflow = 'hidden'
 

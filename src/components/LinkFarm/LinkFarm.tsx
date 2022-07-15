@@ -8,7 +8,6 @@ type Link = {
   href: string
 }
 
-// TODO: Add Github here and to the footer as well
 const links: Link[] = [
   {
     logoSrcs: ['ArtStation-logo-horizontal-dark.svg'],
@@ -56,8 +55,7 @@ const links: Link[] = [
 
 const LinkFarm = () => {
   return (
-    // TODO: Figure out why w-fit isn't recognized by tailwind
-    <div className='mx-auto' style={{ width: 'fit-content' }}>
+    <div className='mx-auto w-[fit-content]'>
       <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-2 md:grid-cols-3'>
         {links &&
           links.map((link, index) => (
@@ -66,7 +64,7 @@ const LinkFarm = () => {
               href={link.href}
               target='_blank'
               rel='noopener noreferrer'
-              style={{ width: 'fit-content' }}
+              className='w-[fit-content]'
             >
               <button
                 type='button'

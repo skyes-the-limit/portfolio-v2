@@ -97,7 +97,6 @@ const Card = ({ variant, card }: CardProps) => {
         )}
         onClick={() => (details ? setShowModal(true) : undefined)}
       >
-        {/* TODO: Navigate to top of new page */}
         {seeMoreHref ? (
           <Link to={seeMoreHref}>
             <CardInner variant={variant} card={card} />
