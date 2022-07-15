@@ -9,8 +9,7 @@ import './Card.css'
 
 export type CardInfo = {
   header: string
-  subheader?: string
-  overline?: string
+  badges?: string[]
   description: string
   imageSrc: string
   imageObjectPos?: string
@@ -26,8 +25,7 @@ export type CardProps = {
 const CardInner = ({ variant, card }: CardProps) => {
   const {
     header,
-    subheader,
-    overline,
+    badges,
     description,
     imageSrc,
     imageObjectPos,
@@ -47,7 +45,7 @@ const CardInner = ({ variant, card }: CardProps) => {
 
   return (
     <div className='flex flex-col space-y-6'>
-      <div className={cx('overflow-hidden bg-white rounded-t-md')}>
+      <div className='overflow-hidden bg-white rounded-t-md'>
         <img
           src={imageSrc}
           className={cx(
@@ -59,18 +57,23 @@ const CardInner = ({ variant, card }: CardProps) => {
         />
       </div>
       <div className='flex flex-col justify-between px-6 pb-4'>
-        {overline && (
-          <p className='flex justify-between text-xs font-medium tracking-widest uppercase'>
-            {/* TODO: Restyle as badges */}
-            <span className='text-sky-400'>{overline}</span>
-            {subheader && (
-              <span className='text-gray-400 whitespace-nowrap'>
-                {subheader}
-              </span>
-            )}
-          </p>
-        )}
-        <h2 className='text-xl font-semibold tracking-wide'>{header}</h2>
+        <div className='flex flex-row justify-between items-center space-x-4 mb-4'>
+          <h2 className='text-xl font-semibold tracking-wide whitespace-nowrap'>
+            {header}
+          </h2>
+          {badges && (
+            <p className='flex space-x-2 text-xs font-medium uppercase'>
+              {badges.map((badge, index) => (
+                <span
+                  key={index}
+                  className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium tracking-wide whitespace-nowrap'
+                >
+                  {badge}
+                </span>
+              ))}
+            </p>
+          )}
+        </div>
         <p className='text-sm text-gray-400'>{description}</p>
         {/* TODO: Stretch "See More" to sit at the bottom */}
         {seeMoreHref && (

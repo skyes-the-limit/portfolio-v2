@@ -13,9 +13,8 @@ const CategoryPage = ({ category }: CategoryProps) => {
   const cards = content.map((project) => {
     // TODO: Append links from the project after the description
     return {
-      header: '',
-      subheader: project.date,
-      overline: project.medium,
+      header: project.date,
+      badges: project.medium,
       description: project.description,
       imageSrc: require(`../../assets/projects/${project.coverImageSrc}`),
       imageObjectPos: project.coverImagePosition,

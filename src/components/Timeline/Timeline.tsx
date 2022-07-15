@@ -69,10 +69,11 @@ const Timeline = () => {
                       {event.title}
                     </h3>
                     <div className='flex space-x-4'>
+                      {/* TODO: Fix badges at 1024px breakpoint */}
                       {event.badges.map((badge, index) => (
                         <span
                           key={index}
-                          className='flex items-center px-3 border rounded-md text-gray-100 text-xs font-medium tracking-wide'
+                          className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium tracking-wide whitespace-nowrap'
                         >
                           {badge}
                         </span>
