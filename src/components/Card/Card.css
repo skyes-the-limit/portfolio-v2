@@ -1,3 +1,9 @@
-.overlay::before {
-  /* TODO: Lighten image on hover without messing up the stacking context */
+.overlay {
+  transition: transform .3s;
+}
+
+.overlay:hover {
+  opacity: 0.95;
+  transform: scale(1.03);
+  z-index: 1;
 }

@@ -19,7 +19,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
       description: project.description,
       imageSrc: require(`../../assets/projects/${project.coverImageSrc}`),
       imageObjectPos: project.coverImagePosition,
-      seeMoreSrc: '',
+      seeMoreHref: '',
       details: <ProjectDetails project={project} />
     }
   })
@@ -27,7 +27,8 @@ const CategoryPage = ({ category }: CategoryProps) => {
   return (
     <div
       className='container pt-16 px-6 mx-auto'
-      style={{ minHeight: 'calc(100vh - 136px)' }}
+      // TODO: Define 104px as a globally accessibly "footer-height" var
+      style={{ minHeight: 'calc(100vh - 104px)' }}
     >
       <h1 className='text-3xl font-semibold tracking-wide text-center py-6'>
         {title}

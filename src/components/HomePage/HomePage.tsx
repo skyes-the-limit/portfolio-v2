@@ -12,7 +12,7 @@ const primaryCards: CardInfo[] = primaryCategories.map((category) => {
     header: category.title,
     imageSrc: require(`../../assets/projects/${category.coverImageSrc}`),
     imageObjectPos: category.coverImagePosition,
-    seeMoreSrc: category.path
+    seeMoreHref: category.path
   }
 })
 
@@ -22,7 +22,7 @@ const secondaryCards: CardInfo[] = secondaryCategories.map((category) => {
     header: category.title,
     imageSrc: require(`../../assets/projects/${category.coverImageSrc}`),
     imageObjectPos: category.coverImagePosition,
-    seeMoreSrc: category.path
+    seeMoreHref: category.path
   }
 })
 
