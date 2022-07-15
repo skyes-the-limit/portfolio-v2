@@ -14,6 +14,7 @@ import CategoryPage from './components/CategoryPage/CategoryPage'
 import AboutPage from './components/AboutPage/AboutPage'
 import { primaryCategories, secondaryCategories } from './data/categories'
 
+// TODO: Upgrade to tailwind v3
 import './input.css'
 import 'react-toastify/dist/ReactToastify.css'
 

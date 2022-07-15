@@ -18,6 +18,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
     <div>
       {imageSrcs?.length + videoSrcs?.length > 1 && (
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
+          {/* TODO: Improve placement of controls and make interactive areas larger */}
           <label
             className='carouselControl carouselControl__backward'
             onClick={() => {
