@@ -55,7 +55,10 @@ const Card = ({ variant, card }: CardProps) => {
       )}
 
       <div
-        className='rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4'
+        className={cx(
+          'rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between pb-4',
+          details ? 'cursor-pointer' : ''
+        )}
         onClick={() => (details ? setShowModal(true) : undefined)}
       >
         <div className='overlay flex flex-col space-y-6'>
@@ -63,7 +66,7 @@ const Card = ({ variant, card }: CardProps) => {
             src={imageSrc}
             className={cx(
               'overlay',
-              'object-cover w-full rounded-t-md bg-gray-500 cursor-pointer',
+              'object-cover w-full rounded-t-md bg-gray-500',
               imgHeight(),
               imageObjectPos || 'object-top'
             )}
@@ -74,7 +77,9 @@ const Card = ({ variant, card }: CardProps) => {
                 {/* TODO: Restyle as badges */}
                 <span className='text-sky-400'>{overline}</span>
                 {subheader && (
-                  <span className='text-gray-400'>{subheader}</span>
+                  <span className='text-gray-400 whitespace-nowrap'>
+                    {subheader}
+                  </span>
                 )}
               </p>
             )}
