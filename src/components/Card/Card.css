@@ -1,9 +1,9 @@
-.overlay {
+.overlay img {
   transition: transform .3s;
 }
 
-.overlay:hover {
-  opacity: 0.95;
+.overlay:hover img {
+  filter: brightness(1.1);
   transform: scale(1.03);
   z-index: 1;
 }

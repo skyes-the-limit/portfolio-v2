@@ -23,15 +23,8 @@ export type CardProps = {
 }
 
 const CardInner = ({ variant, card }: CardProps) => {
-  const {
-    header,
-    badges,
-    description,
-    imageSrc,
-    imageObjectPos,
-    seeMoreHref,
-    details
-  } = card
+  const { header, badges, description, imageSrc, imageObjectPos, seeMoreHref } =
+    card
   const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
@@ -45,14 +38,13 @@ const CardInner = ({ variant, card }: CardProps) => {
 
   return (
     <div className='flex flex-col space-y-6'>
-      <div className='overflow-hidden bg-white rounded-t-md'>
+      <div className='overflow-hidden bg-white rounded-t-md bg-clip-text'>
         <img
           src={imageSrc}
           className={cx(
             'object-cover w-full',
             imageObjectPos || 'object-top',
-            imgHeight(),
-            { overlay: seeMoreHref || details }
+            imgHeight()
           )}
         />
       </div>
@@ -101,7 +93,7 @@ const Card = ({ variant, card }: CardProps) => {
       <div
         className={cx(
           'rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between overflow-hidden',
-          details ? 'cursor-pointer' : ''
+          { overlay: seeMoreHref || details }
         )}
         onClick={() => (details ? setShowModal(true) : undefined)}
       >
