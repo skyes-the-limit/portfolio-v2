@@ -37,11 +37,16 @@ const HomePage = () => {
   const location: any = useLocation()
 
   useEffect(() => {
+    const headerHeight = 64
+    const topPadding = 24
     const targetId = location?.state?.targetId
     const el = document.getElementById(targetId)
     if (el) {
-      // TODO: Define 64px as a globally accessibly "header-height" var
-      const y = el.getBoundingClientRect().top + window.pageYOffset - 64 - 24
+      const y =
+        el.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerHeight -
+        topPadding
       window.scrollTo({ top: y })
     }
   })
