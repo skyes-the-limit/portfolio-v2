@@ -3,12 +3,17 @@ import React from 'react'
 type VimeoPlayerProps = {
   id: string
   loop?: boolean
+  autoplay?: boolean
 }
 
-const VimeoPlayer = ({ id, loop = false }: VimeoPlayerProps) => {
-  const src = `https://player.vimeo.com/video/${id}?h=865e6c60d8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=1&loop=${
-    loop ? 1 : 0
-  }`
+const VimeoPlayer = ({
+  id,
+  loop = false,
+  autoplay = false
+}: VimeoPlayerProps) => {
+  const src = `https://player.vimeo.com/video/${id}?h=865e6c60d8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&autoplay=${
+    autoplay ? 1 : 0
+  }&loop=${loop ? 1 : 0}`
   // TODO: Fix Vimeo size to match images from ProjectDetails
   return (
     <div style={{ width: 'calc(100vw - 32rem)' }}>

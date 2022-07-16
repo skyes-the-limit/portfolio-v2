@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import cx from 'classnames'
 
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
@@ -12,7 +13,6 @@ type ProjectDetailsProps = {
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { imageSrcs = [], videos = [] } = project
   const [selectedIndex, setSelectedIndex] = useState(0)
-  // TODO: Videos should come first
 
   return (
     <div>
@@ -38,25 +38,35 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </div>
       )}
 
+      {videos &&
+        videos.map(({ vimeoId, loop }, index) => (
+          <div
+            key={`video-${index}`}
+            className={cx({
+              hidden: index !== selectedIndex
+            })}
+          >
+            <VimeoPlayer
+              id={vimeoId}
+              loop={loop}
+              autoplay={index === selectedIndex}
+            />
+          </div>
+        ))}
+
       {imageSrcs &&
         imageSrcs.map((src, index) => {
           return (
             <img
               key={`image-${index}`}
               src={require(`../../assets/projects/${src}`)}
-              className={index === selectedIndex ? '' : 'hidden'}
+              className={cx({
+                hidden: (index + videos?.length ?? 0 - 1) !== selectedIndex
+              })}
               style={{ maxHeight: '70vh' }}
             />
           )
         })}
-
-      {selectedIndex > imageSrcs.length - 1 && (
-        <VimeoPlayer
-          key={`video-${selectedIndex}`}
-          id={videos[selectedIndex - imageSrcs.length].vimeoId}
-          loop={videos[selectedIndex - imageSrcs.length].loop}
-        />
-      )}
     </div>
   )
 }
