@@ -1,6 +1,6 @@
 import React from 'react'
 
-// TODO: Use as navigation between sections in About
+// TODO?: Maybe use as navigation between sections in About
 const Sidebar = () => {
   return (
     <section className='fixed top-24 left-8 text-gray-100'>

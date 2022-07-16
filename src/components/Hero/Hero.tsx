@@ -1,6 +1,6 @@
 import React from 'react'
 
-// Consider looping-video background a la https://y.co/
+// TODO: Original content for src
 const Hero = () => {
   return (
     <section className='w-full'>

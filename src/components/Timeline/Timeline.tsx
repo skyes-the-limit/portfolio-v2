@@ -34,14 +34,14 @@ const events: Event[] = [
     date: 'January 2019 - June 2019',
     badges: ['PostgreSQL', 'Java', 'Vue'],
     description:
-      'Software engineering co-op with the Fulfillment Planning team. Worked independently to develop full-stack project from start to finish.'
+      'Software engineering co-op with the Fulfillment Planning team. Worked independently to develop full-stack internal tool from proposal to MVP.'
   },
   {
     title: "CAMD's Makerspace",
     date: 'October 2018 - December 2020',
     badges: [],
     description:
-      "Worked part-time as a Digital Fabrication Assistant for Northeastern's College of Arts, Media, and Design, assisting students with laser cutting and 3D printing projects."
+      "Worked part-time as a Digital Fabrication Assistant for Northeastern's College of Arts, Media, and Design, helping students with laser cutting and 3D printing projects."
   },
   {
     title: 'Northeastern University',
@@ -65,14 +65,15 @@ const Timeline = () => {
                   className='flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-400'
                 >
                   <div className='flex flex-row justify-between'>
-                    <h3 className='text-2xl font-semibold tracking-wide font-serif'>
+                    <h3 className='text-2xl font-semibold tracking-wide'>
                       {event.title}
                     </h3>
                     <div className='flex space-x-4'>
+                      {/* TODO: Fix badges at 1024px breakpoint */}
                       {event.badges.map((badge, index) => (
                         <span
                           key={index}
-                          className='flex items-center px-3 border rounded-md text-gray-100 text-xs font-medium tracking-wide'
+                          className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium tracking-wide whitespace-nowrap'
                         >
                           {badge}
                         </span>

@@ -12,7 +12,7 @@ const AboutPage = () => {
       {/* <Sidebar /> */}
       <div
         className='flex flex-col space-y-12 container pt-24 pb-4 mx-auto w-[768px]'
-        style={{ minHeight: 'calc(100vh - 136px)' }}
+        style={{ minHeight: 'calc(100vh - 104px)' }}
       >
         <LinkFarm />
         <Timeline />

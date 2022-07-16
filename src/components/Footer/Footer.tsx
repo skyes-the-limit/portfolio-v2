@@ -18,14 +18,14 @@ const icons: Icon[] = [
     href: 'https://skyesthelimit.gumroad.com/'
   },
   {
-    title: 'Instagram',
-    logoSrc: 'Instagram_Glyph_White.svg',
-    href: 'https://www.instagram.com/skye.makes.cgi/'
-  },
-  {
     title: 'Vimeo',
     logoSrc: 'vimeo_icon_white.svg',
     href: 'https://vimeo.com/user101521186'
+  },
+  {
+    title: 'Instagram',
+    logoSrc: 'Instagram_Glyph_White.svg',
+    href: 'https://www.instagram.com/skye.makes.cgi/'
   },
   {
     title: 'LinkedIn',

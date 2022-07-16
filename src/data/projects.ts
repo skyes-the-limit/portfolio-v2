@@ -1,11 +1,15 @@
 export type Project = {
   date: string
-  medium: string
+  medium: string[]
   description: string
   coverImageSrc: string
   coverImagePosition?: 'object-center' | 'object-bottom'
   imageSrcs?: string[]
-  videoSrcs?: string[]
+  videos?: {
+    vimeoId: string
+    loop?: boolean
+  }[]
+  // TODO?: Remove unused field
   links?: {
     displayText: string
     href: string
@@ -13,68 +17,67 @@ export type Project = {
 }
 
 // TODO: convert animated .gifs to looping videos, and images to .webp
-// TODO: re-crop project cover images from square ratio to landscape
 export const general3d: Project[] = [
   {
     date: "Apr '22",
-    medium: 'Houdini, Substance Painter, World Machine, Unreal Engine 4',
+    medium: ['Houdini', 'Substance Painter', 'World Machine', 'UE4'],
     description:
-      "Virtual environment inspired by Iceland's basalt columns. Columns procedurally generated with Houdini, textured in Substance Painter. Terrain generated in World Machine and textured with Quixel Megascans materials. Assembled and rendered in UE4.",
+      "Virtual environment inspired by Iceland's basalt columns. Columns procedurally generated with Houdini, textured in Substance Painter. Terrain generated in World Machine and textured with Quixel Megascans materials. Assembled and rendered in Unreal Engine 4.",
     coverImageSrc: 'IcelandicBasalt_cover.png',
     imageSrcs: [
       'IcelandicBasalt_HoudiniPreview.png',
       'IcelandicBasalt_WorldMachinePreview.png'
     ],
-    videoSrcs: ['713927330']
+    videos: [{ vimeoId: '713927330' }]
   },
   {
     date: "Mar '22",
-    medium: 'Maya, Substance Painter, World Machine, Unreal Engine 4',
+    medium: ['Maya', 'Substance Painter', 'World Machine', 'UE4'],
     description:
-      'Geodesic tent modeled in Maya and textured with Substance Painter. Furnished with free assets from TurboSquid. Terrain generated in World Machine. Assembled in UE4 with Quixel Megascans materials and vegetation.',
+      'Geodesic tent modeled in Maya and textured with Substance Painter. Furnished with free assets from TurboSquid. Terrain generated in World Machine. Assembled in Unreal Engine 4 with Quixel Megascans materials and vegetation.',
     coverImageSrc: 'BorealAurora_cover.png',
     imageSrcs: [
       'BorealAurora_concept.png',
       'BorealAurora_process.png',
       'BorealAurora_terrainPreview.png'
     ],
-    videoSrcs: ['713926631']
+    videos: [{ vimeoId: '713926631' }]
   },
   {
     date: "Dec '21",
-    medium: 'Maya, Substance Painter, Unreal Engine 5',
+    medium: ['Maya', 'Substance Painter', 'UE5'],
     description:
-      "Virtual environment of a resort spaceship's lounge. Modeled in Maya, textured in Substance Painter, assembled and rendered in UE5.",
+      "Virtual environment of a resort spaceship's lounge. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.",
     coverImageSrc: 'SpaceshipLounge_cover.png',
-    videoSrcs: ['725470027']
+    videos: [{ vimeoId: '725470027' }]
   },
   {
     date: "Oct '21",
-    medium: 'Houdini, Substance Painter, Unreal Engine 5',
+    medium: ['Houdini', 'Substance Painter', 'UE5'],
     description:
-      'Bio-engineered vegetation for Martian colonization. Models generated in Houdini, textured in Substance Painter, assembled and rendered in UE5.',
+      'Bio-engineered vegetation for Martian colonization. Models generated in Houdini, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
     coverImageSrc: 'MartianVegetation_cover.png',
-    videoSrcs: ['726182601']
+    videos: [{ vimeoId: '726182601', loop: true }]
   },
   {
     date: "Sept '21",
-    medium: 'Maya, Substance Painter, Unreal Engine 5',
+    medium: ['Maya', 'Substance Painter', 'UE5'],
     description:
-      'SciFi chair for neurologically simulated virtual reality. Modeled in Maya, textured in Substance Painter, assembled and rendered in UE5.',
+      'SciFi chair for neurologically simulated virtual reality. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
     coverImageSrc: 'VRChair_cover.png',
-    videoSrcs: ['726300088']
+    videos: [{ vimeoId: '726300088', loop: true }]
   },
   {
     date: "Dec '20",
-    medium: 'Maya, ZBrush, Substance Painter',
+    medium: ['Maya', 'ZBrush', 'Substance Painter'],
     description:
       'The endangered Pangolin has developed an adaptation to protect it from poachers! Low-poly mesh modeled in Maya, details sculpted in ZBrush. Textured with substance painter, rigged, animated and composited in Maya.',
     coverImageSrc: 'Pangolin_cover.png',
-    videoSrcs: ['726303946', '726302583']
+    videos: [{ vimeoId: '726303946', loop: true }, { vimeoId: '726302583' }]
   },
   {
     date: "Nov '19",
-    medium: 'Maya',
+    medium: ['Maya'],
     description: 'Digital recreation of a small interior space.',
     coverImagePosition: 'object-center',
     coverImageSrc: '2019-11-05 Interior Preview.png',
@@ -82,19 +85,19 @@ export const general3d: Project[] = [
   },
   {
     date: "Dec '18",
-    medium: 'Maya',
+    medium: ['Maya'],
     description: 'Talent show act of an animated and rigged character.',
     coverImageSrc: '2018-12-14 Talent Show Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352084087']
+    videos: [{ vimeoId: '352084087' }]
   },
   {
     date: "Nov '16",
-    medium: '3DS Max',
+    medium: ['3DS Max'],
     description: 'Character model based on Castle Crashers.',
     coverImageSrc: '2016-11-18 Castle Crasher Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['353296476']
+    videos: [{ vimeoId: '353296476', loop: true }]
   }
 ]
 
@@ -102,17 +105,17 @@ export const techArt: Project[] = [
   // TODO: Finished SPL work
   {
     date: "Dec '21",
-    medium: 'Houdini',
+    medium: ['Houdini'],
     description: 'Experiment with vellum and combining Mixamo animations.',
     coverImageSrc: 'VellumDance_cover.png',
-    videoSrcs: ['726342593']
+    videos: [{ vimeoId: '726342593' }]
   }
 ]
 
 export const softwareDev: Project[] = [
   {
     date: "Apr '22",
-    medium: 'MongoDB, Node.js, React.js',
+    medium: ['MongoDB', 'Node.js', 'React.js'],
     description:
       'Fullstack web application for writing parodies of songs. Integrates with Genius API.',
     coverImageSrc: 'ParodyParty_home.png',
@@ -136,15 +139,15 @@ export const softwareDev: Project[] = [
   },
   {
     date: "Dec '21",
-    medium: 'C++',
+    medium: ['C++'],
     description:
       'Application for collaborative painting. Private Github repo available on request with professor approval.',
     coverImageSrc: 'CollaborativeDrawing_cover.png',
-    videoSrcs: ['726526677']
+    videos: [{ vimeoId: '726526677' }]
   },
   {
     date: "Dec '19",
-    medium: 'NativeScript.js',
+    medium: ['NativeScript.js'],
     description: 'Prototype for a social event planning app.',
     coverImageSrc: '2019-12-14 You In Preview.png',
     imageSrcs: [
@@ -167,7 +170,7 @@ export const softwareDev: Project[] = [
   },
   {
     date: "Dec '18",
-    medium: 'Java',
+    medium: ['Java'],
     description: 'A simplified animation editing interface.',
     coverImageSrc: '2018-12-13 Animator Preview.png',
     imageSrcs: ['2018-12-13 Animator.png'],
@@ -180,7 +183,7 @@ export const softwareDev: Project[] = [
   },
   {
     date: "Mar '18",
-    medium: 'Java',
+    medium: ['Java'],
     description: 'A recreation of the Microsoft classic Minesweeper',
     coverImageSrc: '2018-03-27 Minesweeper Preview.png',
     imageSrcs: ['2018-03-27 Minesweeper.png']
@@ -190,7 +193,7 @@ export const softwareDev: Project[] = [
 export const creativeCoding: Project[] = [
   {
     date: "Dec '20",
-    medium: 'Three.js',
+    medium: ['Three.js'],
     description:
       'Web-based graphics project utilizing IBM Watson Tone Analyzer API.',
     coverImageSrc: 'EmotionVisualizer_cover.png',
@@ -207,7 +210,7 @@ export const creativeCoding: Project[] = [
   },
   {
     date: "Jul '19",
-    medium: 'Processing',
+    medium: ['Processing'],
     description:
       'Using google image search as an input, render images via various shapes.',
     coverImageSrc: '2019-07-29 Simple Image Processing Preview.png',
@@ -228,7 +231,7 @@ export const creativeCoding: Project[] = [
   },
   {
     date: "Jul '19",
-    medium: 'Processing',
+    medium: ['Processing'],
     description:
       'Made in processing and then used to control the LED facade on the Ars Electronica Center in Linz, Austria.',
     coverImageSrc: '2019-07-26 Austauschstadt Preview.png',
@@ -241,7 +244,7 @@ export const creativeCoding: Project[] = [
       '2019-07-26 Austauschstadt (6).png',
       '2019-07-26 Austauschstadt (7).png'
     ],
-    videoSrcs: ['353297101', '355991818'],
+    videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -251,7 +254,7 @@ export const creativeCoding: Project[] = [
   },
   {
     date: "Jul '19",
-    medium: 'Processing',
+    medium: ['Processing'],
     description: 'Tessellating hexagons based on Perlin Noise.',
     coverImageSrc: '2019-07-14 Generative Tessellations Preview.png',
     imageSrcs: [
@@ -262,7 +265,7 @@ export const creativeCoding: Project[] = [
       '2019-07-14 Generative Tessellations (5).png',
       '2019-07-14 Generative Tessellations (6).png'
     ],
-    videoSrcs: ['353274180'],
+    videos: [{ vimeoId: '353274180' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -272,7 +275,7 @@ export const creativeCoding: Project[] = [
   },
   {
     date: "Jul '19",
-    medium: 'Processing',
+    medium: ['Processing'],
     description: 'Allows users to draw with complex polygons.',
     coverImageSrc: '2019-07-06 Drawing Machine Preview.png',
     imageSrcs: [
@@ -290,7 +293,7 @@ export const creativeCoding: Project[] = [
       '2019-07-06 Drawing Machine (12).png',
       '2019-07-06 Drawing Machine (13).png'
     ],
-    videoSrcs: ['356239943'],
+    videos: [{ vimeoId: '356239943' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -303,28 +306,28 @@ export const creativeCoding: Project[] = [
 export const motionGraphics: Project[] = [
   {
     date: "Nov '18",
-    medium: 'Photoshop\u3000|\u3000AfterEffects',
+    medium: ['Photoshop\u3000|\u3000AfterEffects'],
     description:
       "An educational video on different culture's 'Halloween-esque' holidays.",
     coverImageSrc: '2018-11-07 Edutainment Preview.png',
     coverImagePosition: 'object-bottom',
-    videoSrcs: ['354709668']
+    videos: [{ vimeoId: '354709668' }]
   },
   {
     date: "Mar '19",
-    medium: 'AfterEffects',
+    medium: ['AfterEffects'],
     description:
       'Lyric video focusing on transforming audio into visual representations.',
     coverImageSrc: '2018-03-20 Lyrics.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352082622']
+    videos: [{ vimeoId: '352082622' }]
   }
 ]
 
 export const illustration: Project[] = [
   {
     date: "Nov '19",
-    medium: 'Photoshop',
+    medium: ['Photoshop'],
     description:
       'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
     coverImageSrc: '2019-11-15 Process Portrait Preview.png',
@@ -348,7 +351,7 @@ export const illustration: Project[] = [
   },
   {
     date: "Jul '19",
-    medium: 'Screenprinted Fabric',
+    medium: ['Screenprinted Fabric'],
     description:
       'Exploration of tagging and graffiti using publicly sited textiles.',
     coverImageSrc: '2019-07-22 Screenprint Preview.png',
@@ -364,7 +367,7 @@ export const illustration: Project[] = [
   },
   {
     date: "Nov '17",
-    medium: 'Illustrator',
+    medium: ['Illustrator'],
     description: 'Patterns generated from swatches of a plant drawing.',
     coverImageSrc: '2017-11-20 Patterns Preview.png',
     coverImagePosition: 'object-center',
@@ -372,7 +375,7 @@ export const illustration: Project[] = [
   },
   {
     date: "Oct '17",
-    medium: 'Photoshop',
+    medium: ['Photoshop'],
     description: 'Study on different modes of drawing.',
     coverImagePosition: 'object-center',
     coverImageSrc: '2017-10-30 Modes Preview.png',
@@ -380,7 +383,7 @@ export const illustration: Project[] = [
   },
   {
     date: "Sept '17",
-    medium: 'Illustrator',
+    medium: ['Illustrator'],
     description: 'Composition of only squares.',
     coverImagePosition: 'object-bottom',
     coverImageSrc: '2017-09-25 Squares Preview.png',
@@ -391,43 +394,43 @@ export const illustration: Project[] = [
 export const videography: Project[] = [
   {
     date: "Sept '21",
-    medium: 'Premiere',
+    medium: ['Premiere'],
     description:
       'Immersive short comedy featuring the Cha Cha Slide by DJ Casper',
     coverImageSrc: 'GetFunky_Cover.png',
-    videoSrcs: ['713918755']
+    videos: [{ vimeoId: '713918755' }]
   },
   {
     date: "Sept '18",
-    medium: 'Premiere',
+    medium: ['Premiere'],
     description: "A variant on the 'chalk talk' style of stop motion.",
     coverImageSrc: '2018-09-25 Chalk Talk Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352083851']
+    videos: [{ vimeoId: '352083851' }]
   },
   {
     date: "Sept '18",
-    medium: 'Premiere',
+    medium: ['Premiere'],
     description:
       'Claymation conceptualized by visualizing a predetermined cartoon soundtrack.',
     coverImageSrc: '2018-09-19 Claymation Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352083588']
+    videos: [{ vimeoId: '352083588' }]
   },
   {
     date: "Apr '18",
-    medium: 'Premiere',
+    medium: ['Premiere'],
     description: 'An impressionistic recollection of a season of dance.',
     coverImageSrc: '2018-04-23 Sum Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352082744']
+    videos: [{ vimeoId: '352082744' }]
   },
   {
     date: "Feb '18",
-    medium: 'Premiere',
+    medium: ['Premiere'],
     description: 'Short study on performance.',
     coverImagePosition: 'object-bottom',
     coverImageSrc: '2018-02-26 Twister Preview.png',
-    videoSrcs: ['352082020']
+    videos: [{ vimeoId: '352082020' }]
   }
 ]
