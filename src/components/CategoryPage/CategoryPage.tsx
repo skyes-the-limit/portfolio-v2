@@ -10,6 +10,7 @@ type CategoryProps = {
 
 const CategoryPage = ({ category }: CategoryProps) => {
   const { title, content } = category
+  const footerHeight = '104px'
   const cards = content.map((project) => {
     return {
       header: project.date,
@@ -24,8 +25,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
   return (
     <div
       className='container pt-16 px-6 mx-auto'
-      // TODO: Define 104px as a globally accessibly "footer-height" var
-      style={{ minHeight: 'calc(100vh - 104px)' }}
+      style={{ minHeight: `calc(100vh - ${footerHeight})` }}
     >
       <h1 className='text-3xl font-semibold tracking-wide text-center py-6'>
         {title}
