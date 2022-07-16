@@ -6,6 +6,7 @@ export type Project = {
   coverImagePosition?: 'object-center' | 'object-bottom'
   imageSrcs?: string[]
   videoSrcs?: string[]
+  // TODO?: Remove unused field
   links?: {
     displayText: string
     href: string

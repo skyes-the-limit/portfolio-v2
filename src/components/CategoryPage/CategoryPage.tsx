@@ -11,14 +11,12 @@ type CategoryProps = {
 const CategoryPage = ({ category }: CategoryProps) => {
   const { title, content } = category
   const cards = content.map((project) => {
-    // TODO: Append links from the project after the description
     return {
       header: project.date,
       badges: project.medium,
       description: project.description,
       imageSrc: require(`../../assets/projects/${project.coverImageSrc}`),
       imageObjectPos: project.coverImagePosition,
-      seeMoreHref: '',
       details: <ProjectDetails project={project} />
     }
   })

@@ -4,6 +4,7 @@ type FeatureProps = {
   message?: string
 }
 
+// TODO: Copy + photo here deserves polish
 const Feature = ({ message }: FeatureProps) => {
   return (
     <a

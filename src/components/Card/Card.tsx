@@ -13,8 +13,13 @@ export type CardInfo = {
   description: string
   imageSrc: string
   imageObjectPos?: string
-  seeMoreHref?: string
-  details?: React.ReactElement // TODO: If onClick OR seeMoreHref truthy, add a hover effect to the image. Place details within Modal.
+  // Link to route to onClick if there is no modal
+  link?: {
+    displayText: string
+    href: string
+  }
+  // Additional content to display in a modal
+  details?: React.ReactElement
 }
 
 export type CardProps = {
@@ -23,8 +28,7 @@ export type CardProps = {
 }
 
 const CardInner = ({ variant, card }: CardProps) => {
-  const { header, badges, description, imageSrc, imageObjectPos, seeMoreHref } =
-    card
+  const { header, badges, description, imageSrc, imageObjectPos, link } = card
   const imgHeight = () => {
     switch (variant) {
       case Variant.Small:
@@ -68,10 +72,13 @@ const CardInner = ({ variant, card }: CardProps) => {
         </div>
         <p className='text-sm text-gray-400'>{description}</p>
         {/* TODO: Stretch "See More" to sit at the bottom */}
-        {seeMoreHref && (
-          <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'>
-            See More
-          </p>
+        {link && (
+          <Link
+            className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'
+            to={link.href}
+          >
+            {link.displayText}
+          </Link>
         )}
       </div>
     </div>
@@ -80,7 +87,7 @@ const CardInner = ({ variant, card }: CardProps) => {
 
 const Card = ({ variant, card }: CardProps) => {
   const [showModal, setShowModal] = useState(false)
-  const { header, details, seeMoreHref } = card
+  const { header, details, link } = card
 
   return (
     <>
@@ -93,12 +100,12 @@ const Card = ({ variant, card }: CardProps) => {
       <div
         className={cx(
           'rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between overflow-hidden',
-          { overlay: seeMoreHref || details }
+          { overlay: link || details }
         )}
         onClick={() => (details ? setShowModal(true) : undefined)}
       >
-        {seeMoreHref ? (
-          <Link to={seeMoreHref}>
+        {link ? (
+          <Link to={link.href}>
             <CardInner variant={variant} card={card} />
           </Link>
         ) : (

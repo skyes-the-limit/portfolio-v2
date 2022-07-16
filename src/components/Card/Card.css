@@ -1,3 +1,7 @@
+.overlay {
+  cursor: pointer;
+}
+
 .overlay img {
   transition: transform .3s;
 }
