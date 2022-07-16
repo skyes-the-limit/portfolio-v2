@@ -4,6 +4,7 @@ import useEventListener from '@use-it/event-listener'
 
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
+import Arrow from '../../assets/icons/arrow.svg'
 
 import './ProjectDetails.css'
 
@@ -46,15 +47,23 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
     <div>
       {imageSrcs?.length + videos?.length > 1 && (
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
-          {/* TODO: Improve placement of controls and make interactive areas larger */}
-          <label
+          {/* TODO: Improve placement of controls */}
+          <button
+            type='button'
             className='carouselControl carouselControl__forward'
+            aria-label='Forward'
             onClick={incrementSelectedIndex}
-          />
-          <label
+          >
+            <img src={Arrow} alt='Forward' className='w-12 h-12' />
+          </button>
+          <button
+            type='button'
             className='carouselControl carouselControl__backward'
+            aria-label='Backward'
             onClick={decrementSelectedIndex}
-          />
+          >
+            <img src={Arrow} alt='Backward' className='w-12 h-12' />
+          </button>
         </div>
       )}
 
