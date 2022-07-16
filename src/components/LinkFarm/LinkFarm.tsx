@@ -55,7 +55,7 @@ const links: Link[] = [
 
 const LinkFarm = () => {
   return (
-    <div className='mx-auto w-[fit-content]'>
+    <div className='mx-auto w-fit'>
       <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-2 md:grid-cols-3'>
         {links &&
           links.map((link, index) => (
@@ -64,7 +64,7 @@ const LinkFarm = () => {
               href={link.href}
               target='_blank'
               rel='noopener noreferrer'
-              className='w-[fit-content]'
+              className='w-fit'
             >
               <button
                 type='button'

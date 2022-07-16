@@ -30,7 +30,7 @@ const Modal = ({ title, setShowModal, children }: ModalProps) => {
       <div className='z-30 fixed flex items-center justify-center top-0 left-0 w-screen h-screen p-6 pointer-events-none'>
         <div className='z-30 relative w-auto pointer-events-auto'>
           <div className='z-30 modal-content border-none shadow-lg relative flex flex-col w-full bg-clip-padding rounded-md outline-none bg-gray-800 text-gray-100'>
-            <div className='modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-700 rounded-t-md'>
+            <div className='modal-header flex shrink-0 items-center justify-between p-4 border-b border-gray-700 rounded-t-md'>
               <h2 className='text-xl font-medium tracking-wide'>{title}</h2>
               {/* TODO: Move close button out of header when there is no title? */}
               <button
