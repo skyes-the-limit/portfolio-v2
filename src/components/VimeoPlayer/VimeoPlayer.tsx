@@ -10,7 +10,6 @@ const VimeoPlayer = ({ id, loop = false }: VimeoPlayerProps) => {
     loop ? 1 : 0
   }`
   // TODO: Fix Vimeo size to match images from ProjectDetails
-  // TODO: Accept a "loop" prop. If vimeo will not allow looping, use a different video src
   return (
     <div style={{ width: 'calc(100vw - 32rem)' }}>
       <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

@@ -31,8 +31,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
         {title}
       </h1>
       <Grid variant={Variant.Large} cards={cards} />
-      {/* TODO: Scroll to category section */}
-      <Link to={'/'}>
+      <Link to={'/'} state={{ targetId: 'project-work' }}>
         <p className='text-center text-s font-medium tracking-widest uppercase text-sky-400 mt-16'>
           Back
         </p>
