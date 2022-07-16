@@ -37,11 +37,8 @@ const HomePage = () => {
   const location: any = useLocation()
 
   useEffect(() => {
-    console.log(location)
     const targetId = location?.state?.targetId
-    console.log(targetId)
     const el = document.getElementById(targetId)
-    console.log(el)
     if (el) {
       // TODO: Define 64px as a globally accessibly "header-height" var
       const y = el.getBoundingClientRect().top + window.pageYOffset - 64 - 24

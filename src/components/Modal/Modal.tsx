@@ -7,10 +7,25 @@ type ModalProps = {
 }
 
 const Modal = ({ title, setShowModal, children }: ModalProps) => {
-  // TODO: Listen to key press and close modal on esc
+  // Close modal on escape keypress
+  const keyUpHandler = ({ key }: KeyboardEvent): void => {
+    switch (key) {
+      case 'Escape':
+        setShowModal(false)
+        break
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keyup', keyUpHandler)
+    return () => {
+      window.removeEventListener('keyup', keyUpHandler)
+    }
+  }, [])
+
+  // Prevent scrolling while modal is open
   useEffect(() => {
     document.body.style.overflow = 'hidden'
-
     return () => {
       document.body.style.overflow = 'visible'
     }

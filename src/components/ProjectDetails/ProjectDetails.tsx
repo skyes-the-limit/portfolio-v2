@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
+import useEventListener from '@use-it/event-listener'
 
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
@@ -14,26 +15,45 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
   const { imageSrcs = [], videos = [] } = project
   const [selectedIndex, setSelectedIndex] = useState(0)
 
+  const incrementSelectedIndex = () => {
+    const maxIndex = imageSrcs.length + videos.length - 1
+    selectedIndex >= maxIndex
+      ? setSelectedIndex(0)
+      : setSelectedIndex(selectedIndex + 1)
+  }
+
+  const decrementSelectedIndex = () => {
+    const maxIndex = imageSrcs.length + videos.length - 1
+    selectedIndex <= 0
+      ? setSelectedIndex(maxIndex)
+      : setSelectedIndex(selectedIndex - 1)
+  }
+
+  const keyUpHandler = ({ key }: KeyboardEvent): void => {
+    switch (key) {
+      case ' ':
+      case 'ArrowRight':
+        incrementSelectedIndex()
+        break
+      case 'ArrowLeft':
+        decrementSelectedIndex()
+        break
+    }
+  }
+  useEventListener('keyup', keyUpHandler)
+
   return (
     <div>
       {imageSrcs?.length + videos?.length > 1 && (
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
           {/* TODO: Improve placement of controls and make interactive areas larger */}
           <label
-            className='carouselControl carouselControl__backward'
-            onClick={() => {
-              selectedIndex <= 0
-                ? setSelectedIndex(imageSrcs.length + videos.length - 1)
-                : setSelectedIndex(selectedIndex - 1)
-            }}
+            className='carouselControl carouselControl__forward'
+            onClick={incrementSelectedIndex}
           />
           <label
-            className='carouselControl carouselControl__forward'
-            onClick={() => {
-              selectedIndex >= imageSrcs.length + videos.length - 1
-                ? setSelectedIndex(0)
-                : setSelectedIndex(selectedIndex + 1)
-            }}
+            className='carouselControl carouselControl__backward'
+            onClick={decrementSelectedIndex}
           />
         </div>
       )}
