@@ -9,11 +9,6 @@ export type Project = {
     vimeoId: string
     loop?: boolean
   }[]
-  // TODO?: Remove unused field
-  links?: {
-    displayText: string
-    href: string
-  }[]
 }
 
 // TODO: convert animated .gifs to looping videos, and images to .webp
@@ -125,16 +120,6 @@ export const softwareDev: Project[] = [
       'ParodyParty_result.png',
       'ParodyParty_login.png',
       'ParodyParty_account.png'
-    ],
-    links: [
-      {
-        displayText: 'View the frontend on Github!',
-        href: 'https://github.com/skyes-the-limit/parody-party-web'
-      },
-      {
-        displayText: 'View the backend on Github!',
-        href: 'https://github.com/skyes-the-limit/parody-party-server'
-      }
     ]
   },
   {
@@ -160,12 +145,6 @@ export const softwareDev: Project[] = [
       '2019-12-14 You In (7).jpg',
       '2019-12-14 You In (8).jpg',
       '2019-12-14 You In (9).jpg'
-    ],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/you-in'
-      }
     ]
   },
   {
@@ -173,13 +152,7 @@ export const softwareDev: Project[] = [
     medium: ['Java'],
     description: 'A simplified animation editing interface.',
     coverImageSrc: '2018-12-13 Animator Preview.png',
-    imageSrcs: ['2018-12-13 Animator.png'],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/animator'
-      }
-    ]
+    imageSrcs: ['2018-12-13 Animator.png']
   },
   {
     date: "Mar '18",
@@ -200,12 +173,6 @@ export const creativeCoding: Project[] = [
     imageSrcs: [
       'EmotionVisualizer_form.png',
       'EmotionVisualizer_explanation.png'
-    ],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/GraphicsFinalProject'
-      }
     ]
   },
   {
@@ -221,12 +188,6 @@ export const creativeCoding: Project[] = [
       '2019-07-29 Simple Image Processing (4).png',
       '2019-07-29 Simple Image Processing (5).png',
       '2019-07-29 Simple Image Processing (6).png'
-    ],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/OutsideData'
-      }
     ]
   },
   {
@@ -244,13 +205,7 @@ export const creativeCoding: Project[] = [
       '2019-07-26 Austauschstadt (6).png',
       '2019-07-26 Austauschstadt (7).png'
     ],
-    videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/FacadePortal'
-      }
-    ]
+    videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }]
   },
   {
     date: "Jul '19",
@@ -265,13 +220,7 @@ export const creativeCoding: Project[] = [
       '2019-07-14 Generative Tessellations (5).png',
       '2019-07-14 Generative Tessellations (6).png'
     ],
-    videos: [{ vimeoId: '353274180' }],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/GenerativeDesign'
-      }
-    ]
+    videos: [{ vimeoId: '353274180' }]
   },
   {
     date: "Jul '19",
@@ -293,13 +242,7 @@ export const creativeCoding: Project[] = [
       '2019-07-06 Drawing Machine (12).png',
       '2019-07-06 Drawing Machine (13).png'
     ],
-    videos: [{ vimeoId: '356239943' }],
-    links: [
-      {
-        displayText: 'View it on Github!',
-        href: 'https://github.com/skyes-the-limit/creative-coding/tree/master/creative-coding/tree/master/DrawingMachine'
-      }
-    ]
+    videos: [{ vimeoId: '356239943' }]
   }
 ]
 
