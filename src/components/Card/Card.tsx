@@ -73,12 +73,9 @@ const CardInner = ({ variant, card }: CardProps) => {
         <p className='text-sm text-gray-400'>{description}</p>
         {/* TODO: Stretch "See More" to sit at the bottom */}
         {link && (
-          <Link
-            className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'
-            to={link.href}
-          >
+          <p className='text-center text-xs font-medium tracking-widest uppercase text-sky-400 pt-4'>
             {link.displayText}
-          </Link>
+          </p>
         )}
       </div>
     </div>
