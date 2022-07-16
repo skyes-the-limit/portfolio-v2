@@ -3,28 +3,19 @@ import cx from 'classnames'
 
 import Card, { CardInfo } from '../Card/Card'
 
-export enum Variant {
-  // eslint-disable-next-line no-unused-vars
-  Small,
-  // eslint-disable-next-line no-unused-vars
-  Medium,
-  // eslint-disable-next-line no-unused-vars
-  Large
-}
-
 export interface GridProps {
-  variant: Variant
+  variant: 'small' | 'medium' | 'large'
   cards: CardInfo[]
 }
 
 const Grid = ({ variant, cards }: GridProps) => {
   const gridClassNames = () => {
     switch (variant) {
-      case Variant.Small:
+      case 'small':
         return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
-      case Variant.Medium:
+      case 'medium':
         return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-      case Variant.Large:
+      case 'large':
         return 'grid-cols-1 lg:grid-cols-2'
     }
   }

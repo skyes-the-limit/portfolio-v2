@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import cx from 'classnames'
 
-import { Variant } from '../Grid/Grid'
 import Modal from '../Modal/Modal'
 
 import './Card.css'
@@ -23,7 +22,7 @@ export type CardInfo = {
 }
 
 export type CardProps = {
-  variant: Variant
+  variant: 'small' | 'medium' | 'large'
   card: CardInfo
 }
 
@@ -31,11 +30,11 @@ const CardInner = ({ variant, card }: CardProps) => {
   const { header, badges, description, imageSrc, imageObjectPos, link } = card
   const imgHeight = () => {
     switch (variant) {
-      case Variant.Small:
+      case 'small':
         return 'h-48'
-      case Variant.Medium:
+      case 'medium':
         return 'h-72'
-      case Variant.Large:
+      case 'large':
         return 'h-96'
     }
   }

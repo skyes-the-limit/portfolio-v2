@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 import Feature from '../Feature/Feature'
-import Grid, { Variant } from '../Grid/Grid'
+import Grid from '../Grid/Grid'
 import Hero from '../Hero/Hero'
 import { CardInfo } from '../Card/Card'
 import { primaryCategories, secondaryCategories } from '../../data/categories'
@@ -52,8 +52,8 @@ const HomePage = () => {
       <div className='container mx-auto my-12 max-w-6xl px-6 space-y-6 sm:space-y-12'>
         <Feature />
         <div id='project-work' />
-        <Grid variant={Variant.Medium} cards={primaryCards} />
-        <Grid variant={Variant.Small} cards={secondaryCards} />
+        <Grid variant={'medium'} cards={primaryCards} />
+        <Grid variant={'small'} cards={secondaryCards} />
       </div>
     </div>
   )

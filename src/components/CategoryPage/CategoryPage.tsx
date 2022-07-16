@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Category } from '../../data/categories'
-import Grid, { Variant } from '../Grid/Grid'
+import Grid from '../Grid/Grid'
 import ProjectDetails from '../ProjectDetails/ProjectDetails'
 
 type CategoryProps = {
@@ -30,7 +30,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
       <h1 className='text-3xl font-semibold tracking-wide text-center py-6'>
         {title}
       </h1>
-      <Grid variant={Variant.Large} cards={cards} />
+      <Grid variant={'large'} cards={cards} />
       <Link to={'/'} state={{ targetId: 'project-work' }}>
         <p className='text-center text-s font-medium tracking-widest uppercase text-sky-400 mt-16'>
           Back
