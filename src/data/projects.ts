@@ -5,7 +5,10 @@ export type Project = {
   coverImageSrc: string
   coverImagePosition?: 'object-center' | 'object-bottom'
   imageSrcs?: string[]
-  videoSrcs?: string[]
+  videos?: {
+    vimeoId: string
+    loop?: boolean
+  }[]
   // TODO?: Remove unused field
   links?: {
     displayText: string
@@ -25,7 +28,7 @@ export const general3d: Project[] = [
       'IcelandicBasalt_HoudiniPreview.png',
       'IcelandicBasalt_WorldMachinePreview.png'
     ],
-    videoSrcs: ['713927330']
+    videos: [{ vimeoId: '713927330' }]
   },
   {
     date: "Mar '22",
@@ -38,7 +41,7 @@ export const general3d: Project[] = [
       'BorealAurora_process.png',
       'BorealAurora_terrainPreview.png'
     ],
-    videoSrcs: ['713926631']
+    videos: [{ vimeoId: '713926631' }]
   },
   {
     date: "Dec '21",
@@ -46,7 +49,7 @@ export const general3d: Project[] = [
     description:
       "Virtual environment of a resort spaceship's lounge. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.",
     coverImageSrc: 'SpaceshipLounge_cover.png',
-    videoSrcs: ['725470027']
+    videos: [{ vimeoId: '725470027' }]
   },
   {
     date: "Oct '21",
@@ -54,7 +57,7 @@ export const general3d: Project[] = [
     description:
       'Bio-engineered vegetation for Martian colonization. Models generated in Houdini, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
     coverImageSrc: 'MartianVegetation_cover.png',
-    videoSrcs: ['726182601']
+    videos: [{ vimeoId: '726182601', loop: true }]
   },
   {
     date: "Sept '21",
@@ -62,7 +65,7 @@ export const general3d: Project[] = [
     description:
       'SciFi chair for neurologically simulated virtual reality. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
     coverImageSrc: 'VRChair_cover.png',
-    videoSrcs: ['726300088']
+    videos: [{ vimeoId: '726300088', loop: true }]
   },
   {
     date: "Dec '20",
@@ -70,7 +73,7 @@ export const general3d: Project[] = [
     description:
       'The endangered Pangolin has developed an adaptation to protect it from poachers! Low-poly mesh modeled in Maya, details sculpted in ZBrush. Textured with substance painter, rigged, animated and composited in Maya.',
     coverImageSrc: 'Pangolin_cover.png',
-    videoSrcs: ['726303946', '726302583']
+    videos: [{ vimeoId: '726303946', loop: true }, { vimeoId: '726302583' }]
   },
   {
     date: "Nov '19",
@@ -86,7 +89,7 @@ export const general3d: Project[] = [
     description: 'Talent show act of an animated and rigged character.',
     coverImageSrc: '2018-12-14 Talent Show Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352084087']
+    videos: [{ vimeoId: '352084087' }]
   },
   {
     date: "Nov '16",
@@ -94,7 +97,7 @@ export const general3d: Project[] = [
     description: 'Character model based on Castle Crashers.',
     coverImageSrc: '2016-11-18 Castle Crasher Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['353296476']
+    videos: [{ vimeoId: '353296476', loop: true }]
   }
 ]
 
@@ -105,7 +108,7 @@ export const techArt: Project[] = [
     medium: ['Houdini'],
     description: 'Experiment with vellum and combining Mixamo animations.',
     coverImageSrc: 'VellumDance_cover.png',
-    videoSrcs: ['726342593']
+    videos: [{ vimeoId: '726342593' }]
   }
 ]
 
@@ -140,7 +143,7 @@ export const softwareDev: Project[] = [
     description:
       'Application for collaborative painting. Private Github repo available on request with professor approval.',
     coverImageSrc: 'CollaborativeDrawing_cover.png',
-    videoSrcs: ['726526677']
+    videos: [{ vimeoId: '726526677' }]
   },
   {
     date: "Dec '19",
@@ -241,7 +244,7 @@ export const creativeCoding: Project[] = [
       '2019-07-26 Austauschstadt (6).png',
       '2019-07-26 Austauschstadt (7).png'
     ],
-    videoSrcs: ['353297101', '355991818'],
+    videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -262,7 +265,7 @@ export const creativeCoding: Project[] = [
       '2019-07-14 Generative Tessellations (5).png',
       '2019-07-14 Generative Tessellations (6).png'
     ],
-    videoSrcs: ['353274180'],
+    videos: [{ vimeoId: '353274180' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -290,7 +293,7 @@ export const creativeCoding: Project[] = [
       '2019-07-06 Drawing Machine (12).png',
       '2019-07-06 Drawing Machine (13).png'
     ],
-    videoSrcs: ['356239943'],
+    videos: [{ vimeoId: '356239943' }],
     links: [
       {
         displayText: 'View it on Github!',
@@ -308,7 +311,7 @@ export const motionGraphics: Project[] = [
       "An educational video on different culture's 'Halloween-esque' holidays.",
     coverImageSrc: '2018-11-07 Edutainment Preview.png',
     coverImagePosition: 'object-bottom',
-    videoSrcs: ['354709668']
+    videos: [{ vimeoId: '354709668' }]
   },
   {
     date: "Mar '19",
@@ -317,7 +320,7 @@ export const motionGraphics: Project[] = [
       'Lyric video focusing on transforming audio into visual representations.',
     coverImageSrc: '2018-03-20 Lyrics.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352082622']
+    videos: [{ vimeoId: '352082622' }]
   }
 ]
 
@@ -395,7 +398,7 @@ export const videography: Project[] = [
     description:
       'Immersive short comedy featuring the Cha Cha Slide by DJ Casper',
     coverImageSrc: 'GetFunky_Cover.png',
-    videoSrcs: ['713918755']
+    videos: [{ vimeoId: '713918755' }]
   },
   {
     date: "Sept '18",
@@ -403,7 +406,7 @@ export const videography: Project[] = [
     description: "A variant on the 'chalk talk' style of stop motion.",
     coverImageSrc: '2018-09-25 Chalk Talk Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352083851']
+    videos: [{ vimeoId: '352083851' }]
   },
   {
     date: "Sept '18",
@@ -412,7 +415,7 @@ export const videography: Project[] = [
       'Claymation conceptualized by visualizing a predetermined cartoon soundtrack.',
     coverImageSrc: '2018-09-19 Claymation Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352083588']
+    videos: [{ vimeoId: '352083588' }]
   },
   {
     date: "Apr '18",
@@ -420,7 +423,7 @@ export const videography: Project[] = [
     description: 'An impressionistic recollection of a season of dance.',
     coverImageSrc: '2018-04-23 Sum Preview.png',
     coverImagePosition: 'object-center',
-    videoSrcs: ['352082744']
+    videos: [{ vimeoId: '352082744' }]
   },
   {
     date: "Feb '18",
@@ -428,6 +431,6 @@ export const videography: Project[] = [
     description: 'Short study on performance.',
     coverImagePosition: 'object-bottom',
     coverImageSrc: '2018-02-26 Twister Preview.png',
-    videoSrcs: ['352082020']
+    videos: [{ vimeoId: '352082020' }]
   }
 ]
