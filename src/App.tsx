@@ -29,6 +29,7 @@ const LayoutWrapper = ({ children }: any) => {
   return children
 }
 
+// TODO: Update metadata in index.html for SEO
 const App = () => {
   const categories = [...primaryCategories, ...secondaryCategories]
 
