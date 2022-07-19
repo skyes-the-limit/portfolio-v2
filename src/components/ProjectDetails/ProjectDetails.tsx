@@ -56,7 +56,6 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
     <div>
       {imageSrcs?.length + videos?.length > 1 && (
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
-          {/* TODO: Improve placement of controls */}
           <button
             type='button'
             className='carouselControl carouselControl__forward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
