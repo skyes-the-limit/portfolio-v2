@@ -56,9 +56,9 @@ const IconLink = ({ title, logoSrc, href }: Icon) => {
 const Footer = () => {
   return (
     <footer className='bg-gray-800 text-gray-50'>
-      <div className='container flex justify-between items-center p-4 mx-auto md:p-8 lg:flex-row divide-gray-400'>
+      <div className='container flex justify-between items-center max-w-6xl mx-auto py-8 px-6 lg:flex-row divide-gray-400'>
         <div className='text-gray-400'>© All rights reserved</div>
-        <div className='flex flex-col justify-center pt-6 lg:pt-0'>
+        <div className='flex flex-col justify-center'>
           <div className='flex justify-center space-x-4'>
             {icons.map((icon) => (
               <IconLink
