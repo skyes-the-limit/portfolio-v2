@@ -12,7 +12,7 @@ import {
 export type Category = {
   path: string
   title: string
-  description: string
+  description?: string
   coverImageSrc: string
   coverImagePosition?: 'object-center' | 'object-bottom'
   content: Project[]
@@ -48,14 +48,12 @@ export const secondaryCategories: Category[] = [
   {
     path: '/creative-coding',
     title: 'Creative Coding',
-    description: '',
     coverImageSrc: '2019-07-14 Generative Tessellations Preview.png',
     content: creativeCoding
   },
   {
     path: '/illustration',
     title: 'Illustration',
-    description: '',
     coverImageSrc: '2017-11-20 Patterns Preview.png',
     coverImagePosition: 'object-center',
     content: illustration
@@ -63,14 +61,12 @@ export const secondaryCategories: Category[] = [
   {
     path: '/videography',
     title: 'Videography',
-    description: '',
     coverImageSrc: 'GetFunky_Cover.png',
     content: videography
   },
   {
     path: '/motion-graphics',
     title: 'Motion Graphics',
-    description: '',
     coverImageSrc: '2018-11-07 Edutainment Preview.png',
     coverImagePosition: 'object-bottom',
     content: motionGraphics

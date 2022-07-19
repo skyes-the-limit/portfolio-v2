@@ -9,7 +9,7 @@ import './Card.css'
 export type CardInfo = {
   header: string
   badges?: string[]
-  description: string
+  description?: string
   imageSrc: string
   imageObjectPos?: string
   // Link to route to onClick if there is no modal
@@ -52,8 +52,16 @@ const CardInner = ({ variant, card }: CardProps) => {
         />
       </div>
       <div className='flex flex-col justify-between px-6 pb-4'>
-        <div className='flex flex-row justify-between items-center space-x-4 mb-4'>
-          {/* TODO: Consider centering header when there is no description? */}
+        <div
+          className={cx(
+            'mb-2 w-full',
+            {
+              'flex flex-row justify-between items-center space-x-2 sm:space-x-4 ':
+                badges
+            },
+            { 'text-center': !badges && !description }
+          )}
+        >
           <h2 className='text-xl font-semibold tracking-wide whitespace-nowrap'>
             {header}
           </h2>
