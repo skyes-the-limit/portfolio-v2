@@ -11,7 +11,7 @@ const AboutPage = () => {
     <div>
       {/* <Sidebar /> */}
       <div
-        className='flex flex-col space-y-12 container pt-24 pb-4 mx-auto w-[768px]'
+        className='container flex flex-col space-y-12 container pt-24 pb-4 px-6 mx-auto'
         style={{ minHeight: 'calc(100vh - 104px)' }}
       >
         <LinkFarm />

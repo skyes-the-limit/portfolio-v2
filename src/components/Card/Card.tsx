@@ -62,7 +62,7 @@ const CardInner = ({ variant, card }: CardProps) => {
               {badges.map((badge, index) => (
                 <span
                   key={index}
-                  className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium tracking-wide whitespace-nowrap'
+                  className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium whitespace-nowrap'
                 >
                   {badge}
                 </span>

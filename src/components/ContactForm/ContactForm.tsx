@@ -83,7 +83,7 @@ const ContactForm = () => {
                   as={CustomField}
                 />
                 {touched.fullName && errors.fullName ? (
-                  <div className='my-1 mx-4 text-red-400 text-sm'>
+                  <div className='my-1 text-red-400 text-sm'>
                     {errors.fullName}
                   </div>
                 ) : (
@@ -103,7 +103,7 @@ const ContactForm = () => {
                   as={CustomField}
                 />
                 {touched.email && errors.email ? (
-                  <div className='my-1 mx-4 text-red-400 text-sm'>
+                  <div className='my-1 text-red-400 text-sm'>
                     {errors.email}
                   </div>
                 ) : (
@@ -123,7 +123,7 @@ const ContactForm = () => {
                   as={CustomTextarea}
                 />
                 {touched.message && errors.message ? (
-                  <div className='my-1 mx-4 text-red-400 text-sm'>
+                  <div className='my-1 text-red-400 text-sm'>
                     {errors.message}
                   </div>
                 ) : (
@@ -132,7 +132,7 @@ const ContactForm = () => {
               </div>
 
               {error && (
-                <div className='mb-6 mx-4 text-red-400 text-sm'>
+                <div className='mb-6 text-red-400 text-sm'>
                   {`Unexpected error: ${error}`}
                 </div>
               )}

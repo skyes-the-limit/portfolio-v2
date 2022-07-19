@@ -57,7 +57,8 @@ const links: Link[] = [
 const LinkFarm = () => {
   return (
     <div className='mx-auto w-fit'>
-      <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-2 md:grid-cols-3'>
+      {/* TODO: Switch from grid to flex with space-between and a dynamic number of rows */}
+      <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-1 xs:grid-cols-2 md:grid-cols-3'>
         {links &&
           links.map((link, index) => (
             <a
@@ -69,7 +70,7 @@ const LinkFarm = () => {
             >
               <button
                 type='button'
-                className={`flex justify-center w-60 px-8 ${link.paddingY} space-x-2 font-semibold text-lg rounded-md`}
+                className={`flex justify-center w-60 xs:w-[204px] w-60 px-6 sm:px-8 ${link.paddingY} space-x-2 font-semibold text-lg rounded-md`}
                 style={{ backgroundColor: link.buttonColor }}
               >
                 {link.logoSrcs.map((src) => (

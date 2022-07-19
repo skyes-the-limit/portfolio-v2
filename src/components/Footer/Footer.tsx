@@ -55,9 +55,11 @@ const IconLink = ({ title, logoSrc, href }: Icon) => {
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-800 text-gray-50'>
-      <div className='container flex justify-between items-center max-w-6xl mx-auto py-8 px-6 lg:flex-row divide-gray-400'>
-        <div className='text-gray-400'>© All rights reserved</div>
+    <footer className='bg-gray-800 text-gray-50 text-center'>
+      <div className='container sm:flex justify-between items-center max-w-6xl mx-auto py-8 px-6 lg:flex-row divide-gray-400'>
+        <div className='text-gray-400 text-base mb-4 sm:mb-0'>
+          © All rights reserved
+        </div>
         <div className='flex flex-col justify-center'>
           <div className='flex justify-center space-x-4'>
             {icons.map((icon) => (

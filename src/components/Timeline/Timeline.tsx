@@ -54,26 +54,26 @@ const events: Event[] = [
 
 const Timeline = () => {
   return (
-    <section className='text-left mx-auto'>
-      <div className='container max-w-5xl pl-4 mx-auto'>
-        <div className='relative col-span-12 pl-4 space-y-6 sm:col-span-9'>
-          <div className='col-span-12 space-y-12 relative pl-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700'>
+    <section className='text-left mx-auto pl-4'>
+      <div className='container max-w-5xl mx-auto'>
+        <div className='relative col-span-12 sm:pl-4 space-y-6 sm:col-span-9'>
+          <div className='col-span-12 space-y-12 relative pl-4 sm:col-span-8 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:bg-gray-700'>
             {events &&
               events.map((event, index) => (
                 <div
                   key={index}
-                  className='flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-400'
+                  className='flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-400'
                 >
-                  <div className='flex flex-row justify-between'>
-                    <h3 className='text-2xl font-semibold tracking-wide'>
+                  {/* TODO: Fix badges getting cut off on small screens */}
+                  <div className='flex flex-row justify-between max-w-[240px] xs:max-w-none'>
+                    <h3 className='text-2xl font-semibold tracking-wide pr-2'>
                       {event.title}
                     </h3>
-                    <div className='flex space-x-4'>
-                      {/* TODO: Fix badges at 1024px breakpoint */}
+                    <div className='flex items-center space-x-2 sm:space-x-4 overflow-hidden'>
                       {event.badges.map((badge, index) => (
                         <span
                           key={index}
-                          className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium tracking-wide whitespace-nowrap'
+                          className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium whitespace-nowrap'
                         >
                           {badge}
                         </span>
