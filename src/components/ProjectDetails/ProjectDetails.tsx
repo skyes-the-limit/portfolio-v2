@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { RefCallback, useEffect, useState } from 'react'
 import cx from 'classnames'
 import useEventListener from '@use-it/event-listener'
 
@@ -7,6 +7,7 @@ import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
 import Arrow from '../../assets/icons/arrow.svg'
 
 import './ProjectDetails.css'
+import { useSwipeable } from 'react-swipeable'
 
 type ProjectDetailsProps = {
   project: Project
@@ -29,6 +30,15 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       ? setSelectedIndex(maxIndex)
       : setSelectedIndex(selectedIndex - 1)
   }
+
+  const { ref } = useSwipeable({
+    onSwipedLeft: incrementSelectedIndex,
+    onSwipedRight: decrementSelectedIndex
+  }) as { ref: RefCallback<Document> }
+
+  useEffect(() => {
+    ref(document)
+  })
 
   const keyUpHandler = ({ key }: KeyboardEvent): void => {
     switch (key) {
