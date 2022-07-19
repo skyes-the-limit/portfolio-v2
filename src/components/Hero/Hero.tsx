@@ -12,10 +12,9 @@ const Hero = () => {
         playsInline
         webkit-playsinline=''
         tabIndex={-1}
-        // TODO: With transparent background, remove object-cover
-        className='block object-cover w-full'
+        className='block w-full'
         style={{ height: 'calc(100vh - 8rem)' }}
-        src={require('../../assets/HelloParticles.mp4')}
+        src={require('../../assets/HelloParticles.webm')}
       ></video>
     </section>
   )
