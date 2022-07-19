@@ -53,6 +53,7 @@ const CardInner = ({ variant, card }: CardProps) => {
       </div>
       <div className='flex flex-col justify-between px-6 pb-4'>
         <div className='flex flex-row justify-between items-center space-x-4 mb-4'>
+          {/* TODO: Consider centering header when there is no description? */}
           <h2 className='text-xl font-semibold tracking-wide whitespace-nowrap'>
             {header}
           </h2>

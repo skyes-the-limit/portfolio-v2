@@ -97,7 +97,8 @@ export const general3d: Project[] = [
 ]
 
 export const techArt: Project[] = [
-  // TODO: Finished SPL work
+  // TODO: "Hello!" Particles - July 2022
+  // TODO: Finished SPL - April 2022
   {
     date: "Dec '21",
     medium: ['Houdini'],

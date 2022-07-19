@@ -8,6 +8,7 @@ type Link = {
   href: string
 }
 
+// TODO: Update content on ArtStation, Gumroad, and Instagram
 const links: Link[] = [
   {
     logoSrcs: ['ArtStation-logo-horizontal-dark.svg'],

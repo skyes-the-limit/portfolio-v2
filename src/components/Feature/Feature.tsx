@@ -1,11 +1,7 @@
 import React from 'react'
 
-type FeatureProps = {
-  message?: string
-}
-
-// TODO: Copy + photo here deserves polish
-const Feature = ({ message }: FeatureProps) => {
+// TODO: Replace with higher quality photo
+const Feature = () => {
   return (
     <a
       rel='noopener noreferrer'
@@ -20,13 +16,18 @@ const Feature = ({ message }: FeatureProps) => {
       <div className='p-6 space-y-2 lg:col-span-5'>
         <h3 className='text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline'>
           Skye Bishop
+          <span className='text-lg font-light ml-2'>(they/them)</span>
         </h3>
-        <span className='text-xs text-gray-400'>
-          Software Engineering | Human-Computer Interaction | Technical Art
+        <span className='text-xs italic text-gray-400'>
+          &#34;I trick computers into making pretty things&#34;
+          {/* Software engineer by day, artist by night— */}
         </span>
         <p>
-          {message ||
-            'This will be a brief introductory about section, linking to the full about page. Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.'}
+          Welcome to my site! I enjoy creating visually stunning experiences via
+          various technical mediums. I currently work full-time as a React
+          developer and work on CGI projects in my free time. I am Seattle
+          based, though I strive to travel as far and frequently as possible.
+          Check out my work below!
         </p>
       </div>
     </a>
