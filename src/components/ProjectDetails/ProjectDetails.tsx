@@ -35,7 +35,6 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
     onSwipedLeft: incrementSelectedIndex,
     onSwipedRight: decrementSelectedIndex
   }) as { ref: RefCallback<Document> }
-
   useEffect(() => {
     ref(document)
   })
@@ -60,19 +59,27 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           {/* TODO: Improve placement of controls */}
           <button
             type='button'
-            className='carouselControl carouselControl__forward'
+            className='carouselControl carouselControl__forward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
             aria-label='Forward'
             onClick={incrementSelectedIndex}
           >
-            <img src={Arrow} alt='Forward' className='w-12 h-12' />
+            <img
+              src={Arrow}
+              alt='Forward'
+              className='w-6 xs:w-8 sm:w-10 md:w-12 h-6 xs:h-8 sm:w-10 md:h-12'
+            />
           </button>
           <button
             type='button'
-            className='carouselControl carouselControl__backward'
+            className='carouselControl carouselControl__backward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
             aria-label='Backward'
             onClick={decrementSelectedIndex}
           >
-            <img src={Arrow} alt='Backward' className='w-12 h-12' />
+            <img
+              src={Arrow}
+              alt='Backward'
+              className='w-6 xs:w-8 sm:w-10 md:w-12 h-6 xs:h-8 sm:w-10 md:h-12'
+            />
           </button>
         </div>
       )}
@@ -99,10 +106,9 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             <img
               key={`image-${index}`}
               src={require(`../../assets/projects/${src}`)}
-              className={cx({
-                hidden: (index + videos?.length ?? 0 - 1) !== selectedIndex
+              className={cx('max-h-[calc(100vh-8rem)]', {
+                hidden: index + videos.length !== selectedIndex
               })}
-              style={{ maxHeight: '70vh' }}
             />
           )
         })}

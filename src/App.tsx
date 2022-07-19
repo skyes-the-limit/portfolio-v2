@@ -30,6 +30,7 @@ const LayoutWrapper = ({ children }: any) => {
 }
 
 // TODO: Update metadata in index.html for SEO
+// TODO: Add various testIds
 const App = () => {
   const categories = [...primaryCategories, ...secondaryCategories]
 

@@ -3,7 +3,15 @@ export type Project = {
   medium: string[]
   description: string
   coverImageSrc: string
-  coverImagePosition?: 'object-center' | 'object-bottom'
+  coverImagePosition?:
+    | 'object-bottom'
+    | 'object-center'
+    | 'object-left'
+    | 'object-left-bottom'
+    | 'object-left-top'
+    | 'object-right'
+    | 'object-right-bottom'
+    | 'object-right-top'
   imageSrcs?: string[]
   videos?: {
     vimeoId: string
@@ -31,6 +39,7 @@ export const general3d: Project[] = [
     description:
       'Geodesic tent modeled in Maya and textured with Substance Painter. Furnished with free assets from TurboSquid. Terrain generated in World Machine. Assembled in Unreal Engine 4 with Quixel Megascans materials and vegetation.',
     coverImageSrc: 'BorealAurora_cover.png',
+    coverImagePosition: 'object-left',
     imageSrcs: [
       'BorealAurora_concept.png',
       'BorealAurora_process.png',
