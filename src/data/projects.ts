@@ -19,7 +19,7 @@ export type Project = {
   }[]
 }
 
-// TODO: convert animated .gifs to looping videos, and images to .webp
+// TODO: Convert media to .webm or .webp
 export const general3d: Project[] = [
   {
     date: "Apr '22",
