@@ -29,7 +29,6 @@ const LayoutWrapper = ({ children }: any) => {
   return children
 }
 
-// TODO: Style or hide scrollbar
 const App = () => {
   const categories = [...primaryCategories, ...secondaryCategories]
 
