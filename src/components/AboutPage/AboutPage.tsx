@@ -8,7 +8,7 @@ const AboutPage = () => {
   return (
     <div>
       <div
-        className='container flex flex-col space-y-12 container pt-24 pb-4 px-6 mx-auto'
+        className='container flex flex-col space-y-12 items-center pt-24 pb-4 px-6 mx-auto'
         style={{ minHeight: 'calc(100vh - 104px)' }}
       >
         <LinkFarm />
