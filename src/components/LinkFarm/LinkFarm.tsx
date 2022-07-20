@@ -57,7 +57,6 @@ const links: Link[] = [
 const LinkFarm = () => {
   return (
     <div className='mx-auto w-fit'>
-      {/* TODO: Switch from grid to flex with space-between and a dynamic number of rows */}
       <div className='container grid gap-6 auto-cols-min-content mx-auto grid-cols-1 xs:grid-cols-2 md:grid-cols-3'>
         {links &&
           links.map((link, index) => (

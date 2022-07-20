@@ -19,7 +19,6 @@ export type Project = {
   }[]
 }
 
-// TODO: Convert media to .webm or .webp
 export const general3d: Project[] = [
   {
     date: "Apr '22",

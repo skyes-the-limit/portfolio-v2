@@ -20,7 +20,6 @@ const Feature = () => {
         </h3>
         <span className='text-xs italic text-gray-400'>
           &#34;I trick computers into making pretty things&#34;
-          {/* Software engineer by day, artist by night— */}
         </span>
         <p>
           Welcome to my site! I enjoy creating visually stunning experiences via
