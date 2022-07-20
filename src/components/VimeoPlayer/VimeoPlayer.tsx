@@ -6,6 +6,7 @@ type VimeoPlayerProps = {
   autoplay?: boolean
 }
 
+// TODO: Dynamically accept non-16:9 ratios
 const VimeoPlayer = ({
   id,
   loop = false,
