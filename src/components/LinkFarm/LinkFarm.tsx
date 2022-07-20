@@ -39,7 +39,7 @@ const links: Link[] = [
     href: 'https://www.instagram.com/skye.makes.cgi/'
   },
   {
-    logoSrcs: ['LI-Logo.png'],
+    logoSrcs: ['LI-Logo.webp'],
     logoHeight: 'h-10',
     paddingY: 'py-5',
     buttonColor: '#ffffff',

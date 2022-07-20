@@ -9,7 +9,7 @@ const Feature = () => {
       className='block rounded-lg hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900'
     >
       <img
-        src={require('../../assets/Profile.png')}
+        src={require('../../assets/Profile.webp')}
         alt='Website Design System'
         className='object-cover w-full h-64 rounded-t lg:rounded-tr-none lg:rounded-l sm:h-96 lg:col-span-7 bg-gray-500'
       />

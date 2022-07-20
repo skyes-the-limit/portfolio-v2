@@ -28,7 +28,7 @@ export const general3d: Project[] = [
       "Virtual environment inspired by Iceland's basalt columns. Columns procedurally generated with Houdini, textured in Substance Painter. Terrain generated in World Machine and textured with Quixel Megascans materials. Assembled and rendered in Unreal Engine 4.",
     coverImageSrc: 'IcelandicBasalt_cover.webp',
     imageSrcs: [
-      'IcelandicBasalt_HoudiniPreview.png',
+      'IcelandicBasalt_HoudiniPreview.webp',
       'IcelandicBasalt_WorldMachinePreview.webp'
     ],
     videos: [{ vimeoId: '713927330' }]
@@ -52,7 +52,7 @@ export const general3d: Project[] = [
     medium: ['Maya', 'Substance Painter', 'UE5'],
     description:
       "Virtual environment of a resort spaceship's lounge. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.",
-    coverImageSrc: 'SpaceshipLounge_cover.png',
+    coverImageSrc: 'SpaceshipLounge_cover.webp',
     videos: [{ vimeoId: '725470027' }]
   },
   {
@@ -60,7 +60,7 @@ export const general3d: Project[] = [
     medium: ['Houdini', 'Substance Painter', 'UE5'],
     description:
       'Bio-engineered vegetation for Martian colonization. Models generated in Houdini, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
-    coverImageSrc: 'MartianVegetation_cover.png',
+    coverImageSrc: 'MartianVegetation_cover.webp',
     videos: [{ vimeoId: '726182601', loop: true }]
   },
   {
@@ -68,7 +68,7 @@ export const general3d: Project[] = [
     medium: ['Maya', 'Substance Painter', 'UE5'],
     description:
       'SciFi chair for neurologically simulated virtual reality. Modeled in Maya, textured in Substance Painter, assembled and rendered in Unreal Engine 5.',
-    coverImageSrc: 'VRChair_cover.png',
+    coverImageSrc: 'VRChair_cover.webp',
     videos: [{ vimeoId: '726300088', loop: true }]
   },
   {
@@ -84,8 +84,8 @@ export const general3d: Project[] = [
     medium: ['Maya'],
     description: 'Digital recreation of a small interior space.',
     coverImagePosition: 'object-center',
-    coverImageSrc: '2019-11-05 Interior (1).png',
-    imageSrcs: ['2019-11-05 Interior (1).png', '2019-11-05 Interior (2).png']
+    coverImageSrc: '2019-11-05 Interior (1).webp',
+    imageSrcs: ['2019-11-05 Interior (1).webp', '2019-11-05 Interior (2).webp']
   },
   {
     date: "Dec '18",
@@ -128,8 +128,8 @@ export const softwareDev: Project[] = [
       'ParodyParty_home.webp',
       'ParodyParty_search.webp',
       'ParodyParty_result.webp',
-      'ParodyParty_login.png',
-      'ParodyParty_account.png'
+      'ParodyParty_login.webp',
+      'ParodyParty_account.webp'
     ]
   },
   {
@@ -144,17 +144,17 @@ export const softwareDev: Project[] = [
     date: "Dec '19",
     medium: ['NativeScript.js'],
     description: 'Prototype for a social event planning app.',
-    coverImageSrc: '2019-12-14 You In (1).jpg',
+    coverImageSrc: '2019-12-14 You In (1).webp',
     imageSrcs: [
-      '2019-12-14 You In (1).jpg',
-      '2019-12-14 You In (2).jpg',
-      '2019-12-14 You In (3).jpg',
-      '2019-12-14 You In (4).jpg',
-      '2019-12-14 You In (5).jpg',
-      '2019-12-14 You In (6).jpg',
-      '2019-12-14 You In (7).jpg',
-      '2019-12-14 You In (8).jpg',
-      '2019-12-14 You In (9).jpg'
+      '2019-12-14 You In (1).webp',
+      '2019-12-14 You In (2).webp',
+      '2019-12-14 You In (3).webp',
+      '2019-12-14 You In (4).webp',
+      '2019-12-14 You In (5).webp',
+      '2019-12-14 You In (6).webp',
+      '2019-12-14 You In (7).webp',
+      '2019-12-14 You In (8).webp',
+      '2019-12-14 You In (9).webp'
     ]
   },
   {
@@ -283,23 +283,23 @@ export const illustration: Project[] = [
     medium: ['Photoshop'],
     description:
       'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
-    coverImageSrc: '2019-11-15 Process Portrait (1).png',
+    coverImageSrc: '2019-11-15 Process Portrait (1).webp',
     coverImagePosition: 'object-center',
     imageSrcs: [
-      '2019-11-15 Process Portrait (1).png',
-      '2019-11-15 Process Portrait (2).png',
-      '2019-11-15 Process Portrait (3).png',
-      '2019-11-15 Process Portrait (4).png',
-      '2019-11-15 Process Portrait (5).png',
-      '2019-11-15 Process Portrait (6).png',
-      '2019-11-15 Process Portrait (7).png',
-      '2019-11-15 Process Portrait (8).png',
-      '2019-11-15 Process Portrait (9).png',
-      '2019-11-15 Process Portrait (10).png',
-      '2019-11-15 Process Portrait (11).png',
-      '2019-11-15 Process Portrait (12).png',
-      '2019-11-15 Process Portrait (13).png',
-      '2019-11-15 Process Portrait (14).png'
+      '2019-11-15 Process Portrait (1).webp',
+      '2019-11-15 Process Portrait (2).webp',
+      '2019-11-15 Process Portrait (3).webp',
+      '2019-11-15 Process Portrait (4).webp',
+      '2019-11-15 Process Portrait (5).webp',
+      '2019-11-15 Process Portrait (6).webp',
+      '2019-11-15 Process Portrait (7).webp',
+      '2019-11-15 Process Portrait (8).webp',
+      '2019-11-15 Process Portrait (9).webp',
+      '2019-11-15 Process Portrait (10).webp',
+      '2019-11-15 Process Portrait (11).webp',
+      '2019-11-15 Process Portrait (12).webp',
+      '2019-11-15 Process Portrait (13).webp',
+      '2019-11-15 Process Portrait (14).webp'
     ]
   },
   {
@@ -307,15 +307,15 @@ export const illustration: Project[] = [
     medium: ['Screenprinted Fabric'],
     description:
       'Exploration of tagging and graffiti using publicly sited textiles.',
-    coverImageSrc: '2019-07-22 Screenprint (1).jpg',
+    coverImageSrc: '2019-07-22 Screenprint (1).webp',
     coverImagePosition: 'object-center',
     imageSrcs: [
-      '2019-07-22 Screenprint (1).jpg',
-      '2019-07-22 Screenprint (2).jpg',
-      '2019-07-22 Screenprint (3).jpg',
-      '2019-07-22 Screenprint (4).jpg',
-      '2019-07-22 Screenprint (5).jpg',
-      '2019-07-22 Screenprint (6).jpg'
+      '2019-07-22 Screenprint (1).webp',
+      '2019-07-22 Screenprint (2).webp',
+      '2019-07-22 Screenprint (3).webp',
+      '2019-07-22 Screenprint (4).webp',
+      '2019-07-22 Screenprint (5).webp',
+      '2019-07-22 Screenprint (6).webp'
     ]
   },
   {
