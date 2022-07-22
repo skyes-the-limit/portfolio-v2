@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 
 import Feature from '../Feature/Feature'
 import Grid from '../Grid/Grid'
-import Hero from '../Hero/Hero'
 import { CardInfo } from '../Card/Card'
 import { primaryCategories, secondaryCategories } from '../../data/categories'
 import { useLocation } from 'react-router'
@@ -53,7 +52,6 @@ const HomePage = () => {
 
   return (
     <div className='pt-16'>
-      <Hero />
       <div className='container mx-auto my-12 max-w-6xl px-6 space-y-6 sm:space-y-12'>
         <Feature />
         <div id='project-work' />
