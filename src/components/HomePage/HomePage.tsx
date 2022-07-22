@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import Feature from '../Feature/Feature'
+import Feature from '../Hero/Hero'
 import Grid from '../Grid/Grid'
 import { CardInfo } from '../Card/Card'
 import { primaryCategories, secondaryCategories } from '../../data/categories'
