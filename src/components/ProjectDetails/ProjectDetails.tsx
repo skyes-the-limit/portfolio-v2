@@ -14,18 +14,18 @@ type ProjectDetailsProps = {
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { imageSrcs = [], videos = [] } = project
+  const { images = [], videos = [] } = project
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const incrementSelectedIndex = () => {
-    const maxIndex = imageSrcs.length + videos.length - 1
+    const maxIndex = images.length + videos.length - 1
     selectedIndex >= maxIndex
       ? setSelectedIndex(0)
       : setSelectedIndex(selectedIndex + 1)
   }
 
   const decrementSelectedIndex = () => {
-    const maxIndex = imageSrcs.length + videos.length - 1
+    const maxIndex = images.length + videos.length - 1
     selectedIndex <= 0
       ? setSelectedIndex(maxIndex)
       : setSelectedIndex(selectedIndex - 1)
@@ -54,7 +54,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
 
   return (
     <div>
-      {imageSrcs?.length + videos?.length > 1 && (
+      {images?.length + videos?.length > 1 && (
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
           <button
             type='button'
@@ -99,16 +99,27 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </div>
         ))}
 
-      {imageSrcs &&
-        imageSrcs.map((src, index) => {
+      {images &&
+        images.map(({ src, caption }, index) => {
           return (
-            <img
+            <div
               key={`image-${index}`}
-              src={require(`../../assets/projects/${src}`)}
-              className={cx('max-h-[calc(100vh-8rem)]', {
+              className={cx({
                 hidden: index + videos.length !== selectedIndex
               })}
-            />
+            >
+              <img
+                src={require(`../../assets/projects/${src}`)}
+                className={cx(
+                  caption
+                    ? 'max-h-[calc(100vh-10.5rem)]'
+                    : 'max-h-[calc(100vh-8rem)]'
+                )}
+              />
+              {caption && (
+                <p className='text-gray-400 text-center p-2'>{caption}</p>
+              )}
+            </div>
           )
         })}
     </div>

@@ -12,7 +12,10 @@ export type Project = {
     | 'object-right'
     | 'object-right-bottom'
     | 'object-right-top'
-  imageSrcs?: string[]
+  images?: {
+    src: string
+    caption?: string
+  }[]
   videos?: {
     vimeoId: string
     loop?: boolean
@@ -26,9 +29,15 @@ export const general3d: Project[] = [
     description:
       "Virtual environment inspired by Iceland's basalt columns. Columns procedurally generated with Houdini, textured in Substance Painter. Terrain generated in World Machine and textured with Quixel Megascans materials. Assembled and rendered in Unreal Engine 4.",
     coverImageSrc: 'IcelandicBasalt_cover.webp',
-    imageSrcs: [
-      'IcelandicBasalt_HoudiniPreview.webp',
-      'IcelandicBasalt_WorldMachinePreview.webp'
+    images: [
+      {
+        src: 'IcelandicBasalt_HoudiniPreview.webp',
+        caption: 'Houdini generation of column geometry.'
+      },
+      {
+        src: 'IcelandicBasalt_WorldMachinePreview.webp',
+        caption: 'World Machine terrain generation.'
+      }
     ],
     videos: [{ vimeoId: '713927330' }]
   },
@@ -39,10 +48,13 @@ export const general3d: Project[] = [
       'Geodesic tent modeled in Maya and textured with Substance Painter. Furnished with free assets from TurboSquid. Terrain generated in World Machine. Assembled in Unreal Engine 4 with Quixel Megascans materials and vegetation.',
     coverImageSrc: 'BorealAurora_cover.webp',
     coverImagePosition: 'object-left',
-    imageSrcs: [
-      'BorealAurora_concept.webp',
-      'BorealAurora_process.webp',
-      'BorealAurora_terrainPreview.webp'
+    images: [
+      { src: 'BorealAurora_concept.webp' },
+      { src: 'BorealAurora_process.webp' },
+      {
+        src: 'BorealAurora_terrainPreview.webp',
+        caption: 'World Machine terrain generation.'
+      }
     ],
     videos: [{ vimeoId: '713926631' }]
   },
@@ -84,7 +96,10 @@ export const general3d: Project[] = [
     description: 'Digital recreation of a small interior space.',
     coverImagePosition: 'object-center',
     coverImageSrc: '2019-11-05 Interior (1).webp',
-    imageSrcs: ['2019-11-05 Interior (1).webp', '2019-11-05 Interior (2).webp']
+    images: [
+      { src: '2019-11-05 Interior (1).webp' },
+      { src: '2019-11-05 Interior (2).webp' }
+    ]
   },
   {
     date: "Dec '18",
@@ -123,12 +138,12 @@ export const softwareDev: Project[] = [
     description:
       'Fullstack web application for writing parodies of songs. Integrates with Genius API.',
     coverImageSrc: 'ParodyParty_home.webp',
-    imageSrcs: [
-      'ParodyParty_home.webp',
-      'ParodyParty_search.webp',
-      'ParodyParty_result.webp',
-      'ParodyParty_login.webp',
-      'ParodyParty_account.webp'
+    images: [
+      { src: 'ParodyParty_home.webp' },
+      { src: 'ParodyParty_search.webp' },
+      { src: 'ParodyParty_result.webp' },
+      { src: 'ParodyParty_login.webp' },
+      { src: 'ParodyParty_account.webp' }
     ]
   },
   {
@@ -144,16 +159,16 @@ export const softwareDev: Project[] = [
     medium: ['NativeScript.js'],
     description: 'Prototype for a social event planning app.',
     coverImageSrc: '2019-12-14 You In (1).webp',
-    imageSrcs: [
-      '2019-12-14 You In (1).webp',
-      '2019-12-14 You In (2).webp',
-      '2019-12-14 You In (3).webp',
-      '2019-12-14 You In (4).webp',
-      '2019-12-14 You In (5).webp',
-      '2019-12-14 You In (6).webp',
-      '2019-12-14 You In (7).webp',
-      '2019-12-14 You In (8).webp',
-      '2019-12-14 You In (9).webp'
+    images: [
+      { src: '2019-12-14 You In (1).webp' },
+      { src: '2019-12-14 You In (2).webp' },
+      { src: '2019-12-14 You In (3).webp' },
+      { src: '2019-12-14 You In (4).webp' },
+      { src: '2019-12-14 You In (5).webp' },
+      { src: '2019-12-14 You In (6).webp' },
+      { src: '2019-12-14 You In (7).webp' },
+      { src: '2019-12-14 You In (8).webp' },
+      { src: '2019-12-14 You In (9).webp' }
     ]
   },
   {
@@ -161,14 +176,14 @@ export const softwareDev: Project[] = [
     medium: ['Java'],
     description: 'A simplified animation editing interface.',
     coverImageSrc: '2018-12-13 Animator.webp',
-    imageSrcs: ['2018-12-13 Animator.webp']
+    images: [{ src: '2018-12-13 Animator.webp' }]
   },
   {
     date: "Mar '18",
     medium: ['Java'],
     description: 'A recreation of the Microsoft classic Minesweeper',
     coverImageSrc: '2018-03-27 Minesweeper.webp',
-    imageSrcs: ['2018-03-27 Minesweeper.webp']
+    images: [{ src: '2018-03-27 Minesweeper.webp' }]
   }
 ]
 
@@ -179,9 +194,9 @@ export const creativeCoding: Project[] = [
     description:
       'Web-based graphics project utilizing IBM Watson Tone Analyzer API.',
     coverImageSrc: 'EmotionVisualizer_cover.webp',
-    imageSrcs: [
-      'EmotionVisualizer_form.webp',
-      'EmotionVisualizer_explanation.webp'
+    images: [
+      { src: 'EmotionVisualizer_form.webp' },
+      { src: 'EmotionVisualizer_explanation.webp' }
     ]
   },
   {
@@ -190,13 +205,13 @@ export const creativeCoding: Project[] = [
     description:
       'Using google image search as an input, render images via various shapes.',
     coverImageSrc: '2019-07-29 Simple Image Processing (1).webp',
-    imageSrcs: [
-      '2019-07-29 Simple Image Processing (1).webp',
-      '2019-07-29 Simple Image Processing (2).webp',
-      '2019-07-29 Simple Image Processing (3).webp',
-      '2019-07-29 Simple Image Processing (4).webp',
-      '2019-07-29 Simple Image Processing (5).webp',
-      '2019-07-29 Simple Image Processing (6).webp'
+    images: [
+      { src: '2019-07-29 Simple Image Processing (1).webp' },
+      { src: '2019-07-29 Simple Image Processing (2).webp' },
+      { src: '2019-07-29 Simple Image Processing (3).webp' },
+      { src: '2019-07-29 Simple Image Processing (4).webp' },
+      { src: '2019-07-29 Simple Image Processing (5).webp' },
+      { src: '2019-07-29 Simple Image Processing (6).webp' }
     ]
   },
   {
@@ -205,14 +220,14 @@ export const creativeCoding: Project[] = [
     description:
       'Made in processing and then used to control the LED facade on the Ars Electronica Center in Linz, Austria.',
     coverImageSrc: '2019-07-26 Austauschstadt (1).webp',
-    imageSrcs: [
-      '2019-07-26 Austauschstadt (1).webp',
-      '2019-07-26 Austauschstadt (2).webp',
-      '2019-07-26 Austauschstadt (3).webp',
-      '2019-07-26 Austauschstadt (4).webp',
-      '2019-07-26 Austauschstadt (5).webp',
-      '2019-07-26 Austauschstadt (6).webp',
-      '2019-07-26 Austauschstadt (7).webp'
+    images: [
+      { src: '2019-07-26 Austauschstadt (1).webp' },
+      { src: '2019-07-26 Austauschstadt (2).webp' },
+      { src: '2019-07-26 Austauschstadt (3).webp' },
+      { src: '2019-07-26 Austauschstadt (4).webp' },
+      { src: '2019-07-26 Austauschstadt (5).webp' },
+      { src: '2019-07-26 Austauschstadt (6).webp' },
+      { src: '2019-07-26 Austauschstadt (7).webp' }
     ],
     videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }]
   },
@@ -221,13 +236,13 @@ export const creativeCoding: Project[] = [
     medium: ['Processing'],
     description: 'Tessellating hexagons based on Perlin Noise.',
     coverImageSrc: '2019-07-14 Generative Tessellations (1).webp',
-    imageSrcs: [
-      '2019-07-14 Generative Tessellations (1).webp',
-      '2019-07-14 Generative Tessellations (2).webp',
-      '2019-07-14 Generative Tessellations (3).webp',
-      '2019-07-14 Generative Tessellations (4).webp',
-      '2019-07-14 Generative Tessellations (5).webp',
-      '2019-07-14 Generative Tessellations (6).webp'
+    images: [
+      { src: '2019-07-14 Generative Tessellations (1).webp' },
+      { src: '2019-07-14 Generative Tessellations (2).webp' },
+      { src: '2019-07-14 Generative Tessellations (3).webp' },
+      { src: '2019-07-14 Generative Tessellations (4).webp' },
+      { src: '2019-07-14 Generative Tessellations (5).webp' },
+      { src: '2019-07-14 Generative Tessellations (6).webp' }
     ],
     videos: [{ vimeoId: '353274180' }]
   },
@@ -236,20 +251,20 @@ export const creativeCoding: Project[] = [
     medium: ['Processing'],
     description: 'Allows users to draw with complex polygons.',
     coverImageSrc: '2019-07-06 Drawing Machine (1).webp',
-    imageSrcs: [
-      '2019-07-06 Drawing Machine (1).webp',
-      '2019-07-06 Drawing Machine (2).webp',
-      '2019-07-06 Drawing Machine (3).webp',
-      '2019-07-06 Drawing Machine (4).webp',
-      '2019-07-06 Drawing Machine (5).webp',
-      '2019-07-06 Drawing Machine (6).webp',
-      '2019-07-06 Drawing Machine (7).webp',
-      '2019-07-06 Drawing Machine (8).webp',
-      '2019-07-06 Drawing Machine (9).webp',
-      '2019-07-06 Drawing Machine (10).webp',
-      '2019-07-06 Drawing Machine (11).webp',
-      '2019-07-06 Drawing Machine (12).webp',
-      '2019-07-06 Drawing Machine (13).webp'
+    images: [
+      { src: '2019-07-06 Drawing Machine (1).webp' },
+      { src: '2019-07-06 Drawing Machine (2).webp' },
+      { src: '2019-07-06 Drawing Machine (3).webp' },
+      { src: '2019-07-06 Drawing Machine (4).webp' },
+      { src: '2019-07-06 Drawing Machine (5).webp' },
+      { src: '2019-07-06 Drawing Machine (6).webp' },
+      { src: '2019-07-06 Drawing Machine (7).webp' },
+      { src: '2019-07-06 Drawing Machine (8).webp' },
+      { src: '2019-07-06 Drawing Machine (9).webp' },
+      { src: '2019-07-06 Drawing Machine (10).webp' },
+      { src: '2019-07-06 Drawing Machine (11).webp' },
+      { src: '2019-07-06 Drawing Machine (12).webp' },
+      { src: '2019-07-06 Drawing Machine (13).webp' }
     ],
     videos: [{ vimeoId: '356239943' }]
   }
@@ -284,21 +299,21 @@ export const illustration: Project[] = [
       'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
     coverImageSrc: '2019-11-15 Process Portrait (1).webp',
     coverImagePosition: 'object-center',
-    imageSrcs: [
-      '2019-11-15 Process Portrait (1).webp',
-      '2019-11-15 Process Portrait (2).webp',
-      '2019-11-15 Process Portrait (3).webp',
-      '2019-11-15 Process Portrait (4).webp',
-      '2019-11-15 Process Portrait (5).webp',
-      '2019-11-15 Process Portrait (6).webp',
-      '2019-11-15 Process Portrait (7).webp',
-      '2019-11-15 Process Portrait (8).webp',
-      '2019-11-15 Process Portrait (9).webp',
-      '2019-11-15 Process Portrait (10).webp',
-      '2019-11-15 Process Portrait (11).webp',
-      '2019-11-15 Process Portrait (12).webp',
-      '2019-11-15 Process Portrait (13).webp',
-      '2019-11-15 Process Portrait (14).webp'
+    images: [
+      { src: '2019-11-15 Process Portrait (1).webp' },
+      { src: '2019-11-15 Process Portrait (2).webp' },
+      { src: '2019-11-15 Process Portrait (3).webp' },
+      { src: '2019-11-15 Process Portrait (4).webp' },
+      { src: '2019-11-15 Process Portrait (5).webp' },
+      { src: '2019-11-15 Process Portrait (6).webp' },
+      { src: '2019-11-15 Process Portrait (7).webp' },
+      { src: '2019-11-15 Process Portrait (8).webp' },
+      { src: '2019-11-15 Process Portrait (9).webp' },
+      { src: '2019-11-15 Process Portrait (10).webp' },
+      { src: '2019-11-15 Process Portrait (11).webp' },
+      { src: '2019-11-15 Process Portrait (12).webp' },
+      { src: '2019-11-15 Process Portrait (13).webp' },
+      { src: '2019-11-15 Process Portrait (14).webp' }
     ]
   },
   {
@@ -308,13 +323,13 @@ export const illustration: Project[] = [
       'Exploration of tagging and graffiti using publicly sited textiles.',
     coverImageSrc: '2019-07-22 Screenprint (1).webp',
     coverImagePosition: 'object-center',
-    imageSrcs: [
-      '2019-07-22 Screenprint (1).webp',
-      '2019-07-22 Screenprint (2).webp',
-      '2019-07-22 Screenprint (3).webp',
-      '2019-07-22 Screenprint (4).webp',
-      '2019-07-22 Screenprint (5).webp',
-      '2019-07-22 Screenprint (6).webp'
+    images: [
+      { src: '2019-07-22 Screenprint (1).webp' },
+      { src: '2019-07-22 Screenprint (2).webp' },
+      { src: '2019-07-22 Screenprint (3).webp' },
+      { src: '2019-07-22 Screenprint (4).webp' },
+      { src: '2019-07-22 Screenprint (5).webp' },
+      { src: '2019-07-22 Screenprint (6).webp' }
     ]
   },
   {
@@ -323,7 +338,7 @@ export const illustration: Project[] = [
     description: 'Patterns generated from swatches of a plant drawing.',
     coverImageSrc: '2017-11-20 Patterns.webp',
     coverImagePosition: 'object-center',
-    imageSrcs: ['2017-11-20 Patterns.webp']
+    images: [{ src: '2017-11-20 Patterns.webp' }]
   },
   {
     date: "Oct '17",
@@ -331,7 +346,7 @@ export const illustration: Project[] = [
     description: 'Study on different modes of drawing.',
     coverImagePosition: 'object-center',
     coverImageSrc: '2017-10-30 Modes.webp',
-    imageSrcs: ['2017-10-30 Modes.webp']
+    images: [{ src: '2017-10-30 Modes.webp' }]
   },
   {
     date: "Sept '17",
@@ -339,7 +354,7 @@ export const illustration: Project[] = [
     description: 'Composition of only squares.',
     coverImagePosition: 'object-center',
     coverImageSrc: '2017-09-25 Squares.webp',
-    imageSrcs: ['2017-09-25 Squares.webp']
+    images: [{ src: '2017-09-25 Squares.webp' }]
   }
 ]
 
