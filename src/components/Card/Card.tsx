@@ -5,6 +5,7 @@ import cx from 'classnames'
 import Modal from '../Modal/Modal'
 
 import './Card.css'
+import Badges from '../Badges/Badges'
 
 export type CardInfo = {
   header: string
@@ -39,6 +40,17 @@ const CardInner = ({ variant, card }: CardProps) => {
     }
   }
 
+  const textClasses = () => {
+    switch (variant) {
+      case 'small':
+        return 'px-2 xs:px-6'
+      case 'medium':
+        return 'px-6'
+      case 'large':
+        return 'px-6'
+    }
+  }
+
   return (
     <div className='flex flex-col space-y-6'>
       <div className='overflow-hidden bg-white rounded-t-md bg-clip-text'>
@@ -51,7 +63,7 @@ const CardInner = ({ variant, card }: CardProps) => {
           )}
         />
       </div>
-      <div className='flex flex-col justify-between px-6 pb-4'>
+      <div className={cx('flex flex-col justify-between pb-4', textClasses())}>
         <div
           className={cx(
             'mb-2 w-full',
@@ -62,21 +74,10 @@ const CardInner = ({ variant, card }: CardProps) => {
             { 'text-center': !badges && !description }
           )}
         >
-          <h2 className='text-xl font-semibold tracking-wide whitespace-nowrap'>
+          <h2 className='text-base xs:text-xl font-semibold tracking-wide xs:whitespace-nowrap'>
             {header}
           </h2>
-          {badges && (
-            <p className='flex space-x-2 text-xs font-medium uppercase'>
-              {badges.map((badge, index) => (
-                <span
-                  key={index}
-                  className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium whitespace-nowrap'
-                >
-                  {badge}
-                </span>
-              ))}
-            </p>
-          )}
+          {badges && <Badges badges={badges} />}
         </div>
         <p className='text-sm text-gray-400'>{description}</p>
         {/* TODO: Stretch "See More" to sit at the bottom */}

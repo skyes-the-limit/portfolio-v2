@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Feature = () => {
   return (
     <div className='flex flex-row h-[calc(100vh-12rem)]'>
-      <div className='object-cover w-full h-full pt-6 px-6 border-b-4 xs:border-4 border-gray-200 border-double xs:rounded-lg overflow-hidden'>
+      <div className='w-full h-full pt-6 px-6 border-b-2 xs:border-4 border-gray-700 xs:border-gray-200 xs:border-double xs:rounded-lg overflow-hidden'>
         <img
           src={require('../../assets/Profile.webp')}
           alt='Website Design System'

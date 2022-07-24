@@ -17,8 +17,6 @@ import { primaryCategories, secondaryCategories } from './data/categories'
 import './input.css'
 import 'react-toastify/dist/ReactToastify.css'
 
-// Scroll to top of page whenever we detect a location change
-// https://stackoverflow.com/questions/70193712/how-to-scroll-to-top-on-route-change-with-react-router-dom-v6
 const LayoutWrapper = ({ children }: any) => {
   const location = useLocation()
 

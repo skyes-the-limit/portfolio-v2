@@ -1,4 +1,5 @@
 import React from 'react'
+import Badges from '../Badges/Badges'
 
 type Event = {
   title: string
@@ -64,21 +65,11 @@ const Timeline = () => {
                   key={index}
                   className='flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-400'
                 >
-                  {/* TODO: Fix badges getting cut off on small screens */}
                   <div className='flex flex-row justify-between max-w-[240px] xs:max-w-none'>
                     <h3 className='text-2xl font-semibold tracking-wide pr-2'>
                       {event.title}
                     </h3>
-                    <div className='flex items-center space-x-2 sm:space-x-4 overflow-hidden'>
-                      {event.badges.map((badge, index) => (
-                        <span
-                          key={index}
-                          className='h-6 flex items-center px-3 py-0.5 rounded-md text-gray-900 bg-sky-400 text-xs font-medium whitespace-nowrap'
-                        >
-                          {badge}
-                        </span>
-                      ))}
-                    </div>
+                    <Badges badges={event.badges} />
                   </div>
                   <time className='text-xs tracking-wide uppercase text-gray-400'>
                     {event.date}
