@@ -12,17 +12,13 @@ const Header = () => {
       >
         <img src={Logo} alt='logo' style={{ width: '225px', height: '2rem' }} />
       </NavLink>
-      <ul className='flex items-stretch space-x-3 pr-3'>
-        <li className='flex'>
-          <NavLink
-            to='/about'
-            aria-label='About'
-            className='flex items-center px-4 -mb-1 border-b-2 border-transparent'
-          >
-            About
-          </NavLink>
-        </li>
-      </ul>
+      <NavLink
+        to='/about'
+        aria-label='About'
+        className='flex items-center px-4 -mb-1 border-b-2 border-transparent'
+      >
+        About
+      </NavLink>
     </header>
   )
 }

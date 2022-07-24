@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
+import useEventListener from '@use-it/event-listener'
 import Download from '../../assets/icons/download.svg'
 
 const Resume = () => {
+  const [pageWidth, setPageWidth] = useState(0)
+  const calcPageWidth = () => {
+    if (window.innerWidth < 480) {
+      setPageWidth(window.innerWidth - 48)
+    } else if (window.innerWidth < 640) {
+      setPageWidth(480 - 48)
+    } else if (window.innerWidth < 768) {
+      setPageWidth(640 - 48)
+    } else if (window.innerWidth < 1024) {
+      setPageWidth(768 - 48)
+    } else if (window.innerWidth < 1280) {
+      setPageWidth(1024 - 48)
+    } else if (window.innerWidth < 1536) {
+      setPageWidth(1280 - 48)
+    } else {
+      setPageWidth(1536 - 48)
+    }
+  }
+  useEventListener('resize', calcPageWidth)
+
   const pdfSrc = require('../../assets/docs/SkyeBishop_Resume.pdf')
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
@@ -13,7 +34,7 @@ const Resume = () => {
           className='rounded-md overflow-hidden'
           pageNumber={1}
           renderAnnotationLayer={false}
-          width={768}
+          width={pageWidth}
         />
       </Document>
       <a href={pdfSrc} target='blank' rel='noopener noreferrer'>

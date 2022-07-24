@@ -12,7 +12,7 @@ import {
 export type Category = {
   path: string
   title: string
-  description: string
+  description?: string
   coverImageSrc: string
   coverImagePosition?: 'object-center' | 'object-bottom'
   content: Project[]
@@ -24,14 +24,14 @@ export const primaryCategories: Category[] = [
     title: 'General 3D',
     description:
       'General 3D modeling projects, often with a focus on environment design.',
-    coverImageSrc: 'BorealAurora_cover.png',
+    coverImageSrc: 'BorealAurora_cover.webp',
     content: general3d
   },
   {
     path: '/tech-art',
     title: 'Technical Art',
     description: 'Generative assets and special effects work.',
-    coverImageSrc: 'VellumDance_cover.png',
+    coverImageSrc: 'VellumDance_cover.webp',
     content: techArt
   },
   {
@@ -39,7 +39,7 @@ export const primaryCategories: Category[] = [
     title: 'Software Development',
     description:
       'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
-    coverImageSrc: 'ParodyParty_home.png',
+    coverImageSrc: 'ParodyParty_home.webp',
     content: softwareDev
   }
 ]
@@ -48,30 +48,26 @@ export const secondaryCategories: Category[] = [
   {
     path: '/creative-coding',
     title: 'Creative Coding',
-    description: '',
-    coverImageSrc: '2019-07-14 Generative Tessellations Preview.png',
+    coverImageSrc: '2019-07-14 Generative Tessellations (1).webp',
     content: creativeCoding
   },
   {
     path: '/illustration',
     title: 'Illustration',
-    description: '',
-    coverImageSrc: '2017-11-20 Patterns Preview.png',
+    coverImageSrc: '2017-11-20 Patterns.webp',
     coverImagePosition: 'object-center',
     content: illustration
   },
   {
     path: '/videography',
     title: 'Videography',
-    description: '',
-    coverImageSrc: 'GetFunky_Cover.png',
+    coverImageSrc: 'GetFunky_Cover.webp',
     content: videography
   },
   {
     path: '/motion-graphics',
     title: 'Motion Graphics',
-    description: '',
-    coverImageSrc: '2018-11-07 Edutainment Preview.png',
+    coverImageSrc: '2018-11-07 Edutainment.webp',
     coverImagePosition: 'object-bottom',
     content: motionGraphics
   }

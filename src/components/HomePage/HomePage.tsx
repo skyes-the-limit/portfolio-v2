@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 
-import Feature from '../Feature/Feature'
+import Feature from '../Hero/Hero'
 import Grid from '../Grid/Grid'
-import Hero from '../Hero/Hero'
 import { CardInfo } from '../Card/Card'
 import { primaryCategories, secondaryCategories } from '../../data/categories'
 import { useLocation } from 'react-router'
@@ -40,6 +39,7 @@ const HomePage = () => {
     const headerHeight = 64
     const topPadding = 24
     const targetId = location?.state?.targetId
+    const scrollBehavior = location?.state?.scrollBehavior || 'auto'
     const el = document.getElementById(targetId)
     if (el) {
       const y =
@@ -47,13 +47,12 @@ const HomePage = () => {
         window.pageYOffset -
         headerHeight -
         topPadding
-      window.scrollTo({ top: y })
+      window.scrollTo({ top: y, behavior: scrollBehavior })
     }
   })
 
   return (
     <div className='pt-16'>
-      <Hero />
       <div className='container mx-auto my-12 max-w-6xl px-6 space-y-6 sm:space-y-12'>
         <Feature />
         <div id='project-work' />

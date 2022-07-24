@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
@@ -18,6 +19,10 @@ module.exports = {
       sans: ['Montserrat', 'sans-serif'],
       serif: ['Zilla Slab', 'serif'],
     },
+    screens: {
+      'xs': '480px',
+      ...defaultTheme.screens
+    }
   },
   variants: {},
   plugins: []
