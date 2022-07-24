@@ -39,6 +39,7 @@ const HomePage = () => {
     const headerHeight = 64
     const topPadding = 24
     const targetId = location?.state?.targetId
+    const scrollBehavior = location?.state?.scrollBehavior || 'auto'
     const el = document.getElementById(targetId)
     if (el) {
       const y =
@@ -46,7 +47,7 @@ const HomePage = () => {
         window.pageYOffset -
         headerHeight -
         topPadding
-      window.scrollTo({ top: y })
+      window.scrollTo({ top: y, behavior: scrollBehavior })
     }
   })
 
