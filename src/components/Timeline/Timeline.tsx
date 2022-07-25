@@ -65,7 +65,7 @@ const Timeline = () => {
                   key={index}
                   className='flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-400'
                 >
-                  <div className='flex flex-row justify-between max-w-[240px] xs:max-w-none'>
+                  <div className='flex flex-row justify-between'>
                     <h3 className='text-2xl font-semibold tracking-wide pr-2'>
                       {event.title}
                     </h3>
