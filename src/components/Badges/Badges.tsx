@@ -30,9 +30,9 @@ const Badges = ({ badges }: BadgesProps) => {
   return (
     <div className='relative overflow-hidden'>
       {!firstInView && badges.length > 1 && (
-        <div className='feather featherBeginning' />
+        <div className='feather feather__beginning' />
       )}
-      <p className='hideScrollbar flex space-x-2 text-xs font-medium uppercase overflow-auto'>
+      <p className='hide-scrollbar flex space-x-2 text-xs font-medium uppercase overflow-auto'>
         {badges.map((badge, index) => (
           <span
             key={index}
@@ -44,7 +44,7 @@ const Badges = ({ badges }: BadgesProps) => {
         ))}
       </p>
       {!lastInView && badges.length > 1 && (
-        <div className='feather featherEnd' />
+        <div className='feather feather__end' />
       )}
     </div>
   )

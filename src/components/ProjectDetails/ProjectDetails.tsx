@@ -58,7 +58,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         <div className='fixed z-20 w-screen h-screen top-0 left-0 pointer-events-none'>
           <button
             type='button'
-            className='carouselControl carouselControl__forward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
+            className='carousel-control carousel-control__forward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
             aria-label='Forward'
             onClick={incrementSelectedIndex}
           >
@@ -70,7 +70,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </button>
           <button
             type='button'
-            className='carouselControl carouselControl__backward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
+            className='carousel-control carousel-control__backward p-2 xs:p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12'
             aria-label='Backward'
             onClick={decrementSelectedIndex}
           >
