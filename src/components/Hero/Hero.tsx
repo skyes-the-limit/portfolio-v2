@@ -32,7 +32,7 @@ const Feature = () => {
         <h3 className={cx('font-semibold mb-4', 'text-xl xs:text-4xl')}>
           Skye Bishop
           <span className={cx('font-light ml-2', 'text-xs xs:text-lg')}>
-            (they/them)
+            (they/he)
           </span>
         </h3>
         <p>

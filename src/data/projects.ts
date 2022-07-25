@@ -273,7 +273,7 @@ export const creativeCoding: Project[] = [
 export const motionGraphics: Project[] = [
   {
     date: "Nov '18",
-    medium: ['Photoshop\u3000|\u3000AfterEffects'],
+    medium: ['Photoshop', 'AfterEffects'],
     description:
       "An educational video on different culture's 'Halloween-esque' holidays.",
     coverImageSrc: '2018-11-07 Edutainment.webp',
