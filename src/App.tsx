@@ -29,7 +29,8 @@ const LayoutWrapper = ({ children }: any) => {
 
 // TODO: Update metadata in index.html for SEO
 // TODO: Add various testIds
-// TODO: Setup some kinda basic analytics
+// TODO: Run against accessibility tests
+// TODO: Investigate preloading some media?
 const App = () => {
   const categories = [...primaryCategories, ...secondaryCategories]
 
