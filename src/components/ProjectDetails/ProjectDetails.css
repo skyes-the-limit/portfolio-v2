@@ -1,5 +1,5 @@
 .carousel-control {
-  top: calc(50% - 30px);
+  top: calc(50%);
   position: absolute;
   display: block;
   cursor: pointer;
