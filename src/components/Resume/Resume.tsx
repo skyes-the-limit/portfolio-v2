@@ -3,6 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import useEventListener from '@use-it/event-listener'
 import Download from '../../assets/icons/download.svg'
 
+// TODO: Add skeleton loader with same dimensions
 const Resume = () => {
   const [pageWidth, setPageWidth] = useState(0)
   const calcPageWidth = () => {
