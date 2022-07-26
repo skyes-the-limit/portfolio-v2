@@ -21,7 +21,15 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "trailingComma": "none",
+        "semi": false
+      }
+    ],
     "indent": "off",
     "multiline-ternary": "off"
   },
