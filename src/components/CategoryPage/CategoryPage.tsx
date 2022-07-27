@@ -16,7 +16,7 @@ const CategoryPage = ({ category }: CategoryProps) => {
       header: project.date,
       badges: project.medium,
       description: project.description,
-      imageSrc: require(`../../assets/projects/${project.coverImageSrc}`),
+      imageSrc: `projects/${project.coverImageSrc}`,
       imageObjectPos: project.coverImagePosition,
       details: <ProjectDetails project={project} />
     }

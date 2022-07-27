@@ -6,6 +6,7 @@ import Modal from '../Modal/Modal'
 
 import './Card.css'
 import Badges from '../Badges/Badges'
+import Image from '../Image/Image'
 
 export type CardInfo = {
   header: string
@@ -32,7 +33,7 @@ const CardInner = ({ variant, card }: CardProps) => {
   const imgHeight = () => {
     switch (variant) {
       case 'small':
-        return 'h-48'
+        return 'h-40'
       case 'medium':
         return 'h-72'
       case 'large':
@@ -54,7 +55,7 @@ const CardInner = ({ variant, card }: CardProps) => {
   return (
     <div className='flex flex-col space-y-6'>
       <div className='overflow-hidden bg-white rounded-t-md bg-clip-text'>
-        <img
+        <Image
           src={imageSrc}
           className={cx(
             'object-cover w-full',
