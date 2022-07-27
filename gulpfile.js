@@ -14,7 +14,7 @@ const img = () =>
         ]
       })
     )
-    .pipe(dest('dist/img'))
+    .pipe(dest('src/assets'))
 
 module.exports = {
   img
