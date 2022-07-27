@@ -1,13 +1,14 @@
 import React from 'react'
 import cx from 'classnames'
 import { Link } from 'react-router-dom'
+import Image from '../Image/Image'
 
 const Feature = () => {
   return (
     <div className='flex flex-row h-[calc(100vh-12rem)] 2xl:relative'>
       <div className='w-full h-full pt-6 px-6 border-b-2 xs:border-4 border-gray-700 xs:border-gray-200 xs:border-double xs:rounded-lg overflow-hidden'>
-        <img
-          src={require('../../assets/Profile.webp')}
+        <Image
+          src='Profile'
           alt='Website Design System'
           className={cx(
             'object-contain object-left-bottom h-full',

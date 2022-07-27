@@ -4,9 +4,10 @@ type ImageProps = {
   src: string
   className?: string
   alt?: string
+  style?: object
 }
 
-const Image = ({ src, className = '', alt = '' }: ImageProps) => {
+const Image = ({ src, className = '', alt = '', style = {} }: ImageProps) => {
   return (
     <picture>
       <source
@@ -36,8 +37,9 @@ const Image = ({ src, className = '', alt = '' }: ImageProps) => {
 
       <img
         src={require(`../../assets/${src}.webp`)}
-        className={className}
         alt={alt}
+        className={className}
+        style={style}
       />
     </picture>
   )
