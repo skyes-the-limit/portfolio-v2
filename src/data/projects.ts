@@ -158,7 +158,7 @@ export const softwareDev: Project[] = [
     date: "Dec '19",
     medium: ['NativeScript.js'],
     description: 'Prototype for a social event planning app.',
-    coverImageSrc: '2019-12-14 You_In_(1)',
+    coverImageSrc: '2019-12-14_You_In_(1)',
     images: [
       { src: '2019-12-14_You_In_(1)' },
       { src: '2019-12-14_You_In_(2)' },
@@ -204,7 +204,7 @@ export const creativeCoding: Project[] = [
     medium: ['Processing'],
     description:
       'Using google image search as an input, render images via various shapes.',
-    coverImageSrc: '2019-07-29 Simple Image_Processing_(1)',
+    coverImageSrc: '2019-07-29_Simple_Image_Processing_(1)',
     images: [
       { src: '2019-07-29_Simple_Image_Processing_(1)' },
       { src: '2019-07-29_Simple_Image_Processing_(2)' },
@@ -235,7 +235,7 @@ export const creativeCoding: Project[] = [
     date: "Jul '19",
     medium: ['Processing'],
     description: 'Tessellating hexagons based on Perlin Noise.',
-    coverImageSrc: '2019-07-14 Generative_Tessellations_(1)',
+    coverImageSrc: '2019-07-14_Generative_Tessellations_(1)',
     images: [
       { src: '2019-07-14_Generative_Tessellations_(1)' },
       { src: '2019-07-14_Generative_Tessellations_(2)' },
@@ -250,7 +250,7 @@ export const creativeCoding: Project[] = [
     date: "Jul '19",
     medium: ['Processing'],
     description: 'Allows users to draw with complex polygons.',
-    coverImageSrc: '2019-07-06 Drawing_Machine_(1)',
+    coverImageSrc: '2019-07-06_Drawing_Machine_(1)',
     images: [
       { src: '2019-07-06_Drawing_Machine_(1)' },
       { src: '2019-07-06_Drawing_Machine_(2)' },
@@ -297,7 +297,7 @@ export const illustration: Project[] = [
     medium: ['Photoshop'],
     description:
       'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
-    coverImageSrc: '2019-11-15 Process_Portrait_(1)',
+    coverImageSrc: '2019-11-15_Process_Portrait_(1)',
     coverImagePosition: 'object-center',
     images: [
       { src: '2019-11-15_Process_Portrait_(1)' },

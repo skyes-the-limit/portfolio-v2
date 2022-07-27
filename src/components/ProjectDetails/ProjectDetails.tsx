@@ -1,13 +1,14 @@
 import React, { RefCallback, useEffect, useState } from 'react'
 import cx from 'classnames'
 import useEventListener from '@use-it/event-listener'
+import { useSwipeable } from 'react-swipeable'
 
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
 import Arrow from '../../assets/icons/arrow.svg'
 
 import './ProjectDetails.css'
-import { useSwipeable } from 'react-swipeable'
+import Image from '../Image/Image'
 
 type ProjectDetailsProps = {
   project: Project
@@ -108,8 +109,8 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
                 hidden: index + videos.length !== selectedIndex
               })}
             >
-              <img
-                src={require(`../../assets/projects/${src}`)}
+              <Image
+                src={`projects/${src}`}
                 className={cx(
                   caption
                     ? 'max-h-[calc(100vh-10.5rem)]'
