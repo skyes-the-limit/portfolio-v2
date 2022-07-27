@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Category } from '../../data/categories'
-import Grid from '../Grid/Grid'
-import ProjectDetails from '../ProjectDetails/ProjectDetails'
+import { FullScreenLoader } from '../Loader/Loader'
+
+const Grid = lazy(() => import('../Grid/Grid'))
+const ProjectDetails = lazy(() => import('../ProjectDetails/ProjectDetails'))
 
 type CategoryProps = {
   category: Category
@@ -23,20 +25,22 @@ const CategoryPage = ({ category }: CategoryProps) => {
   })
 
   return (
-    <div
-      className='container pt-16 px-6 mx-auto'
-      style={{ minHeight: `calc(100vh - ${footerHeight})` }}
-    >
-      <h1 className='text-3xl font-semibold tracking-wide text-center py-6'>
-        {title}
-      </h1>
-      <Grid variant={'large'} cards={cards} />
-      <Link to={'/'} state={{ targetId: 'project-work' }}>
-        <p className='text-center text-s font-medium tracking-widest uppercase text-sky-400 mt-16'>
-          Back
-        </p>
-      </Link>
-    </div>
+    <Suspense fallback={<FullScreenLoader />}>
+      <div
+        className='container pt-16 px-6 mx-auto'
+        style={{ minHeight: `calc(100vh - ${footerHeight})` }}
+      >
+        <h1 className='text-3xl font-semibold tracking-wide text-center py-6'>
+          {title}
+        </h1>
+        <Grid variant={'large'} cards={cards} />
+        <Link to={'/'} state={{ targetId: 'project-work' }}>
+          <p className='text-center text-s font-medium tracking-widest uppercase text-sky-400 mt-16'>
+            Back
+          </p>
+        </Link>
+      </div>
+    </Suspense>
   )
 }
 

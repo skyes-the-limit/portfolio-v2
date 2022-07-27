@@ -1,5 +1,13 @@
 import React from 'react'
 
+export const FullScreenLoader = () => {
+  return (
+    <div className='w-screen h-screen flex items-center justify-center'>
+      <Loader />
+    </div>
+  )
+}
+
 const Loader = () => {
   return (
     <div className='flex items-center justify-center space-x-2 h-7'>

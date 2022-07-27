@@ -5,10 +5,10 @@ import { useSwipeable } from 'react-swipeable'
 
 import { Project } from '../../data/projects'
 import VimeoPlayer from '../VimeoPlayer/VimeoPlayer'
+import Image from '../Image/Image'
 import Arrow from '../../assets/icons/arrow.svg'
 
 import './ProjectDetails.css'
-import Image from '../Image/Image'
 
 type ProjectDetailsProps = {
   project: Project
