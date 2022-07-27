@@ -24,14 +24,14 @@ export const primaryCategories: Category[] = [
     title: 'General 3D',
     description:
       'General 3D modeling projects, often with a focus on environment design.',
-    coverImageSrc: 'BorealAurora_cover.webp',
+    coverImageSrc: 'BorealAurora_cover',
     content: general3d
   },
   {
     path: '/tech-art',
     title: 'Technical Art',
     description: 'Generative assets and special effects work.',
-    coverImageSrc: 'VellumDance_cover.webp',
+    coverImageSrc: 'VellumDance_cover',
     content: techArt
   },
   {
@@ -39,7 +39,7 @@ export const primaryCategories: Category[] = [
     title: 'Software Development',
     description:
       'Programming work, mostly front-end web with a smattering of full-stack and mobile.',
-    coverImageSrc: 'ParodyParty_home.webp',
+    coverImageSrc: 'ParodyParty_home',
     content: softwareDev
   }
 ]
@@ -48,26 +48,26 @@ export const secondaryCategories: Category[] = [
   {
     path: '/creative-coding',
     title: 'Creative Coding',
-    coverImageSrc: '2019-07-14 Generative Tessellations (1).webp',
+    coverImageSrc: '2019-07-14 Generative Tessellations (1)',
     content: creativeCoding
   },
   {
     path: '/illustration',
     title: 'Illustration',
-    coverImageSrc: '2017-11-20 Patterns.webp',
+    coverImageSrc: '2017-11-20 Patterns',
     coverImagePosition: 'object-center',
     content: illustration
   },
   {
     path: '/videography',
     title: 'Videography',
-    coverImageSrc: 'GetFunky_Cover.webp',
+    coverImageSrc: 'GetFunky_Cover',
     content: videography
   },
   {
     path: '/motion-graphics',
     title: 'Motion Graphics',
-    coverImageSrc: '2018-11-07 Edutainment.webp',
+    coverImageSrc: '2018-11-07 Edutainment',
     coverImagePosition: 'object-bottom',
     content: motionGraphics
   }
