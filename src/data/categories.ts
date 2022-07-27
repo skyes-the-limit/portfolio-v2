@@ -48,13 +48,13 @@ export const secondaryCategories: Category[] = [
   {
     path: '/creative-coding',
     title: 'Creative Coding',
-    coverImageSrc: '2019-07-14 Generative Tessellations (1)',
+    coverImageSrc: '2019-07-14_Generative_Tessellations_(1)',
     content: creativeCoding
   },
   {
     path: '/illustration',
     title: 'Illustration',
-    coverImageSrc: '2017-11-20 Patterns',
+    coverImageSrc: '2017-11-20_Patterns',
     coverImagePosition: 'object-center',
     content: illustration
   },
@@ -67,7 +67,7 @@ export const secondaryCategories: Category[] = [
   {
     path: '/motion-graphics',
     title: 'Motion Graphics',
-    coverImageSrc: '2018-11-07 Edutainment',
+    coverImageSrc: '2018-11-07_Edutainment',
     coverImagePosition: 'object-bottom',
     content: motionGraphics
   }

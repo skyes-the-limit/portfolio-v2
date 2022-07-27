@@ -95,17 +95,17 @@ export const general3d: Project[] = [
     medium: ['Maya'],
     description: 'Digital recreation of a small interior space.',
     coverImagePosition: 'object-center',
-    coverImageSrc: '2019-11-05 Interior (1)',
+    coverImageSrc: '2019-11-05_Interior_(1)',
     images: [
-      { src: '2019-11-05 Interior (1)' },
-      { src: '2019-11-05 Interior (2)' }
+      { src: '2019-11-05_Interior_(1)' },
+      { src: '2019-11-05_Interior_(2)' }
     ]
   },
   {
     date: "Dec '18",
     medium: ['Maya'],
     description: 'Talent show act of an animated and rigged character.',
-    coverImageSrc: '2018-12-14 Talent Show',
+    coverImageSrc: '2018-12-14_Talent_Show',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '352084087' }]
   },
@@ -113,7 +113,7 @@ export const general3d: Project[] = [
     date: "Nov '16",
     medium: ['3DS Max'],
     description: 'Character model based on Castle Crashers.',
-    coverImageSrc: '2016-11-18 Castle Crasher',
+    coverImageSrc: '2016-11-18_Castle_Crasher',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '353296476', loop: true }]
   }
@@ -158,32 +158,32 @@ export const softwareDev: Project[] = [
     date: "Dec '19",
     medium: ['NativeScript.js'],
     description: 'Prototype for a social event planning app.',
-    coverImageSrc: '2019-12-14 You In (1)',
+    coverImageSrc: '2019-12-14 You_In_(1)',
     images: [
-      { src: '2019-12-14 You In (1)' },
-      { src: '2019-12-14 You In (2)' },
-      { src: '2019-12-14 You In (3)' },
-      { src: '2019-12-14 You In (4)' },
-      { src: '2019-12-14 You In (5)' },
-      { src: '2019-12-14 You In (6)' },
-      { src: '2019-12-14 You In (7)' },
-      { src: '2019-12-14 You In (8)' },
-      { src: '2019-12-14 You In (9)' }
+      { src: '2019-12-14_You_In_(1)' },
+      { src: '2019-12-14_You_In_(2)' },
+      { src: '2019-12-14_You_In_(3)' },
+      { src: '2019-12-14_You_In_(4)' },
+      { src: '2019-12-14_You_In_(5)' },
+      { src: '2019-12-14_You_In_(6)' },
+      { src: '2019-12-14_You_In_(7)' },
+      { src: '2019-12-14_You_In_(8)' },
+      { src: '2019-12-14_You_In_(9)' }
     ]
   },
   {
     date: "Dec '18",
     medium: ['Java'],
     description: 'A simplified animation editing interface.',
-    coverImageSrc: '2018-12-13 Animator',
-    images: [{ src: '2018-12-13 Animator' }]
+    coverImageSrc: '2018-12-13_Animator',
+    images: [{ src: '2018-12-13_Animator' }]
   },
   {
     date: "Mar '18",
     medium: ['Java'],
     description: 'A recreation of the Microsoft classic Minesweeper',
-    coverImageSrc: '2018-03-27 Minesweeper',
-    images: [{ src: '2018-03-27 Minesweeper' }]
+    coverImageSrc: '2018-03-27_Minesweeper',
+    images: [{ src: '2018-03-27_Minesweeper' }]
   }
 ]
 
@@ -204,14 +204,14 @@ export const creativeCoding: Project[] = [
     medium: ['Processing'],
     description:
       'Using google image search as an input, render images via various shapes.',
-    coverImageSrc: '2019-07-29 Simple Image Processing (1)',
+    coverImageSrc: '2019-07-29 Simple Image_Processing_(1)',
     images: [
-      { src: '2019-07-29 Simple Image Processing (1)' },
-      { src: '2019-07-29 Simple Image Processing (2)' },
-      { src: '2019-07-29 Simple Image Processing (3)' },
-      { src: '2019-07-29 Simple Image Processing (4)' },
-      { src: '2019-07-29 Simple Image Processing (5)' },
-      { src: '2019-07-29 Simple Image Processing (6)' }
+      { src: '2019-07-29_Simple_Image_Processing_(1)' },
+      { src: '2019-07-29_Simple_Image_Processing_(2)' },
+      { src: '2019-07-29_Simple_Image_Processing_(3)' },
+      { src: '2019-07-29_Simple_Image_Processing_(4)' },
+      { src: '2019-07-29_Simple_Image_Processing_(5)' },
+      { src: '2019-07-29_Simple_Image_Processing_(6)' }
     ]
   },
   {
@@ -219,15 +219,15 @@ export const creativeCoding: Project[] = [
     medium: ['Processing'],
     description:
       'Made in processing and then used to control the LED facade on the Ars Electronica Center in Linz, Austria.',
-    coverImageSrc: '2019-07-26 Austauschstadt (1)',
+    coverImageSrc: '2019-07-26_Austauschstadt_(1)',
     images: [
-      { src: '2019-07-26 Austauschstadt (1)' },
-      { src: '2019-07-26 Austauschstadt (2)' },
-      { src: '2019-07-26 Austauschstadt (3)' },
-      { src: '2019-07-26 Austauschstadt (4)' },
-      { src: '2019-07-26 Austauschstadt (5)' },
-      { src: '2019-07-26 Austauschstadt (6)' },
-      { src: '2019-07-26 Austauschstadt (7)' }
+      { src: '2019-07-26_Austauschstadt_(1)' },
+      { src: '2019-07-26_Austauschstadt_(2)' },
+      { src: '2019-07-26_Austauschstadt_(3)' },
+      { src: '2019-07-26_Austauschstadt_(4)' },
+      { src: '2019-07-26_Austauschstadt_(5)' },
+      { src: '2019-07-26_Austauschstadt_(6)' },
+      { src: '2019-07-26_Austauschstadt_(7)' }
     ],
     videos: [{ vimeoId: '353297101' }, { vimeoId: '355991818' }]
   },
@@ -235,14 +235,14 @@ export const creativeCoding: Project[] = [
     date: "Jul '19",
     medium: ['Processing'],
     description: 'Tessellating hexagons based on Perlin Noise.',
-    coverImageSrc: '2019-07-14 Generative Tessellations (1)',
+    coverImageSrc: '2019-07-14 Generative_Tessellations_(1)',
     images: [
-      { src: '2019-07-14 Generative Tessellations (1)' },
-      { src: '2019-07-14 Generative Tessellations (2)' },
-      { src: '2019-07-14 Generative Tessellations (3)' },
-      { src: '2019-07-14 Generative Tessellations (4)' },
-      { src: '2019-07-14 Generative Tessellations (5)' },
-      { src: '2019-07-14 Generative Tessellations (6)' }
+      { src: '2019-07-14_Generative_Tessellations_(1)' },
+      { src: '2019-07-14_Generative_Tessellations_(2)' },
+      { src: '2019-07-14_Generative_Tessellations_(3)' },
+      { src: '2019-07-14_Generative_Tessellations_(4)' },
+      { src: '2019-07-14_Generative_Tessellations_(5)' },
+      { src: '2019-07-14_Generative_Tessellations_(6)' }
     ],
     videos: [{ vimeoId: '353274180' }]
   },
@@ -250,21 +250,21 @@ export const creativeCoding: Project[] = [
     date: "Jul '19",
     medium: ['Processing'],
     description: 'Allows users to draw with complex polygons.',
-    coverImageSrc: '2019-07-06 Drawing Machine (1)',
+    coverImageSrc: '2019-07-06 Drawing_Machine_(1)',
     images: [
-      { src: '2019-07-06 Drawing Machine (1)' },
-      { src: '2019-07-06 Drawing Machine (2)' },
-      { src: '2019-07-06 Drawing Machine (3)' },
-      { src: '2019-07-06 Drawing Machine (4)' },
-      { src: '2019-07-06 Drawing Machine (5)' },
-      { src: '2019-07-06 Drawing Machine (6)' },
-      { src: '2019-07-06 Drawing Machine (7)' },
-      { src: '2019-07-06 Drawing Machine (8)' },
-      { src: '2019-07-06 Drawing Machine (9)' },
-      { src: '2019-07-06 Drawing Machine (10)' },
-      { src: '2019-07-06 Drawing Machine (11)' },
-      { src: '2019-07-06 Drawing Machine (12)' },
-      { src: '2019-07-06 Drawing Machine (13)' }
+      { src: '2019-07-06_Drawing_Machine_(1)' },
+      { src: '2019-07-06_Drawing_Machine_(2)' },
+      { src: '2019-07-06_Drawing_Machine_(3)' },
+      { src: '2019-07-06_Drawing_Machine_(4)' },
+      { src: '2019-07-06_Drawing_Machine_(5)' },
+      { src: '2019-07-06_Drawing_Machine_(6)' },
+      { src: '2019-07-06_Drawing_Machine_(7)' },
+      { src: '2019-07-06_Drawing_Machine_(8)' },
+      { src: '2019-07-06_Drawing_Machine_(9)' },
+      { src: '2019-07-06_Drawing_Machine_(10)' },
+      { src: '2019-07-06_Drawing_Machine_(11)' },
+      { src: '2019-07-06_Drawing_Machine_(12)' },
+      { src: '2019-07-06_Drawing_Machine_(13)' }
     ],
     videos: [{ vimeoId: '356239943' }]
   }
@@ -276,7 +276,7 @@ export const motionGraphics: Project[] = [
     medium: ['Photoshop', 'AfterEffects'],
     description:
       "An educational video on different culture's 'Halloween-esque' holidays.",
-    coverImageSrc: '2018-11-07 Edutainment',
+    coverImageSrc: '2018-11-07_Edutainment',
     coverImagePosition: 'object-bottom',
     videos: [{ vimeoId: '354709668' }]
   },
@@ -285,7 +285,7 @@ export const motionGraphics: Project[] = [
     medium: ['AfterEffects'],
     description:
       'Lyric video focusing on transforming audio into visual representations.',
-    coverImageSrc: '2018-03-20 Lyrics',
+    coverImageSrc: '2018-03-20_Lyrics',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '352082622' }]
   }
@@ -297,23 +297,23 @@ export const illustration: Project[] = [
     medium: ['Photoshop'],
     description:
       'Series of speed paint portraits based on references from /r/RedditGetsDrawn.',
-    coverImageSrc: '2019-11-15 Process Portrait (1)',
+    coverImageSrc: '2019-11-15 Process_Portrait_(1)',
     coverImagePosition: 'object-center',
     images: [
-      { src: '2019-11-15 Process Portrait (1)' },
-      { src: '2019-11-15 Process Portrait (2)' },
-      { src: '2019-11-15 Process Portrait (3)' },
-      { src: '2019-11-15 Process Portrait (4)' },
-      { src: '2019-11-15 Process Portrait (5)' },
-      { src: '2019-11-15 Process Portrait (6)' },
-      { src: '2019-11-15 Process Portrait (7)' },
-      { src: '2019-11-15 Process Portrait (8)' },
-      { src: '2019-11-15 Process Portrait (9)' },
-      { src: '2019-11-15 Process Portrait (10)' },
-      { src: '2019-11-15 Process Portrait (11)' },
-      { src: '2019-11-15 Process Portrait (12)' },
-      { src: '2019-11-15 Process Portrait (13)' },
-      { src: '2019-11-15 Process Portrait (14)' }
+      { src: '2019-11-15_Process_Portrait_(1)' },
+      { src: '2019-11-15_Process_Portrait_(2)' },
+      { src: '2019-11-15_Process_Portrait_(3)' },
+      { src: '2019-11-15_Process_Portrait_(4)' },
+      { src: '2019-11-15_Process_Portrait_(5)' },
+      { src: '2019-11-15_Process_Portrait_(6)' },
+      { src: '2019-11-15_Process_Portrait_(7)' },
+      { src: '2019-11-15_Process_Portrait_(8)' },
+      { src: '2019-11-15_Process_Portrait_(9)' },
+      { src: '2019-11-15_Process_Portrait_(10)' },
+      { src: '2019-11-15_Process_Portrait_(11)' },
+      { src: '2019-11-15_Process_Portrait_(12)' },
+      { src: '2019-11-15_Process_Portrait_(13)' },
+      { src: '2019-11-15_Process_Portrait_(14)' }
     ]
   },
   {
@@ -321,40 +321,40 @@ export const illustration: Project[] = [
     medium: ['Screenprinted Fabric'],
     description:
       'Exploration of tagging and graffiti using publicly sited textiles.',
-    coverImageSrc: '2019-07-22 Screenprint (1)',
+    coverImageSrc: '2019-07-22_Screenprint_(1)',
     coverImagePosition: 'object-center',
     images: [
-      { src: '2019-07-22 Screenprint (1)' },
-      { src: '2019-07-22 Screenprint (2)' },
-      { src: '2019-07-22 Screenprint (3)' },
-      { src: '2019-07-22 Screenprint (4)' },
-      { src: '2019-07-22 Screenprint (5)' },
-      { src: '2019-07-22 Screenprint (6)' }
+      { src: '2019-07-22_Screenprint_(1)' },
+      { src: '2019-07-22_Screenprint_(2)' },
+      { src: '2019-07-22_Screenprint_(3)' },
+      { src: '2019-07-22_Screenprint_(4)' },
+      { src: '2019-07-22_Screenprint_(5)' },
+      { src: '2019-07-22_Screenprint_(6)' }
     ]
   },
   {
     date: "Nov '17",
     medium: ['Illustrator'],
     description: 'Patterns generated from swatches of a plant drawing.',
-    coverImageSrc: '2017-11-20 Patterns',
+    coverImageSrc: '2017-11-20_Patterns',
     coverImagePosition: 'object-center',
-    images: [{ src: '2017-11-20 Patterns' }]
+    images: [{ src: '2017-11-20_Patterns' }]
   },
   {
     date: "Oct '17",
     medium: ['Photoshop'],
     description: 'Study on different modes of drawing.',
     coverImagePosition: 'object-center',
-    coverImageSrc: '2017-10-30 Modes',
-    images: [{ src: '2017-10-30 Modes' }]
+    coverImageSrc: '2017-10-30_Modes',
+    images: [{ src: '2017-10-30_Modes' }]
   },
   {
     date: "Sept '17",
     medium: ['Illustrator'],
     description: 'Composition of only squares.',
     coverImagePosition: 'object-center',
-    coverImageSrc: '2017-09-25 Squares',
-    images: [{ src: '2017-09-25 Squares' }]
+    coverImageSrc: '2017-09-25_Squares',
+    images: [{ src: '2017-09-25_Squares' }]
   }
 ]
 
@@ -371,7 +371,7 @@ export const videography: Project[] = [
     date: "Sept '18",
     medium: ['Premiere'],
     description: "A variant on the 'chalk talk' style of stop motion.",
-    coverImageSrc: '2018-09-25 Chalk Talk',
+    coverImageSrc: '2018-09-25_Chalk_Talk',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '352083851' }]
   },
@@ -380,7 +380,7 @@ export const videography: Project[] = [
     medium: ['Premiere'],
     description:
       'Claymation conceptualized by visualizing a predetermined cartoon soundtrack.',
-    coverImageSrc: '2018-09-19 Claymation',
+    coverImageSrc: '2018-09-19_Claymation',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '352083588' }]
   },
@@ -388,7 +388,7 @@ export const videography: Project[] = [
     date: "Apr '18",
     medium: ['Premiere'],
     description: 'An impressionistic recollection of a season of dance.',
-    coverImageSrc: '2018-04-23 Sum Preview',
+    coverImageSrc: '2018-04-23_Sum_Preview',
     coverImagePosition: 'object-center',
     videos: [{ vimeoId: '352082744' }]
   },
@@ -397,7 +397,7 @@ export const videography: Project[] = [
     medium: ['Premiere'],
     description: 'Short study on performance.',
     coverImagePosition: 'object-bottom',
-    coverImageSrc: '2018-02-26 Twister',
+    coverImageSrc: '2018-02-26_Twister',
     videos: [{ vimeoId: '352082020' }]
   }
 ]
