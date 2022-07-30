@@ -3,6 +3,7 @@ import React from 'react'
 type Icon = {
   title: string
   logoSrc: string
+  logoAlt: string
   href: string
 }
 
@@ -10,36 +11,42 @@ const icons: Icon[] = [
   {
     title: 'ArtStation',
     logoSrc: 'ArtStation-logomark-white.svg',
+    logoAlt: 'ArtStation logo',
     href: 'https://www.artstation.com/skyes-the-limit'
   },
   {
     title: 'Gumroad',
     logoSrc: 'Gumroad_icon.svg',
+    logoAlt: 'Gumroad logo',
     href: 'https://skyesthelimit.gumroad.com/'
   },
   {
     title: 'Vimeo',
     logoSrc: 'vimeo_icon_white.svg',
+    logoAlt: 'Vimeo logo',
     href: 'https://vimeo.com/user101521186'
   },
   {
     title: 'Instagram',
     logoSrc: 'Instagram_Glyph_White.svg',
+    logoAlt: 'Instagram logo',
     href: 'https://www.instagram.com/skye.makes.cgi/'
   },
   {
     title: 'LinkedIn',
     logoSrc: 'LinkedIn_Icon_white.svg',
+    logoAlt: 'LinkedIn logo',
     href: 'https://www.linkedin.com/in/skye-bishop-854212172/'
   },
   {
     title: 'Github',
     logoSrc: 'github_mark_white.svg',
+    logoAlt: 'Github logo',
     href: 'https://github.com/skyes-the-limit'
   }
 ]
 
-const IconLink = ({ title, logoSrc, href }: Icon) => {
+const IconLink = ({ title, logoSrc, logoAlt, href }: Icon) => {
   return (
     <a
       target='_blank'
@@ -48,7 +55,7 @@ const IconLink = ({ title, logoSrc, href }: Icon) => {
       title={title}
       className='flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-900 hover:bg-gray-700'
     >
-      <img className='w-4 h-4' src={logoSrc} />
+      <img className='w-4 h-4' src={logoSrc} alt={logoAlt} />
     </a>
   )
 }
@@ -67,6 +74,7 @@ const Footer = () => {
                 key={icon.title}
                 title={icon.title}
                 logoSrc={require(`../../assets/icons/${icon.logoSrc}`)}
+                logoAlt={icon.logoAlt}
                 href={icon.href}
               />
             ))}
