@@ -158,8 +158,18 @@ export const general3d: Project[] = [
 ]
 
 export const techArt: Project[] = [
-  // TODO: "Hello!" Particles - July 2022
-  // TODO: Finished SPL - April 2022
+  // TODO: Finished SPL - April 2022?
+  {
+    date: "July '22",
+    medium: ['Houdini'],
+    description: 'Simple particle effect used with a text source.',
+    coverImage: {
+      src: 'HelloParticles_cover',
+      objectPosition: 'object-left',
+      alt: '"Hello!" spelled with bursting particles.'
+    },
+    videos: [{ vimeoId: '735002097', loop: true }]
+  },
   {
     date: "Dec '21",
     medium: ['Houdini'],
