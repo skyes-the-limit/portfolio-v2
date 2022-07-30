@@ -18,8 +18,11 @@ const CategoryPage = ({ category }: CategoryProps) => {
       header: project.date,
       badges: project.medium,
       description: project.description,
-      imageSrc: `projects/${project.coverImageSrc}`,
-      imageObjectPos: project.coverImagePosition,
+      coverImage: {
+        src: `projects/${project.coverImage.src}`,
+        objectPosition: project.coverImage.objectPosition,
+        alt: project.coverImage.alt
+      },
       details: <ProjectDetails project={project} />
     }
   })

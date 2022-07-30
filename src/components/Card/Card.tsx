@@ -12,8 +12,19 @@ export type CardInfo = {
   header: string
   badges?: string[]
   description?: string
-  imageSrc: string
-  imageObjectPos?: string
+  coverImage: {
+    src: string
+    objectPosition?:
+      | 'object-bottom'
+      | 'object-center'
+      | 'object-left'
+      | 'object-left-bottom'
+      | 'object-left-top'
+      | 'object-right'
+      | 'object-right-bottom'
+      | 'object-right-top'
+    alt?: string
+  }
   // Link to route to onClick if there is no modal
   link?: {
     displayText: string
@@ -29,7 +40,7 @@ export type CardProps = {
 }
 
 const CardInner = ({ variant, card }: CardProps) => {
-  const { header, badges, description, imageSrc, imageObjectPos, link } = card
+  const { header, badges, description, coverImage, link } = card
   const imgHeight = () => {
     switch (variant) {
       case 'small':
@@ -56,10 +67,10 @@ const CardInner = ({ variant, card }: CardProps) => {
     <div className='flex flex-col space-y-6'>
       <div className='overflow-hidden bg-white rounded-t-md bg-clip-text'>
         <Image
-          src={imageSrc}
+          src={coverImage.src}
           className={cx(
             'object-cover w-full',
-            imageObjectPos || 'object-top',
+            coverImage.objectPosition || 'object-top',
             imgHeight()
           )}
         />

@@ -3,34 +3,32 @@ import React, { useEffect } from 'react'
 import Feature from '../Hero/Hero'
 import Grid from '../Grid/Grid'
 import { CardInfo } from '../Card/Card'
-import { primaryCategories, secondaryCategories } from '../../data/categories'
+import {
+  primaryCategories,
+  secondaryCategories,
+  Category
+} from '../../data/categories'
 import { useLocation } from 'react-router'
 
-const primaryCards: CardInfo[] = primaryCategories.map((category) => {
-  return {
-    ...category,
-    header: category.title,
-    imageSrc: `projects/${category.coverImageSrc}`,
-    imageObjectPos: category.coverImagePosition,
-    link: {
-      displayText: 'See More',
-      href: category.path
+const categoryToCardProps = (categories: Category[]): CardInfo[] => {
+  return categories.map((category) => {
+    return {
+      ...category,
+      header: category.title,
+      coverImage: {
+        ...category.coverImage,
+        src: `projects/${category.coverImage.src}`
+      },
+      link: {
+        displayText: 'See More',
+        href: category.path
+      }
     }
-  }
-})
+  })
+}
 
-const secondaryCards: CardInfo[] = secondaryCategories.map((category) => {
-  return {
-    ...category,
-    header: category.title,
-    imageSrc: `projects/${category.coverImageSrc}`,
-    imageObjectPos: category.coverImagePosition,
-    link: {
-      displayText: 'See More',
-      href: category.path
-    }
-  }
-})
+const primaryCards = categoryToCardProps(primaryCategories)
+const secondaryCards = categoryToCardProps(secondaryCategories)
 
 const HomePage = () => {
   const location: any = useLocation()
