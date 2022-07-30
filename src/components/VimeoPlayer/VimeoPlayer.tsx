@@ -7,7 +7,6 @@ type VimeoPlayerProps = {
 }
 
 // TODO: Dynamically accept non-16:9 ratios
-// TODO: Spills off bottom of page at very wide landscapes
 const VimeoPlayer = ({
   id,
   loop = false,
