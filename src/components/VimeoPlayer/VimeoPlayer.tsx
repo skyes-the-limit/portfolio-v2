@@ -17,7 +17,7 @@ const VimeoPlayer = ({
     autoplay ? 1 : 0
   }&loop=${loop ? 1 : 0}`
   return (
-    <div className='w-[calc(100vw-4rem)] xs:w-[calc(100vw-6rem)] sm:w-[calc(100vw-8rem)] md:w-[calc(100vw-10rem)] lg:w-[calc(100vw-12rem)]'>
+    <div className='w-[calc(100vw-4rem)] xs:w-[calc(100vw-6rem)] sm:w-[calc(100vw-8rem)] md:w-[calc(100vw-10rem)] lg:w-[calc(100vw-12rem)] max-h-[calc(100vh-10.5rem)]'>
       <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
         <iframe
           src={src}
