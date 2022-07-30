@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Logo from '../../assets/icons/logo.svg'
 
 const Header = () => {
   return (
@@ -10,7 +9,11 @@ const Header = () => {
         aria-label='Back to homepage'
         className='flex items-center p-2'
       >
-        <img src={Logo} alt='logo' style={{ width: '225px', height: '2rem' }} />
+        <img
+          src={'logo.svg'}
+          alt='logo'
+          style={{ width: '225px', height: '2rem' }}
+        />
       </NavLink>
       <NavLink
         to='/about'

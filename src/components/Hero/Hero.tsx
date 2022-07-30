@@ -1,25 +1,57 @@
 import React from 'react'
 import cx from 'classnames'
 import { Link } from 'react-router-dom'
-import Image from '../Image/Image'
+
+const HeroImage = () => (
+  <picture>
+    <source
+      srcSet={'Profile-xs.webp'}
+      media='(max-width: 639px)'
+      type='image/webp'
+    />
+    <source
+      srcSet={'Profile-sm.webp'}
+      media='(max-width: 767px)'
+      type='image/webp'
+    />
+    <source
+      srcSet={'Profile-md.webp'}
+      media='(max-width: 1023px)'
+      type='image/webp'
+    />
+    <source
+      srcSet={'Profile-lg.webp'}
+      media='(max-width: 1279px)'
+      type='image/webp'
+    />
+    <source
+      srcSet={'Profile-xl.webp'}
+      media='(max-width: 1535px)'
+      type='image/webp'
+    />
+    <source srcSet={'Profile-2xl.webp'} type='image/webp' />
+
+    <img
+      src={'Profile.webp'}
+      alt='Skye Bishop posing for photo'
+      className={cx(
+        'object-contain object-left-bottom h-full',
+        'w-96 sm:w-[65%] lg:w-full',
+        'mt-0 xs:mt-[4.5rem] sm:mt-0'
+      )}
+      style={{
+        filter: 'drop-shadow(5px 15px 10px rgba(0,0,0,0.8))',
+        WebkitFilter: 'drop-shadow(5px 5px 5px #222)'
+      }}
+    />
+  </picture>
+)
 
 const Feature = () => {
   return (
     <div className='flex flex-row h-[calc(100vh-12rem)] 2xl:relative'>
       <div className='w-full h-full pt-6 px-6 border-b-2 xs:border-4 border-gray-700 xs:border-gray-200 xs:border-double xs:rounded-lg overflow-hidden'>
-        <Image
-          src='Profile'
-          alt='Website Design System'
-          className={cx(
-            'object-contain object-left-bottom h-full',
-            'w-96 sm:w-[65%] lg:w-full',
-            'mt-0 xs:mt-[4.5rem] sm:mt-0'
-          )}
-          style={{
-            filter: 'drop-shadow(5px 15px 10px rgba(0,0,0,0.8))',
-            WebkitFilter: 'drop-shadow(5px 5px 5px #222)'
-          }}
-        />
+        <HeroImage />
       </div>
       <div
         className={cx(
@@ -33,7 +65,7 @@ const Feature = () => {
         <h3 className={cx('font-semibold mb-4', 'text-xl xs:text-4xl')}>
           Skye Bishop
           <span className={cx('font-light ml-2', 'text-xs xs:text-lg')}>
-            (they/he)
+            (they / he)
           </span>
         </h3>
         <p>
