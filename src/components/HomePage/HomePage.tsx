@@ -15,10 +15,6 @@ const categoryToCardProps = (categories: Category[]): CardInfo[] => {
     return {
       ...category,
       header: category.title,
-      coverImage: {
-        ...category.coverImage,
-        src: `projects/${category.coverImage.src}`
-      },
       link: {
         displayText: 'See More',
         href: category.path
