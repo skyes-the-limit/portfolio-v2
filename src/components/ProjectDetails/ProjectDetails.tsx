@@ -110,7 +110,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
               })}
             >
               <Image
-                src={`projects/${src}`}
+                src={src}
                 className={cx(
                   caption
                     ? 'max-h-[calc(100vh-10.5rem)]'

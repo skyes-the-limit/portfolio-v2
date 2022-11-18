@@ -11,37 +11,37 @@ const Image = ({ src, className = '', alt = '', style = {} }: ImageProps) => {
   return (
     <picture>
       <source
-        srcSet={require(`../../assets/${src}-xs.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-xs.webp`}
         media='(max-width: 639px)'
         type='image/webp'
       />
       <source
-        srcSet={require(`../../assets/${src}-sm.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-sm.webp`}
         media='(max-width: 767px)'
         type='image/webp'
       />
       <source
-        srcSet={require(`../../assets/${src}-md.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-md.webp`}
         media='(max-width: 1023px)'
         type='image/webp'
       />
       <source
-        srcSet={require(`../../assets/${src}-lg.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-lg.webp`}
         media='(max-width: 1279px)'
         type='image/webp'
       />
       <source
-        srcSet={require(`../../assets/${src}-xl.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-xl.webp`}
         media='(max-width: 1535px)'
         type='image/webp'
       />
       <source
-        srcSet={require(`../../assets/${src}-2xl.webp`)}
+        srcSet={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}-2xl.webp`}
         type='image/webp'
       />
 
       <img
-        src={require(`../../assets/${src}.webp`)}
+        src={`https://skye-bishop-portfolio-static.s3.us-west-2.amazonaws.com/${src}.webp`}
         alt={alt}
         className={className}
         style={style}
