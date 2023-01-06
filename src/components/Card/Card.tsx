@@ -121,7 +121,7 @@ const Card = ({ variant, card }: CardProps) => {
 
       <div
         className={cx(
-          'rounded-md shadow-md bg-gray-900 text-gray-100 flex flex-col justify-between overflow-hidden',
+          'rounded-md shadow-med bg-gray-900 text-gray-100 flex flex-col justify-between overflow-hidden',
           { overlay: link || details }
         )}
         onClick={() => (details ? setShowModal(true) : undefined)}

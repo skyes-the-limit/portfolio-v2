@@ -16,11 +16,16 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
-      serif: ['Zilla Slab', 'serif'],
+      serif: ['Zilla Slab', 'serif']
     },
     screens: {
-      'xs': '480px',
+      xs: '480px',
       ...defaultTheme.screens
+    },
+    boxShadow: {
+      low: 'var(--shadow-elevation-low)',
+      med: 'var(--shadow-elevation-medium)',
+      high: 'var(--shadow-elevation-high)'
     }
   },
   variants: {},
