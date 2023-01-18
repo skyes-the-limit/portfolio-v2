@@ -49,7 +49,9 @@ const HomePage = () => {
     <div className='pt-16'>
       <div className='container mx-auto my-12 max-w-6xl px-6 space-y-6 sm:space-y-12'>
         <Feature />
-        <div id='project-work' />
+        <h2 id='project-work' className='w-0 h-0 overflow-hidden'>
+          Project Work
+        </h2>
         <Grid variant={'medium'} cards={primaryCards} />
         <Grid variant={'small'} cards={secondaryCards} />
       </div>

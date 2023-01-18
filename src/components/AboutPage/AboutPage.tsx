@@ -15,6 +15,7 @@ const AboutPage = () => {
   return (
     <Suspense fallback={<FullScreenLoader />}>
       <div>
+        <h1 className='w-0 h-0 overflow-hidden'>About</h1>
         <div
           className='container flex flex-col space-y-12 items-center pt-24 pb-4 px-6 mx-auto'
           style={{ minHeight: `calc(100vh - ${FOOTER_HEIGHT})` }}

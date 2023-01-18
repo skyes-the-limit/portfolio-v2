@@ -86,13 +86,13 @@ const CardInner = ({ variant, card }: CardProps) => {
             { 'text-center': !badges && !description }
           )}
         >
-          <h2
+          <h3
             className={cx('text-base xs:text-xl font-semibold tracking-wide', {
               'whitespace-nowrap': badges
             })}
           >
             {header}
-          </h2>
+          </h3>
           {badges && <Badges badges={badges} />}
         </div>
         <p className='text-sm text-gray-400'>{description}</p>

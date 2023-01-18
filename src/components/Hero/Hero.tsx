@@ -30,12 +30,13 @@ const Feature = () => {
           'text-sm xs:text-base'
         )}
       >
-        <h3 className={cx('font-semibold mb-4', 'text-xl xs:text-4xl')}>
+        <h2 className={cx('font-semibold mb-4', 'text-xl xs:text-4xl')}>
           Skye Bishop
           <span className={cx('font-light ml-2', 'text-xs xs:text-lg')}>
+            {' '}
             (they / he)
           </span>
-        </h3>
+        </h2>
         <p>
           Welcome to my site! I enjoy creating visually stunning experiences via
           various technical mediums. I currently work full-time as a React

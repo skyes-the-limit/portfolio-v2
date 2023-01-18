@@ -56,7 +56,7 @@ const ContactForm = () => {
 
   return (
     <section className='container max-w-md mx-auto'>
-      <h1 className='text-4xl font-bold text-center mt-24'>Get in touch!</h1>
+      <h2 className='text-4xl font-bold text-center mt-24'>Get in touch!</h2>
       <Formik
         initialValues={{
           fullName: '',
