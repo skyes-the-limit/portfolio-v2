@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import { Category } from '../../data/categories'
+import useDocumentTitle from '../../hooks/useDocumentTitle'
 import { FullScreenLoader } from '../Loader/Loader'
 
 const Grid = lazy(() => import('../Grid/Grid'))
@@ -12,6 +13,7 @@ type CategoryProps = {
 
 const CategoryPage = ({ category }: CategoryProps) => {
   const { title, content } = category
+  useDocumentTitle(`Skye Bishop - ${title}`)
   const footerHeight = '104px'
   const cards = content.map((project) => {
     return {
