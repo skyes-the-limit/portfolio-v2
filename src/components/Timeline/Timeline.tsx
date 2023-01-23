@@ -55,7 +55,7 @@ const events: Event[] = [
 
 const Timeline = () => {
   return (
-    <section className='text-left mx-auto pl-4'>
+    <section className='text-left mx-auto pl-4 w-full'>
       <h2 className='w-0 h-0 overflow-hidden'>Timeline</h2>
       <div className='container max-w-5xl mx-auto'>
         <div className='relative col-span-12 sm:pl-4 space-y-6 sm:col-span-9'>
@@ -66,7 +66,7 @@ const Timeline = () => {
                   key={index}
                   className='flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-400'
                 >
-                  <div className='flex flex-row justify-between'>
+                  <div className='flex flex-row justify-between items-center'>
                     <h3 className='text-2xl font-semibold tracking-wide pr-2'>
                       {event.title}
                     </h3>
