@@ -55,9 +55,9 @@ const events: Event[] = [
 
 const Timeline = () => {
   return (
-    <section className='text-left mx-auto pl-4 w-full'>
+    <section className='text-left mx-auto pl-4 w-full max-w-5xl'>
       <h2 className='w-0 h-0 overflow-hidden'>Timeline</h2>
-      <div className='container max-w-5xl mx-auto'>
+      <div className='container w-full'>
         <div className='relative col-span-12 sm:pl-4 space-y-6 sm:col-span-9'>
           <div className='col-span-12 space-y-12 relative pl-4 sm:col-span-8 sm:space-y-8 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-left-3 before:bg-gray-700'>
             {events &&

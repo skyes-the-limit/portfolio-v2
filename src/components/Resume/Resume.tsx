@@ -14,10 +14,8 @@ const calcPageWidth = (width: number) => {
     return 768 - 48
   } else if (width < 1280) {
     return 1024 - 48
-  } else if (width < 1536) {
-    return 1280 - 48
   } else {
-    return 1536 - 48
+    return 1008 // 64rem
   }
 }
 
