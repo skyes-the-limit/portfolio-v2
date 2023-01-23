@@ -3,27 +3,30 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import useEventListener from '@use-it/event-listener'
 import Download from '../../assets/icons/download.svg'
 
+const calcPageWidth = (width: number) => {
+  if (width < 480) {
+    return width - 48
+  } else if (width < 640) {
+    return 480 - 48
+  } else if (width < 768) {
+    return 640 - 48
+  } else if (width < 1024) {
+    return 768 - 48
+  } else if (width < 1280) {
+    return 1024 - 48
+  } else if (width < 1536) {
+    return 1280 - 48
+  } else {
+    return 1536 - 48
+  }
+}
+
 // TODO: Add skeleton loader with same dimensions
 const Resume = () => {
-  const [pageWidth, setPageWidth] = useState(0)
-  const calcPageWidth = () => {
-    if (window.innerWidth < 480) {
-      setPageWidth(window.innerWidth - 48)
-    } else if (window.innerWidth < 640) {
-      setPageWidth(480 - 48)
-    } else if (window.innerWidth < 768) {
-      setPageWidth(640 - 48)
-    } else if (window.innerWidth < 1024) {
-      setPageWidth(768 - 48)
-    } else if (window.innerWidth < 1280) {
-      setPageWidth(1024 - 48)
-    } else if (window.innerWidth < 1536) {
-      setPageWidth(1280 - 48)
-    } else {
-      setPageWidth(1536 - 48)
-    }
-  }
-  useEventListener('resize', calcPageWidth)
+  const [pageWidth, setPageWidth] = useState(calcPageWidth(window.innerWidth))
+  useEventListener('resize', () =>
+    setPageWidth(calcPageWidth(window.innerWidth))
+  )
 
   const pdfSrc = require('../../assets/docs/SkyeBishop_Resume.pdf')
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
