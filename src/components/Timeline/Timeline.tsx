@@ -10,46 +10,28 @@ type Event = {
 
 const events: Event[] = [
   {
-    title: 'Toast',
-    date: 'January 2021 - Present',
-    badges: ['React', 'Figma'],
-    description:
-      'Software Engineer I on the Mobile Dining Solutions team, responsible for the Order and Pay at Table, Scan to Pay, and Digital Menus products. Primarily focused on frontend development, sometimes flexing towards design as well.'
+    title: 'Tinuiti',
+    date: 'March 2024 - Present',
+    badges: ['React', 'Node', 'PostgreSQL'],
+    description: 'Full-stack development on the product team.'
   },
   {
-    title: 'Cuseum',
-    date: 'April 2020 - June 2020',
-    badges: ['Flutter', 'Vue'],
-    description:
-      'Software developer internship focused on rapid prototyping for new ventures.'
+    title: 'Glowforge',
+    date: 'April 2023 - February 2024',
+    badges: ['React', 'Node'],
+    description: 'Frontend development on the app team.'
   },
   {
     title: 'Toast',
-    date: 'January 2020 - April 2020',
-    badges: ['React', 'Swift', 'Kotlin'],
-    description:
-      'Software engineering co-op focused on new ventures within Digital Ordering, including Toast Outposts and first-party delivery.'
+    date: 'January 2020 - March 2023',
+    badges: ['React', 'Node'],
+    description: 'Frontend development on the Digital Ordering team.'
   },
   {
     title: 'Chewy',
     date: 'January 2019 - June 2019',
     badges: ['PostgreSQL', 'Java', 'Vue'],
-    description:
-      'Software engineering co-op with the Fulfillment Planning team. Worked independently to develop full-stack internal tool from proposal to MVP.'
-  },
-  {
-    title: "CAMD's Makerspace",
-    date: 'October 2018 - December 2020',
-    badges: [],
-    description:
-      "Worked part-time as a Digital Fabrication Assistant for Northeastern's College of Arts, Media, and Design, helping students with laser cutting and 3D printing projects."
-  },
-  {
-    title: 'Northeastern University',
-    date: 'September 2017 - May 2022',
-    badges: [],
-    description:
-      'Bachelor of Science in Computer Science / Media Arts (Animation), graduated cum laude.'
+    description: 'Full-stack development on the Fulfillment Planning team.'
   }
 ]
 
